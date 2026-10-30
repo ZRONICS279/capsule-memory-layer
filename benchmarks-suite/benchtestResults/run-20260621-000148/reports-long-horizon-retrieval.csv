@@ -1,0 +1,5 @@
+adapter,success_rate,memory_success_rate,context_success_rate,recall,stale_penalty,score,avg_total_tokens
+capsule,,,1.0000,1.0000,0.0000,1.0000,0
+mem0_real_async,,,0.0000,0.0278,0.0000,0.0278,0
+vector_rag,,,0.0000,0.0000,0.3333,0.0000,0
+langgraph_real,,,0.0000,0.1667,0.3333,0.1111,0

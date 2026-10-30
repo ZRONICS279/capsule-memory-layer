@@ -1,0 +1,343 @@
+{
+  "summary": {
+    "adapters": [
+      "mem0_real",
+      "capsule",
+      "bm25_rag",
+      "no_memory"
+    ],
+    "adapter_scores": {
+      "mem0_real": {
+        "tasks": 1,
+        "success_rate": null,
+        "context_success_rate": 0.0,
+        "avg_recall": 0.3333,
+        "avg_stale_penalty": 0.1667,
+        "avg_cross_session_score": 0.2778,
+        "avg_token_efficiency": 0.9129,
+        "avg_ingest_duration_seconds": 446.8,
+        "avg_total_tokens": 0,
+        "avg_raw_context_tokens": 5049,
+        "avg_prepared_context_tokens": 440,
+        "avg_token_savings": 0.913,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 0.2778,
+            "high": 0.2778
+          },
+          "recall": {
+            "low": 0.3333,
+            "high": 0.3333
+          },
+          "stale_penalty": {
+            "low": 0.1667,
+            "high": 0.1667
+          },
+          "context_success_rate": {
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "capsule": {
+        "tasks": 1,
+        "success_rate": null,
+        "context_success_rate": 0.0,
+        "avg_recall": 0.6667,
+        "avg_stale_penalty": 0.0,
+        "avg_cross_session_score": 0.6667,
+        "avg_token_efficiency": 0.8893,
+        "avg_ingest_duration_seconds": 0.13,
+        "avg_total_tokens": 0,
+        "avg_raw_context_tokens": 5049,
+        "avg_prepared_context_tokens": 559,
+        "avg_token_savings": 0.889,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 0.6667,
+            "high": 0.6667
+          },
+          "recall": {
+            "low": 0.6667,
+            "high": 0.6667
+          },
+          "stale_penalty": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "context_success_rate": {
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "bm25_rag": {
+        "tasks": 1,
+        "success_rate": null,
+        "context_success_rate": 0.0,
+        "avg_recall": 0.5,
+        "avg_stale_penalty": 0.3333,
+        "avg_cross_session_score": 0.3333,
+        "avg_token_efficiency": 0.9699,
+        "avg_ingest_duration_seconds": 0.0,
+        "avg_total_tokens": 0,
+        "avg_raw_context_tokens": 5049,
+        "avg_prepared_context_tokens": 152,
+        "avg_token_savings": 0.97,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 0.3333,
+            "high": 0.3333
+          },
+          "recall": {
+            "low": 0.5,
+            "high": 0.5
+          },
+          "stale_penalty": {
+            "low": 0.3333,
+            "high": 0.3333
+          },
+          "context_success_rate": {
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "no_memory": {
+        "tasks": 1,
+        "success_rate": null,
+        "context_success_rate": 0.0,
+        "avg_recall": 0.0,
+        "avg_stale_penalty": 0.0,
+        "avg_cross_session_score": 0.0,
+        "avg_token_efficiency": 1.0,
+        "avg_ingest_duration_seconds": 0.0,
+        "avg_total_tokens": 0,
+        "avg_raw_context_tokens": 5049,
+        "avg_prepared_context_tokens": 0,
+        "avg_token_savings": 1.0,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "recall": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "stale_penalty": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "context_success_rate": {
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      }
+    },
+    "best_adapter": "capsule",
+    "best_cross_session_score": 0.6667,
+    "capsule_cross_session_score": 0.6667,
+    "capsule_beats_mem0_real": true,
+    "capsule_token_savings": 0.889,
+    "mem0_token_savings": 0.913,
+    "score_formula": "multiplicative",
+    "paired_deltas": {
+      "left": "capsule",
+      "right": "mem0_real",
+      "pairs": 1,
+      "avg_cross_session_score_delta": 0.3889,
+      "bootstrap_ci": {
+        "low": 0.3889,
+        "high": 0.3889
+      }
+    }
+  },
+  "results": [
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "mem0_real",
+      "mode": "retrieval_only",
+      "repeat": 0,
+      "success": null,
+      "context_success": false,
+      "tests_passed": null,
+      "unknown_passed": null,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 440,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 440,
+      "token_savings": 0.913,
+      "duration_seconds": 0.0,
+      "ingest_duration_seconds": 446.7963274169888,
+      "final_message": "RETRIEVAL_ONLY",
+      "action_trace": [],
+      "recall_score": {
+        "recall": 0.3333,
+        "precision_penalty": 0.1667,
+        "score": 0.2778,
+        "subtractive_score": 0.1667,
+        "multiplicative_score": 0.2778,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9129,
+        "required_found": 2,
+        "required_total": 6,
+        "stale_found": 1,
+        "stale_total": 6,
+        "payload_tokens": 440,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "mode": "retrieval_only",
+      "repeat": 0,
+      "success": null,
+      "context_success": false,
+      "tests_passed": null,
+      "unknown_passed": null,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 515,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 559,
+      "token_savings": 0.889,
+      "duration_seconds": 0.0,
+      "ingest_duration_seconds": 0.12879583300673403,
+      "final_message": "RETRIEVAL_ONLY",
+      "action_trace": [],
+      "recall_score": {
+        "recall": 0.6667,
+        "precision_penalty": 0.0,
+        "score": 0.6667,
+        "subtractive_score": 0.6667,
+        "multiplicative_score": 0.6667,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.8893,
+        "required_found": 4,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 559,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "bm25_rag",
+      "mode": "retrieval_only",
+      "repeat": 0,
+      "success": null,
+      "context_success": false,
+      "tests_passed": null,
+      "unknown_passed": null,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 152,
+      "token_savings": 0.97,
+      "duration_seconds": 0.0,
+      "ingest_duration_seconds": 7.0829992182552814e-06,
+      "final_message": "RETRIEVAL_ONLY",
+      "action_trace": [],
+      "recall_score": {
+        "recall": 0.5,
+        "precision_penalty": 0.3333,
+        "score": 0.3333,
+        "subtractive_score": 0.1667,
+        "multiplicative_score": 0.3333,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9699,
+        "required_found": 3,
+        "required_total": 6,
+        "stale_found": 2,
+        "stale_total": 6,
+        "payload_tokens": 152,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "no_memory",
+      "mode": "retrieval_only",
+      "repeat": 0,
+      "success": null,
+      "context_success": false,
+      "tests_passed": null,
+      "unknown_passed": null,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 0,
+      "token_savings": 1.0,
+      "duration_seconds": 0.0,
+      "ingest_duration_seconds": 8.333008736371994e-06,
+      "final_message": "RETRIEVAL_ONLY",
+      "action_trace": [],
+      "recall_score": {
+        "recall": 0.0,
+        "precision_penalty": 0.0,
+        "score": 0.0,
+        "subtractive_score": 0.0,
+        "multiplicative_score": 0.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 1.0,
+        "required_found": 0,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 0,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    }
+  ]
+}

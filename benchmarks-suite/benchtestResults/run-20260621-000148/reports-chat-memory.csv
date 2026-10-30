@@ -1,0 +1,5 @@
+adapter,ctxok,recall,stale,privacy,deletion,score,raw_tokens,prepared_tokens,token_savings,ingest_seconds
+capsule,0.3750,0.7708,0.2500,0.1250,0.1250,0.4583,142,120,0.2070,0.01
+mem0_real_async,0.1875,0.8125,0.3750,0.1250,0.1250,0.3125,142,121,0.2130,2.67
+vector_rag,0.1250,0.7500,0.3125,0.1250,0.1250,0.2812,142,66,0.4760,0.00
+langgraph_real,0.3125,0.9635,0.3750,0.1250,0.1250,0.3542,142,151,0.0110,0.00

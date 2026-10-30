@@ -1,0 +1,403 @@
+{
+  "cases": [
+    {
+      "case_id": "pydantic-validator-to-field-validator",
+      "repo_url": "https://github.com/pydantic/pydantic.git",
+      "base_ref": "b9b8eb76c4f37ed5b33e136aea6d4b80ffa673c8",
+      "issue_url": "https://github.com/pydantic/pydantic/discussions/5393",
+      "gold_pr_url": "https://github.com/pydantic/pydantic/pull/5153",
+      "memory_sessions": [
+        [
+          "Pydantic v2 migration planning: the @validator decorator is deprecated in Pydantic v2.",
+          "The old API is pydantic.validator with pre=True/each_item=True keyword arguments.",
+          "Rejected approach: keep using @validator with compatibility shims — shims will be removed in v3.",
+          "The values dict parameter in @validator is replaced by info.data in @field_validator."
+        ],
+        [
+          "Maintainer decision: migrate all @validator usages to @field_validator.",
+          "Key changes: import field_validator from pydantic, use mode='before' instead of pre=True.",
+          "The new signature is @field_validator('field_name', mode='before') with (cls, v, info) parameters.",
+          "ValidationInfo replaces the old **kwargs pattern. Access other field values via info.data.",
+          "Reference commit: 82bfb19d267c56f053add97974f679754165bffe"
+        ],
+        [
+          "FINAL MIGRATION: replace @validator with @field_validator throughout the codebase.",
+          "Target files: any file importing from pydantic that uses @validator decorator.",
+          "Run tests with: python -m pytest tests/",
+          "Forbidden: @validator decorator usage, pre=True argument, each_item=True argument.",
+          "The pydantic v2 release tag is v2.0 at commit aeb8fd0255bf034212e808b92893283adc9f8d3a."
+        ]
+      ],
+      "prompt": "Migrate @validator decorators to @field_validator following the Pydantic v2 migration guide.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "pydantic/decorators.py",
+        "pydantic/_internal/_decorators.py"
+      ],
+      "forbidden_patterns": [
+        "@validator(",
+        "pre=True",
+        "each_item=True"
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "sqlalchemy-declarative-base-to-declarativebase",
+      "repo_url": "https://github.com/sqlalchemy/sqlalchemy.git",
+      "base_ref": "768507602e4564108799c0c6bfd3d7ceb734784b",
+      "issue_url": "https://github.com/sqlalchemy/sqlalchemy/discussions/9310",
+      "gold_pr_url": null,
+      "memory_sessions": [
+        [
+          "SQLAlchemy 2.0 migration: declarative_base() function is deprecated.",
+          "The old pattern: from sqlalchemy.orm import declarative_base; Base = declarative_base().",
+          "Rejected approach: keep using declarative_base() with future=True engine flag.",
+          "The legacy DeclarativeMeta metaclass pattern will not support new type-safe features."
+        ],
+        [
+          "Architecture decision: migrate to the new DeclarativeBase class pattern.",
+          "New pattern: from sqlalchemy.orm import DeclarativeBase; class Base(DeclarativeBase): pass.",
+          "Column() is replaced by mapped_column(). relationship() remains but uses Mapped[] type hints.",
+          "Integer/String column types stay the same, but declarations use Mapped[int] annotations."
+        ],
+        [
+          "FINAL MIGRATION: replace declarative_base() with DeclarativeBase subclass.",
+          "Replace Column(Integer) with mapped_column(Integer) or Mapped[int] throughout models.",
+          "Target files: all ORM model files importing from sqlalchemy.orm.",
+          "Run tests: python -m pytest tests/",
+          "SQLAlchemy 2.0.0 release: ad2a65ef7e3cd57912c6c0373c8b843b8a1730eb.",
+          "Forbidden: declarative_base() function call, Column() without mapped_column wrapper."
+        ]
+      ],
+      "prompt": "Migrate SQLAlchemy models from declarative_base() to the new DeclarativeBase class pattern with mapped_column.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "lib/sqlalchemy/orm/decl_api.py"
+      ],
+      "forbidden_patterns": [
+        "declarative_base()",
+        "from sqlalchemy.orm import declarative_base"
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "flask-before-first-request-removal",
+      "repo_url": "https://github.com/pallets/flask.git",
+      "base_ref": "aab1d9935e17e40104a28c89d4c669f7ab3cc579",
+      "issue_url": "https://github.com/pallets/flask/issues/4605",
+      "gold_pr_url": "https://github.com/pallets/flask/pull/4995",
+      "memory_sessions": [
+        [
+          "Flask upgrade planning: before_first_request decorator is deprecated in Flask 2.2.",
+          "The old pattern: @app.before_first_request to run setup code on first HTTP request.",
+          "Problem: before_first_request has race conditions with multiple workers and is misused as app startup logic.",
+          "Rejected approach: keep using before_first_request with DeprecationWarning suppression."
+        ],
+        [
+          "Maintainer decision (issue #4605): before_first_request will be removed in Flask 2.3/3.0.",
+          "Deprecation commit: aab1d9935e17e40104a28c89d4c669f7ab3cc579 (PR #4621).",
+          "Replacement: move setup code into the application factory function (create_app pattern).",
+          "For lazy initialization, use a flag variable checked in before_request instead."
+        ],
+        [
+          "FINAL REMOVAL: before_first_request and before_app_first_request are removed.",
+          "Removal PR #4995 commit: 1ee22e1736ffd12c2222cd6215ed04ec1592adaa.",
+          "Target files: src/flask/app.py, src/flask/blueprints.py, src/flask/scaffold.py.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: before_first_request, before_app_first_request, got_first_request."
+        ]
+      ],
+      "prompt": "Remove the deprecated before_first_request functionality and migrate to the app factory pattern.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "src/flask/app.py",
+        "src/flask/blueprints.py",
+        "src/flask/scaffold.py"
+      ],
+      "forbidden_patterns": [
+        "before_first_request",
+        "before_app_first_request",
+        "got_first_request"
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "django-url-to-path-routing",
+      "repo_url": "https://github.com/django/django.git",
+      "base_ref": "b99221b8bb2a4cd7fd5ac6e5f03e8eb1953d6384",
+      "issue_url": "https://github.com/django/django/pull/7482",
+      "gold_pr_url": "https://github.com/django/django/pull/7482",
+      "memory_sessions": [
+        [
+          "Django URL routing upgrade: django.conf.urls.url() is deprecated.",
+          "The old pattern: from django.conf.urls import url; url(r'^articles/(?P<id>[0-9]+)/$', views.article).",
+          "Rejected approach: keep using url() with regex patterns and suppress RemovedInDjango40Warning.",
+          "The url() function was a wrapper around re_path() and will be removed in Django 4.0."
+        ],
+        [
+          "Architecture decision (DEP 0201): adopt the simplified path() routing syntax.",
+          "New pattern: from django.urls import path; path('articles/<int:id>/', views.article).",
+          "For complex regex patterns, use re_path() instead of url().",
+          "path() supports type converters: <int:id>, <str:slug>, <uuid:pk>, <path:subpath>.",
+          "Implementation commit: df41b5a05d4e00e80e73afe629072e37873e767a (PR #7482)."
+        ],
+        [
+          "FINAL MIGRATION: replace all url() calls with path() or re_path().",
+          "Target files: urls.py files throughout the project.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: django.conf.urls.url, url(r'^, from django.conf.urls import url.",
+          "Simple patterns use path(); regex patterns use re_path() from django.urls."
+        ]
+      ],
+      "prompt": "Migrate Django URL routing from url() to path() and re_path() following DEP 0201.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "django/conf/urls/__init__.py",
+        "django/urls/resolvers.py"
+      ],
+      "forbidden_patterns": [
+        "from django.conf.urls import url",
+        "django.conf.urls.url"
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "httpx-app-param-to-transport",
+      "repo_url": "https://github.com/encode/httpx.git",
+      "base_ref": "08eff926a6011ac84961fd2cee22d9fd4d4b1a88",
+      "issue_url": "https://github.com/encode/httpx/issues/1274",
+      "gold_pr_url": "https://github.com/encode/httpx/pull/3315",
+      "memory_sessions": [
+        [
+          "httpx API cleanup: the app= parameter on Client/AsyncClient is deprecated.",
+          "The old pattern: httpx.Client(app=my_wsgi_app) or httpx.AsyncClient(app=my_asgi_app).",
+          "Problem: the app= shortcut hides the transport layer and prevents custom transport configuration.",
+          "Rejected approach: keep using app= with DeprecationWarning — it will be removed."
+        ],
+        [
+          "Maintainer decision: replace app= with explicit WSGITransport/ASGITransport.",
+          "New pattern: httpx.Client(transport=httpx.WSGITransport(app=my_wsgi_app)).",
+          "Async pattern: httpx.AsyncClient(transport=httpx.ASGITransport(app=my_asgi_app)).",
+          "Deprecation PR #3050 commit: cabd1c095e52e2f67ab63ec17941d3a539d7c877."
+        ],
+        [
+          "FINAL REMOVAL: app= parameter removed from Client and AsyncClient.",
+          "Removal PR #3315 commit: 34e1110a9b3f8ff875fd2f61e1721cf68e18e564.",
+          "Target files: httpx/_client.py, tests/test_asgi.py, tests/test_wsgi.py.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: Client(app=, AsyncClient(app=. Must use transport= instead."
+        ]
+      ],
+      "prompt": "Migrate httpx tests from the deprecated app= parameter to explicit WSGITransport/ASGITransport.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "httpx/_client.py"
+      ],
+      "forbidden_patterns": [
+        "Client(app=",
+        "AsyncClient(app="
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "pytest-asyncio-strict-mode-default",
+      "repo_url": "https://github.com/pytest-dev/pytest-asyncio.git",
+      "base_ref": "bcdc04920eb08586145bf0f18e2fe96d242d9a7d",
+      "issue_url": "https://github.com/pytest-dev/pytest-asyncio/issues/293",
+      "gold_pr_url": null,
+      "memory_sessions": [
+        [
+          "pytest-asyncio upgrade: the default asyncio_mode is changing from 'legacy' to 'strict'.",
+          "In legacy mode, all async test functions are automatically treated as asyncio tests.",
+          "Problem: implicit marking hides which tests are async and causes surprising behavior.",
+          "Rejected approach: keep asyncio_mode=legacy — it will be removed in a future release."
+        ],
+        [
+          "Migration decision: explicitly set asyncio_mode in pytest config.",
+          "Option A: asyncio_mode=auto — automatically marks all async tests (closest to legacy behavior).",
+          "Option B: asyncio_mode=strict — requires explicit @pytest.mark.asyncio on each async test.",
+          "The strict default was introduced in v0.19.0 at commit 2da33c4feb4a7523f19dd791a6b0ee6200bf14d8.",
+          "Recommendation: use auto mode if migrating from legacy to minimize code changes."
+        ],
+        [
+          "FINAL CONFIG: set asyncio_mode=auto in pyproject.toml [tool.pytest.ini_options].",
+          "Add: asyncio_mode = 'auto' to pytest configuration.",
+          "Target file: pyproject.toml or pytest.ini.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: asyncio_mode=legacy, asyncio_mode = \"legacy\". Do not leave mode unset."
+        ]
+      ],
+      "prompt": "Configure pytest-asyncio mode explicitly to replace the deprecated legacy default.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "pyproject.toml"
+      ],
+      "forbidden_patterns": [
+        "asyncio_mode=legacy",
+        "asyncio_mode = \"legacy\""
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "celery-task-module-removal",
+      "repo_url": "https://github.com/celery/celery.git",
+      "base_ref": "5b86b35c81ea5a1fbfd439861f4fee6813148d16",
+      "issue_url": "https://github.com/celery/celery/issues/6406",
+      "gold_pr_url": "https://github.com/celery/celery/pull/6869",
+      "memory_sessions": [
+        [
+          "Celery 5.0 migration: the celery.task module is removed.",
+          "Old import pattern: from celery.task import task, periodic_task.",
+          "Old decorator pattern: from celery.decorators import task.",
+          "These modules raised ImportError in Celery 5.0: No module named 'celery.task'."
+        ],
+        [
+          "Migration decision: use the app-bound task pattern instead.",
+          "New pattern: from celery import Celery; app = Celery(); @app.task.",
+          "Or use the shared_task decorator: from celery import shared_task; @shared_task.",
+          "The @periodic_task decorator is also removed; use celery beat schedule config instead.",
+          "Removal PR #6869 commit: 3cf5072ee5f95744024f60e0f4a77eb2edb8959f."
+        ],
+        [
+          "FINAL MIGRATION: replace all celery.task and celery.decorators imports.",
+          "Use @app.task or @shared_task for task definitions.",
+          "For periodic tasks, configure CELERY_BEAT_SCHEDULE in settings instead of @periodic_task.",
+          "Target files: any file importing from celery.task or celery.decorators.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: from celery.task, from celery.decorators, @periodic_task."
+        ]
+      ],
+      "prompt": "Migrate Celery task definitions from the removed celery.task module to the app-bound pattern.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "celery/__init__.py",
+        "celery/app/task.py"
+      ],
+      "forbidden_patterns": [
+        "from celery.task",
+        "from celery.decorators",
+        "@periodic_task"
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "fastapi-response-model-return-type",
+      "repo_url": "https://github.com/fastapi/fastapi.git",
+      "base_ref": "d0573f5713b0a8ce2dbb3d12d36a7fc34b89e2ff",
+      "issue_url": "https://github.com/fastapi/fastapi/issues/101",
+      "gold_pr_url": "https://github.com/fastapi/fastapi/pull/1436",
+      "memory_sessions": [
+        [
+          "FastAPI response model discussion: response_model parameter is verbose and redundant.",
+          "Old pattern: @app.get('/items', response_model=List[Item]) def get_items() -> Any.",
+          "Problem: the return type annotation and response_model often duplicate the same type.",
+          "Rejected approach: keep explicit response_model= on every route decorator."
+        ],
+        [
+          "Feature decision (issue #101): infer response_model from function return type annotations.",
+          "New pattern: @app.get('/items') def get_items() -> list[Item]: return items.",
+          "FastAPI 0.89.0+ automatically uses the return type as response_model if not explicitly set.",
+          "To opt out, use response_model=None to disable response filtering.",
+          "Implementation PR #1436 commit: d0573f5713b0a8ce2dbb3d12d36a7fc34b89e2ff."
+        ],
+        [
+          "FINAL MIGRATION: remove explicit response_model= where return type annotation matches.",
+          "Add proper return type annotations to all route handlers.",
+          "Target files: all route definition files.",
+          "Run tests: python -m pytest tests/",
+          "Keep response_model= only when it differs from the return type (e.g., response filtering)."
+        ]
+      ],
+      "prompt": "Migrate FastAPI routes to use return type annotations instead of explicit response_model parameters.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "fastapi/routing.py"
+      ],
+      "forbidden_patterns": [],
+      "needs_verification": true
+    },
+    {
+      "case_id": "werkzeug-deprecated-imports-removal",
+      "repo_url": "https://github.com/pallets/werkzeug.git",
+      "base_ref": "2139fa0b2cad96053f807384a6d04d8d09717802",
+      "issue_url": null,
+      "gold_pr_url": "https://github.com/pallets/werkzeug/pull/2967",
+      "memory_sessions": [
+        [
+          "Werkzeug upgrade: top-level convenience imports are removed in Werkzeug 3.1.",
+          "Old pattern: from werkzeug import Request, Response, escape, url_quote.",
+          "These top-level re-exports were deprecated and now raise ImportError.",
+          "Rejected approach: keep importing from werkzeug top-level with compatibility shims."
+        ],
+        [
+          "Migration decision: use explicit submodule imports instead.",
+          "New pattern: from werkzeug.wrappers import Request, Response.",
+          "Utils: from werkzeug.utils import escape. URLs: from werkzeug.urls import url_quote.",
+          "Removal PR #2967 commit: 2139fa0b2cad96053f807384a6d04d8d09717802.",
+          "The __init__.py was cleaned to remove all lazy-loading shims."
+        ],
+        [
+          "FINAL MIGRATION: replace all top-level werkzeug imports with submodule imports.",
+          "from werkzeug.wrappers import Request, Response.",
+          "from werkzeug.serving import run_simple.",
+          "from werkzeug.urls import url_quote, url_unquote.",
+          "Target files: any file with 'from werkzeug import' statements.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: from werkzeug import Request, from werkzeug import Response (top-level)."
+        ]
+      ],
+      "prompt": "Migrate Werkzeug imports from deprecated top-level to explicit submodule imports.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "src/werkzeug/__init__.py"
+      ],
+      "forbidden_patterns": [
+        "from werkzeug import Request",
+        "from werkzeug import Response"
+      ],
+      "needs_verification": true
+    },
+    {
+      "case_id": "requests-urllib3-v2-compatibility",
+      "repo_url": "https://github.com/psf/requests.git",
+      "base_ref": "main",
+      "issue_url": "https://github.com/psf/requests/issues/6432",
+      "gold_pr_url": null,
+      "memory_sessions": [
+        [
+          "Requests library: urllib3 2.0 compatibility issue.",
+          "Problem: requests 2.29.0 pinned urllib3<1.27, blocking urllib3 2.0 installation.",
+          "urllib3 2.0 removed support for OpenSSL<1.1.1, removed urllib3.contrib.pyopenssl.",
+          "urllib3 2.0 also removed the deprecated urllib3[secure] extra package."
+        ],
+        [
+          "Migration decision: update requests to support urllib3>=2.0.",
+          "Key change: remove the urllib3<1.27 upper bound in setup.cfg/pyproject.toml.",
+          "urllib3.contrib.pyopenssl usage must be removed — requests stopped using it in v2.26.0.",
+          "The urllib3.response.HTTPResponse API changed: .data access pattern differs.",
+          "Issue #6432 tracks the incompatibility."
+        ],
+        [
+          "FINAL MIGRATION: update dependency bounds to allow urllib3>=2.0.",
+          "Remove any imports from urllib3.contrib.pyopenssl.",
+          "Remove references to urllib3[secure] extra.",
+          "Target files: setup.cfg, pyproject.toml, requests/adapters.py.",
+          "Run tests: python -m pytest tests/",
+          "Forbidden: urllib3<1.27, urllib3.contrib.pyopenssl, urllib3[secure]."
+        ]
+      ],
+      "prompt": "Update the requests library to be compatible with urllib3 2.0 by removing deprecated dependencies.",
+      "test_command": "python -m pytest tests/",
+      "expected_files": [
+        "setup.cfg",
+        "src/requests/adapters.py"
+      ],
+      "forbidden_patterns": [
+        "urllib3<1.27",
+        "urllib3.contrib.pyopenssl",
+        "urllib3[secure]"
+      ],
+      "needs_verification": true
+    }
+  ]
+}

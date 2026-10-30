@@ -1,0 +1,212 @@
+Run folder: benchtestResults/capsule-only-gpt41mini-20260621-232256
+Started: Sun Jun 21 23:22:56 PDT 2026
+Agent model: gpt-4.1-mini
+[1/6] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+[1/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.2s elapsed=0.2s
+[2/6] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+[2/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=0.3s
+[3/6] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+[3/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=0.5s
+[4/6] repeat=1/1 task=cs_long_horizon_project_003 adapter=capsule
+[4/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=0.7s
+[5/6] repeat=1/1 task=cs_long_horizon_project_004 adapter=capsule
+[5/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=0.8s
+[6/6] repeat=1/1 task=cs_long_horizon_project_005 adapter=capsule
+[6/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=1.0s
+Report written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-long-horizon-retrieval.json
+LaTeX table written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-long-horizon-retrieval.tex
+CSV table written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-long-horizon-retrieval.csv
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                   n/a      n/a    1.000    1.000    0.000    1.000        0.1        0
+
+Best adapter: capsule (score=1.000)
+Set AYYGENT_AI_API_KEY or OPENAI_API_KEY to run --agent openai
+[1/40] repeat=1/1 task=cs_auth_evolution_000 adapter=capsule
+[1/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=0.1s
+[2/40] repeat=1/1 task=cs_auth_evolution_001 adapter=capsule
+[2/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.1s
+[3/40] repeat=1/1 task=cs_auth_evolution_002 adapter=capsule
+[3/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.1s
+[4/40] repeat=1/1 task=cs_auth_evolution_003 adapter=capsule
+[4/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.2s
+[5/40] repeat=1/1 task=cs_config_iteration_000 adapter=capsule
+[5/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.2s
+[6/40] repeat=1/1 task=cs_config_iteration_001 adapter=capsule
+[6/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.2s
+[7/40] repeat=1/1 task=cs_config_iteration_002 adapter=capsule
+[7/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.2s
+[8/40] repeat=1/1 task=cs_config_iteration_003 adapter=capsule
+[8/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.3s
+[9/40] repeat=1/1 task=cs_route_migration_000 adapter=capsule
+[9/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.3s
+[10/40] repeat=1/1 task=cs_route_migration_001 adapter=capsule
+[10/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.3s
+[11/40] repeat=1/1 task=cs_route_migration_002 adapter=capsule
+[11/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.3s
+[12/40] repeat=1/1 task=cs_route_migration_003 adapter=capsule
+[12/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.4s
+[13/40] repeat=1/1 task=cs_feature_flag_000 adapter=capsule
+[13/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.4s
+[14/40] repeat=1/1 task=cs_feature_flag_001 adapter=capsule
+[14/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.4s
+[15/40] repeat=1/1 task=cs_feature_flag_002 adapter=capsule
+[15/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.5s
+[16/40] repeat=1/1 task=cs_feature_flag_003 adapter=capsule
+[16/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.5s
+[17/40] repeat=1/1 task=cs_service_ownership_000 adapter=capsule
+[17/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.6s
+[18/40] repeat=1/1 task=cs_service_ownership_001 adapter=capsule
+[18/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.6s
+[19/40] repeat=1/1 task=cs_service_ownership_002 adapter=capsule
+[19/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.6s
+[20/40] repeat=1/1 task=cs_service_ownership_003 adapter=capsule
+[20/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.7s
+[21/40] repeat=1/1 task=cs_export_jobs_000 adapter=capsule
+[21/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.7s
+[22/40] repeat=1/1 task=cs_export_jobs_001 adapter=capsule
+[22/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.8s
+[23/40] repeat=1/1 task=cs_export_jobs_002 adapter=capsule
+[23/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.8s
+[24/40] repeat=1/1 task=cs_export_jobs_003 adapter=capsule
+[24/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.8s
+[25/40] repeat=1/1 task=cs_stale_docs_code_000 adapter=capsule
+[25/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.9s
+[26/40] repeat=1/1 task=cs_stale_docs_code_001 adapter=capsule
+[26/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.9s
+[27/40] repeat=1/1 task=cs_stale_docs_code_002 adapter=capsule
+[27/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.9s
+[28/40] repeat=1/1 task=cs_stale_docs_code_003 adapter=capsule
+[28/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.9s
+[29/40] repeat=1/1 task=cs_dependency_pin_000 adapter=capsule
+[29/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=0.9s
+[30/40] repeat=1/1 task=cs_dependency_pin_001 adapter=capsule
+[30/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.0s
+[31/40] repeat=1/1 task=cs_dependency_pin_002 adapter=capsule
+[31/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.0s
+[32/40] repeat=1/1 task=cs_dependency_pin_003 adapter=capsule
+[32/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.0s
+[33/40] repeat=1/1 task=cs_unknown_owner_000 adapter=capsule
+[33/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.0s
+[34/40] repeat=1/1 task=cs_unknown_owner_001 adapter=capsule
+[34/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.0s
+[35/40] repeat=1/1 task=cs_unknown_owner_002 adapter=capsule
+[35/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.1s
+[36/40] repeat=1/1 task=cs_unknown_owner_003 adapter=capsule
+[36/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=1.1s
+[37/40] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+[37/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=1.2s
+[38/40] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+[38/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=1.4s
+[39/40] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+[39/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=1.5s
+[40/40] repeat=1/1 task=cs_long_horizon_project_003 adapter=capsule
+[40/40] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=1.7s
+Report written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-all-retrieval.json
+LaTeX table written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-all-retrieval.tex
+CSV table written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-all-retrieval.csv
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                   n/a      n/a    1.000    1.000    0.000    1.000        0.0        0
+
+Best adapter: capsule (score=1.000)
+Set AYYGENT_AI_API_KEY or OPENAI_API_KEY to run --agent openai
+[1/32] repeat=1/1 task=chat_personal_preference_000 adapter=capsule
+[1/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[2/32] repeat=1/1 task=chat_personal_preference_001 adapter=capsule
+[2/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[3/32] repeat=1/1 task=chat_personal_preference_002 adapter=capsule
+[3/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[4/32] repeat=1/1 task=chat_personal_preference_003 adapter=capsule
+[4/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[5/32] repeat=1/1 task=chat_preference_update_000 adapter=capsule
+[5/32] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.1s
+[6/32] repeat=1/1 task=chat_preference_update_001 adapter=capsule
+[6/32] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.1s
+[7/32] repeat=1/1 task=chat_preference_update_002 adapter=capsule
+[7/32] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.1s
+[8/32] repeat=1/1 task=chat_preference_update_003 adapter=capsule
+[8/32] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.1s
+[9/32] repeat=1/1 task=chat_episodic_recall_000 adapter=capsule
+[9/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[10/32] repeat=1/1 task=chat_episodic_recall_001 adapter=capsule
+[10/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[11/32] repeat=1/1 task=chat_episodic_recall_002 adapter=capsule
+[11/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[12/32] repeat=1/1 task=chat_episodic_recall_003 adapter=capsule
+[12/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.1s
+[13/32] repeat=1/1 task=chat_conversation_continuity_000 adapter=capsule
+[13/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.2s
+[14/32] repeat=1/1 task=chat_conversation_continuity_001 adapter=capsule
+[14/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.2s
+[15/32] repeat=1/1 task=chat_conversation_continuity_002 adapter=capsule
+[15/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.2s
+[16/32] repeat=1/1 task=chat_conversation_continuity_003 adapter=capsule
+[16/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.2s
+[17/32] repeat=1/1 task=chat_privacy_boundary_000 adapter=capsule
+[17/32] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[18/32] repeat=1/1 task=chat_privacy_boundary_001 adapter=capsule
+[18/32] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[19/32] repeat=1/1 task=chat_privacy_boundary_002 adapter=capsule
+[19/32] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[20/32] repeat=1/1 task=chat_privacy_boundary_003 adapter=capsule
+[20/32] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[21/32] repeat=1/1 task=chat_deletion_forgetting_000 adapter=capsule
+[21/32] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=0.2s
+[22/32] repeat=1/1 task=chat_deletion_forgetting_001 adapter=capsule
+[22/32] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=0.2s
+[23/32] repeat=1/1 task=chat_deletion_forgetting_002 adapter=capsule
+[23/32] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=0.2s
+[24/32] repeat=1/1 task=chat_deletion_forgetting_003 adapter=capsule
+[24/32] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=0.2s
+[25/32] repeat=1/1 task=chat_temporal_preference_000 adapter=capsule
+[25/32] done recall=0.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[26/32] repeat=1/1 task=chat_temporal_preference_001 adapter=capsule
+[26/32] done recall=0.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[27/32] repeat=1/1 task=chat_temporal_preference_002 adapter=capsule
+[27/32] done recall=0.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.2s
+[28/32] repeat=1/1 task=chat_temporal_preference_003 adapter=capsule
+[28/32] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=0.3s
+[29/32] repeat=1/1 task=chat_general_mixed_000 adapter=capsule
+[29/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.3s
+[30/32] repeat=1/1 task=chat_general_mixed_001 adapter=capsule
+[30/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.3s
+[31/32] repeat=1/1 task=chat_general_mixed_002 adapter=capsule
+[31/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.3s
+[32/32] repeat=1/1 task=chat_general_mixed_003 adapter=capsule
+[32/32] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=0.3s
+Report written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-chat-memory.json
+CSV table written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-chat-memory.csv
+LaTeX table written to benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-chat-memory.tex
+
+=== Chat Memory Benchmark Results ===
+Adapter                 CtxOK   Recall    Stale  Privacy   Delete    Score  Savings
+--------------------------------------------------------------------------------------
+capsule                 0.500    0.844    0.250    0.125    0.125    0.500    0.278
+
+Best adapter: capsule (score=0.500)
+Wrote benchmarks-suite/benchtestResults/capsule-only-gpt41mini-20260621-232256/researchpaper/benchmark-scorecard.png
+Wrote benchmarks-suite/benchtestResults/capsule-only-gpt41mini-20260621-232256/researchpaper/benchmark-scorecard.md
+Traceback (most recent call last):
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 241, in <module>
+    main()
+    ~~~~^^
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 236, in main
+    render(report_dir, out, blended_price_per_million=args.blended_price_per_million)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 66, in render
+    full = _load(report_dir, "reports-all-agentic.json")
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 45, in _load
+    with (report_dir / name).open() as fh:
+         ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 776, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'benchmarks-suite/benchtestResults/capsule-only-gpt41mini-20260621-232256/reports-all-agentic.json'
+Wrote benchmarks-suite/benchtestResults/capsule-only-gpt41mini-20260621-232256/researchpaper/benchmark-methods-graphic.png
+Finished: Sun Jun 21 23:23:00 PDT 2026
+Results folder: benchtestResults/capsule-only-gpt41mini-20260621-232256

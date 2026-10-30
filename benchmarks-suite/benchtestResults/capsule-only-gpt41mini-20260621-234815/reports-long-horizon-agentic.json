@@ -1,0 +1,300 @@
+{
+  "summary": {
+    "adapters": [
+      "capsule"
+    ],
+    "adapter_scores": {
+      "capsule": {
+        "tasks": 4,
+        "success_rate": 1.0,
+        "memory_success_rate": 1.0,
+        "context_success_rate": 1.0,
+        "avg_recall": 1.0,
+        "avg_stale_penalty": 0.0,
+        "avg_cross_session_score": 1.0,
+        "avg_token_efficiency": 0.9595,
+        "avg_ingest_duration_seconds": 0.15,
+        "avg_total_tokens": 11848,
+        "avg_raw_context_tokens": 5413,
+        "avg_prepared_context_tokens": 218,
+        "avg_token_savings": 0.96,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "recall": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "stale_penalty": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "context_success_rate": {
+            "low": 1.0,
+            "high": 1.0
+          }
+        }
+      }
+    },
+    "best_adapter": "capsule",
+    "best_cross_session_score": 1.0,
+    "capsule_cross_session_score": 1.0,
+    "capsule_beats_mem0_real": null,
+    "mem0_baseline": null,
+    "capsule_token_savings": 0.96,
+    "mem0_token_savings": null,
+    "score_formula": "multiplicative",
+    "paired_deltas": {}
+  },
+  "results": [
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 6,
+      "retries": 5,
+      "input_tokens": 8333,
+      "output_tokens": 344,
+      "total_tokens": 8677,
+      "memory_payload_tokens": 218,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 218,
+      "token_savings": 0.957,
+      "duration_seconds": 9.301342459000125,
+      "ingest_duration_seconds": 0.19578479100005097,
+      "final_message": "batch: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=True command=py",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpoph9iktf/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'PAGINATION_MODE=offset; TIMEOUT_SECONDS=30', 'new': 'PAGINATION_MODE=cursor; TIMEOUT_SECONDS=30'}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27",
+        "ACTION 2: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n\nSTOP_LOOP: You have now read 'src/api/routes/export_jobs.py' 2 times in a row with no change. The content is exactly as shown above. Do NOT read it again. Choose one of: apply_patch, write_file, or run_tests.",
+        "ACTION 4: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\\n\"}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=48",
+        "ACTION 5: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\\n\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+        "ACTION 6: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': 'on_call_owner=@alice-chen', 'new': 'on_call_owner=@carol-wu'}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9568,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 218,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_001",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 7,
+      "retries": 6,
+      "input_tokens": 12152,
+      "output_tokens": 346,
+      "total_tokens": 12498,
+      "memory_payload_tokens": 218,
+      "raw_context_tokens": 5534,
+      "prepared_context_tokens": 218,
+      "token_savings": 0.961,
+      "duration_seconds": 10.496165957999892,
+      "ingest_duration_seconds": 0.13603874999989785,
+      "final_message": "batch: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nPATCHED src/ops/oncall.py old_bytes=27 new_bytes=27\n---\nTESTS ok=True command=python3 ",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpmf1k2z9e/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'PAGINATION_MODE=offset; TIMEOUT_SECONDS=30', 'new': 'PAGINATION_MODE=cursor; TIMEOUT_SECONDS=30'}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nF.\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpmf1k2z9e/repo_capsule/tests/test_export_jobs.py\", line 6, in test_export_jobs_cursor_timeout_0\n    self.assertEqual(PAGINATION_MODE, 'cursor')\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'offset' != 'cursor'\n- offset\n+ cursor\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n",
+        "ACTION 2: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/ops/oncall.py'}\nOBSERVATION: FILE src/ops/oncall.py:\nON_CALL_OWNER = '@carol-wu'\n",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n\nSTOP_LOOP: You have now read 'src/api/routes/export_jobs.py' 2 times in a row with no change. The content is exactly as shown above. Do NOT read it again. Choose one of: apply_patch, write_file, or run_tests.",
+        "ACTION 6: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47",
+        "ACTION 7: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@carol-wu'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nPATCHED src/ops/oncall.py old_bytes=27 new_bytes=27\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9606,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 218,
+        "raw_tokens": 5534
+      },
+      "sessions": 11,
+      "session_events": 140
+    },
+    {
+      "task_id": "cs_long_horizon_project_002",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 9,
+      "retries": 8,
+      "input_tokens": 16748,
+      "output_tokens": 469,
+      "total_tokens": 17217,
+      "memory_payload_tokens": 218,
+      "raw_context_tokens": 6022,
+      "prepared_context_tokens": 218,
+      "token_savings": 0.964,
+      "duration_seconds": 16.6520814160001,
+      "ingest_duration_seconds": 0.14138454199996886,
+      "final_message": "run_tests: TESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpxkdrzuvh/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'PAGINATION_MODE=offset', 'new': 'PAGINATION_MODE=cursor'}, {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'TIMEOUT_SECONDS=60', 'new': 'TIMEOUT_SECONDS=30'}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER='@alice-chen'\", 'new': \"ON_CALL_OWNER='@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpxkdrzuvh/repo_capsule/tests/test_export_jobs.py\", line 6, in test_export_jobs_cursor_timeout_0\n    self.assertEqual(PAGINATION_MODE, 'cursor')\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'offset' != 'cursor'\n- offset\n+ cursor\n\n\n======================================================================\nFAIL: test_current_owner ",
+        "ACTION 2: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n\nSTOP_LOOP: You have now read 'src/api/routes/export_jobs.py' 2 times in a row with no change. The content is exactly as shown above. Do NOT read it again. Choose one of: apply_patch, write_file, or run_tests.",
+        "ACTION 4: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"owner = '@alice-chen'\", 'new': \"owner = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n.F\n======================================================================\nFAIL: test_current_owner (tests.test_oncall.OncallTest.test_current_owner)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpxkdrzuvh/repo_capsule/tests/test_oncall.py\", line 6, in test_current_owner\n    self.assertEqual(ON_CALL_OWNER, '@carol-wu')\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '@alice-chen' != '@carol-wu'\n- @alice-chen\n+ @carol-wu\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n",
+        "ACTION 5: {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}\nOBSERVATION: PATCHED src/ops/oncall.py old_bytes=29 new_bytes=27",
+        "ACTION 6: {'action': 'write_file', 'path': 'src/ops/oncall.py', 'content': \"ON_CALL_OWNER = '@carol-wu'\\n\"}\nOBSERVATION: WROTE src/ops/oncall.py bytes=28",
+        "ACTION 7: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+        "ACTION 8: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+        "ACTION 9: {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}\nOBSERVATION: TESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9638,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 218,
+        "raw_tokens": 6022
+      },
+      "sessions": 11,
+      "session_events": 150
+    },
+    {
+      "task_id": "cs_long_horizon_project_003",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 8670,
+      "output_tokens": 329,
+      "total_tokens": 8999,
+      "memory_payload_tokens": 218,
+      "raw_context_tokens": 5046,
+      "prepared_context_tokens": 218,
+      "token_savings": 0.957,
+      "duration_seconds": 7.7996640830001525,
+      "ingest_duration_seconds": 0.12045041700002912,
+      "final_message": "batch: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=True command=py",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp5lyykrow/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'PAGINATION_MODE=offset', 'new': 'PAGINATION_MODE=cursor'}, {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'TIMEOUT_SECONDS=60', 'new': 'TIMEOUT_SECONDS=30'}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nF.\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp5lyykrow/repo_capsule/tests/test_export_jobs.py\", line 6, in test_export_jobs_cursor_timeout_0\n    self.assertEqual(PAGINATION_MODE, 'cursor')\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'offset' != 'cursor'\n- offset\n+ cursor\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (",
+        "ACTION 2: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n\nSTOP_LOOP: You have now read 'src/api/routes/export_jobs.py' 2 times in a row with no change. The content is exactly as shown above. Do NOT read it again. Choose one of: apply_patch, write_file, or run_tests.",
+        "ACTION 4: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\\n\"}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=48",
+        "ACTION 5: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': 'on_call_owner=@alice-chen', 'new': 'on_call_owner=@carol-wu'}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9568,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 218,
+        "raw_tokens": 5046
+      },
+      "sessions": 11,
+      "session_events": 130
+    }
+  ]
+}

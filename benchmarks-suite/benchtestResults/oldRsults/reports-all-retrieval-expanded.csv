@@ -1,0 +1,7 @@
+adapter,success_rate,context_success_rate,recall,stale_penalty,score,avg_total_tokens
+mem0_real_async,,0.0500,0.8250,0.7167,0.1583,0
+capsule,,1.0000,1.0000,0.0000,1.0000,0
+bm25_rag,,0.0000,0.9000,0.9083,0.0583,0
+langgraph_real,,0.0000,0.6750,0.8333,0.0611,0
+vector_rag,,0.0000,0.0000,0.0000,0.0000,0
+no_memory,,0.0000,0.0000,0.0000,0.0000,0

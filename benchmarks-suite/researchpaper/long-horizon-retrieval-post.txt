@@ -1,0 +1,4 @@
+Agentic memory benchmark:
+capsule vs mem0_real_async: +100.0 percentage points higher score, 0.0% less stale leakage.
+capsule recall=1.000, stale=0.000, token savings=91.6%.
+Workload: cross-session software-engineering memory with stale facts and long project history.

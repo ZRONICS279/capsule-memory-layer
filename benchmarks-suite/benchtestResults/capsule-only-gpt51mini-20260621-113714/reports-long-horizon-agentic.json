@@ -1,0 +1,269 @@
+{
+  "summary": {
+    "adapters": [
+      "capsule"
+    ],
+    "adapter_scores": {
+      "capsule": {
+        "tasks": 4,
+        "success_rate": 0.0,
+        "memory_success_rate": 0.0,
+        "context_success_rate": 1.0,
+        "avg_recall": 1.0,
+        "avg_stale_penalty": 0.0,
+        "avg_cross_session_score": 1.0,
+        "avg_token_efficiency": 0.9506,
+        "avg_ingest_duration_seconds": 0.16,
+        "avg_total_tokens": 0,
+        "avg_raw_context_tokens": 5413,
+        "avg_prepared_context_tokens": 266,
+        "avg_token_savings": 0.95,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "recall": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "stale_penalty": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "context_success_rate": {
+            "low": 1.0,
+            "high": 1.0
+          }
+        }
+      }
+    },
+    "best_adapter": "capsule",
+    "best_cross_session_score": 1.0,
+    "capsule_cross_session_score": 1.0,
+    "capsule_beats_mem0_real": null,
+    "mem0_baseline": null,
+    "capsule_token_savings": 0.95,
+    "mem0_token_savings": null,
+    "score_formula": "multiplicative",
+    "paired_deltas": {}
+  },
+  "results": [
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "forbidden_found": [
+        "'offset'",
+        "@alice-chen",
+        "TIMEOUT_SECONDS = 5"
+      ],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.947,
+      "duration_seconds": 0.22415483300574124,
+      "ingest_duration_seconds": 0.18019899999490008,
+      "final_message": "ERROR: HTTP Error 404: Not Found",
+      "action_trace": [],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9473,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_001",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "forbidden_found": [
+        "'offset'",
+        "@alice-chen",
+        "TIMEOUT_SECONDS = 5"
+      ],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 5534,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.952,
+      "duration_seconds": 0.3434176670270972,
+      "ingest_duration_seconds": 0.14714987500337884,
+      "final_message": "ERROR: HTTP Error 404: Not Found",
+      "action_trace": [],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9519,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 5534
+      },
+      "sessions": 11,
+      "session_events": 140
+    },
+    {
+      "task_id": "cs_long_horizon_project_002",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "forbidden_found": [
+        "'offset'",
+        "@alice-chen",
+        "TIMEOUT_SECONDS = 5"
+      ],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 6022,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.956,
+      "duration_seconds": 0.22659054200630635,
+      "ingest_duration_seconds": 0.1620401669642888,
+      "final_message": "ERROR: HTTP Error 404: Not Found",
+      "action_trace": [],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9558,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 6022
+      },
+      "sessions": 11,
+      "session_events": 150
+    },
+    {
+      "task_id": "cs_long_horizon_project_003",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "forbidden_found": [
+        "'offset'",
+        "@alice-chen",
+        "TIMEOUT_SECONDS = 5"
+      ],
+      "hallucinated_files": [],
+      "steps": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 5046,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.947,
+      "duration_seconds": 0.43045554199488834,
+      "ingest_duration_seconds": 0.1367766660405323,
+      "final_message": "ERROR: HTTP Error 404: Not Found",
+      "action_trace": [],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9473,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 5046
+      },
+      "sessions": 11,
+      "session_events": 130
+    }
+  ]
+}

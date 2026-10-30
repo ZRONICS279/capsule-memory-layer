@@ -1,0 +1,31 @@
+Agentic memory benchmark results
+
+Agentic memory benchmark:
+capsule vs mem0_real_async: +100.0 percentage points higher score, 0.0% less stale leakage.
+capsule recall=1.000, stale=0.000, token savings=91.6%.
+Workload: cross-session software-engineering memory with stale facts and long project history.
+
+Agentic memory benchmark:
+capsule vs mem0_real_async: +84.7 percentage points higher score (6.5x, +554% relative), 8.3% less stale leakage.
+capsule recall=1.000, stale=0.000, token savings=91.2%.
+Workload: cross-session software-engineering memory with stale facts and long project history.
+
+Agentic memory benchmark:
+capsule vs mem0_real_async: +88.3 percentage points higher score (8.6x, +757% relative), 70.0% less stale leakage.
+capsule recall=1.000, stale=0.000, token savings=47.4%.
+Workload: cross-session software-engineering memory with stale facts and long project history.
+
+Agentic memory benchmark:
+capsule vs mem0_real_async: +87.5 percentage points higher score (8.0x, +700% relative), 70.0% less stale leakage.
+capsule recall=1.000, stale=0.000, token savings=44.8%.
+Workload: cross-session software-engineering memory with stale facts and long project history.
+
+Agentic memory benchmark:
+capsule vs mem0_real_async: +82.5 percentage points higher score (5.7x, +471% relative), 70.0% less stale leakage.
+capsule recall=1.000, stale=0.000, token savings=47.4%.
+Workload: cross-session software-engineering memory with stale facts and long project history.
+
+Agentic memory benchmark:
+best adapter: bm25_rag score=0.500.
+capsule recall=0.771, stale=0.250, token savings=10.3%.
+Workload: cross-session software-engineering memory with stale facts and long project history.

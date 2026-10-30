@@ -1,0 +1,870 @@
+{
+  "summary": {
+    "provider": "heuristic",
+    "model": "heuristic",
+    "tokenizer_backend": "tiktoken:cl100k_base",
+    "cases": 22,
+    "avg_token_savings": 0.9769882740557286,
+    "baseline_accuracy": 1.0,
+    "capsule_accuracy": 1.0,
+    "accuracy_delta": 0.0,
+    "baseline_hallucination_count": 0,
+    "capsule_hallucination_count": 0,
+    "unknown_pass_rate": 1.0,
+    "passed": true
+  },
+  "results": [
+    {
+      "case_id": "correction_board_001",
+      "baseline": {
+        "answer": "ESP32-C3, MicroPython",
+        "accuracy": 1.0,
+        "expected_found": [
+          "ESP32-C3",
+          "MicroPython"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 15278,
+        "output_tokens": 7,
+        "total_tokens": 15285,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "ESP32-C3, MicroPython",
+        "accuracy": 1.0,
+        "expected_found": [
+          "ESP32-C3",
+          "MicroPython"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 339,
+        "output_tokens": 7,
+        "total_tokens": 346,
+        "usage_source": "local",
+        "memory_payload_tokens": 267
+      },
+      "token_savings": 0.9778112318366279,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "unknown_color_001",
+      "baseline": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 15254,
+        "output_tokens": 1,
+        "total_tokens": 15255,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 327,
+        "output_tokens": 1,
+        "total_tokens": 328,
+        "usage_source": "local",
+        "memory_payload_tokens": 256
+      },
+      "token_savings": 0.9785629998688868,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "pump_voltage_001",
+      "baseline": {
+        "answer": "12V",
+        "accuracy": 1.0,
+        "expected_found": [
+          "12V"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 11269,
+        "output_tokens": 2,
+        "total_tokens": 11271,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "12V",
+        "accuracy": 1.0,
+        "expected_found": [
+          "12V"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 314,
+        "output_tokens": 2,
+        "total_tokens": 316,
+        "usage_source": "local",
+        "memory_payload_tokens": 250
+      },
+      "token_savings": 0.9721359481764131,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "pump_current_001",
+      "baseline": {
+        "answer": "2A",
+        "accuracy": 1.0,
+        "expected_found": [
+          "2A"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 11969,
+        "output_tokens": 2,
+        "total_tokens": 11971,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "2A",
+        "accuracy": 1.0,
+        "expected_found": [
+          "2A"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 313,
+        "output_tokens": 2,
+        "total_tokens": 315,
+        "usage_source": "local",
+        "memory_payload_tokens": 247
+      },
+      "token_savings": 0.9738491102013535,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "avoid_language_001",
+      "baseline": {
+        "answer": "Arduino C++",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Arduino C++"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 9812,
+        "output_tokens": 3,
+        "total_tokens": 9815,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "Arduino C++",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Arduino C++"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 312,
+        "output_tokens": 3,
+        "total_tokens": 315,
+        "usage_source": "local",
+        "memory_payload_tokens": 284
+      },
+      "token_savings": 0.9682022013860578,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "pin_mapping_001",
+      "baseline": {
+        "answer": "BCM GPIO 18",
+        "accuracy": 1.0,
+        "expected_found": [
+          "BCM GPIO 18"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 8512,
+        "output_tokens": 4,
+        "total_tokens": 8516,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "BCM GPIO 18",
+        "accuracy": 1.0,
+        "expected_found": [
+          "BCM GPIO 18"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 344,
+        "output_tokens": 4,
+        "total_tokens": 348,
+        "usage_source": "local",
+        "memory_payload_tokens": 271
+      },
+      "token_savings": 0.9595864661654135,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "pico_board_correction_001",
+      "baseline": {
+        "answer": "Raspberry Pi Pico W",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Raspberry Pi Pico W"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 12062,
+        "output_tokens": 6,
+        "total_tokens": 12068,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "Raspberry Pi Pico W",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Raspberry Pi Pico W"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 328,
+        "output_tokens": 6,
+        "total_tokens": 334,
+        "usage_source": "local",
+        "memory_payload_tokens": 257
+      },
+      "token_savings": 0.9728071629912121,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "unknown_deployment_001",
+      "baseline": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 9146,
+        "output_tokens": 1,
+        "total_tokens": 9147,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 326,
+        "output_tokens": 1,
+        "total_tokens": 327,
+        "usage_source": "local",
+        "memory_payload_tokens": 255
+      },
+      "token_savings": 0.9643560026240979,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "selected_color_001",
+      "baseline": {
+        "answer": "blue anodized aluminum",
+        "accuracy": 1.0,
+        "expected_found": [
+          "blue anodized aluminum"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 9800,
+        "output_tokens": 5,
+        "total_tokens": 9805,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "blue anodized aluminum evidence",
+        "accuracy": 1.0,
+        "expected_found": [
+          "blue anodized aluminum"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 331,
+        "output_tokens": 6,
+        "total_tokens": 337,
+        "usage_source": "local",
+        "memory_payload_tokens": 264
+      },
+      "token_savings": 0.9662244897959184,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "multi_fact_greenhouse_001",
+      "baseline": {
+        "answer": "ESP32-C3, 12V, 2A",
+        "accuracy": 1.0,
+        "expected_found": [
+          "ESP32-C3",
+          "12V",
+          "2A"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 15368,
+        "output_tokens": 12,
+        "total_tokens": 15380,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "ESP32-C3, 12V, 2A",
+        "accuracy": 1.0,
+        "expected_found": [
+          "ESP32-C3",
+          "12V",
+          "2A"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 344,
+        "output_tokens": 12,
+        "total_tokens": 356,
+        "usage_source": "local",
+        "memory_payload_tokens": 263
+      },
+      "token_savings": 0.9776158250910983,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "language_python311_001",
+      "baseline": {
+        "answer": "Python 3.11",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Python 3.11"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 11108,
+        "output_tokens": 5,
+        "total_tokens": 11113,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "Python 3.11",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Python 3.11"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 356,
+        "output_tokens": 5,
+        "total_tokens": 361,
+        "usage_source": "local",
+        "memory_payload_tokens": 282
+      },
+      "token_savings": 0.9679510262873605,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "unknown_pin_001",
+      "baseline": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 8509,
+        "output_tokens": 1,
+        "total_tokens": 8510,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 331,
+        "output_tokens": 1,
+        "total_tokens": 332,
+        "usage_source": "local",
+        "memory_payload_tokens": 261
+      },
+      "token_savings": 0.9611000117522623,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "avoid_runtime_001",
+      "baseline": {
+        "answer": "Node.js",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Node"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 7857,
+        "output_tokens": 2,
+        "total_tokens": 7859,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "Node",
+        "accuracy": 1.0,
+        "expected_found": [
+          "Node"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 414,
+        "output_tokens": 1,
+        "total_tokens": 415,
+        "usage_source": "local",
+        "memory_payload_tokens": 341
+      },
+      "token_savings": 0.9473081328751431,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "voltage_correction_24v_001",
+      "baseline": {
+        "answer": "24V",
+        "accuracy": 1.0,
+        "expected_found": [
+          "24V"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 10573,
+        "output_tokens": 2,
+        "total_tokens": 10575,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "24V",
+        "accuracy": 1.0,
+        "expected_found": [
+          "24V"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 339,
+        "output_tokens": 2,
+        "total_tokens": 341,
+        "usage_source": "local",
+        "memory_payload_tokens": 270
+      },
+      "token_savings": 0.9679371985245436,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "release_contract_long_001",
+      "baseline": {
+        "answer": "gpt-4.1-mini. package, semantic-capsule-memory. path, docs/memory-contract.md, /v1/capsules/prepare",
+        "accuracy": 1.0,
+        "expected_found": [
+          "gpt-4.1-mini",
+          "semantic-capsule-memory",
+          "docs/memory-contract.md",
+          "/v1/capsules/prepare"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 52314,
+        "output_tokens": 32,
+        "total_tokens": 52346,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "gpt-4.1-mini, semantic-capsule-memory, docs/memory-contract.md, /v1/capsules/prepare",
+        "accuracy": 1.0,
+        "expected_found": [
+          "gpt-4.1-mini",
+          "semantic-capsule-memory",
+          "docs/memory-contract.md",
+          "/v1/capsules/prepare"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 421,
+        "output_tokens": 28,
+        "total_tokens": 449,
+        "usage_source": "local",
+        "memory_payload_tokens": 334
+      },
+      "token_savings": 0.99195244102917,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "privacy_retention_long_001",
+      "baseline": {
+        "answer": "policies/privacy-retention.md, us-east-2, v3, 45 days",
+        "accuracy": 1.0,
+        "expected_found": [
+          "45 days",
+          "us-east-2",
+          "v3",
+          "policies/privacy-retention.md"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 39187,
+        "output_tokens": 19,
+        "total_tokens": 39206,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "policies/privacy-retention.md, us-east-2, v3, 45 days",
+        "accuracy": 1.0,
+        "expected_found": [
+          "45 days",
+          "us-east-2",
+          "v3",
+          "policies/privacy-retention.md"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 378,
+        "output_tokens": 19,
+        "total_tokens": 397,
+        "usage_source": "local",
+        "memory_payload_tokens": 295
+      },
+      "token_savings": 0.9903539439099701,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "unknown_secret_store_long_001",
+      "baseline": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 57651,
+        "output_tokens": 1,
+        "total_tokens": 57652,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 194,
+        "output_tokens": 1,
+        "total_tokens": 195,
+        "usage_source": "local",
+        "memory_payload_tokens": 126
+      },
+      "token_savings": 0.9966349239388735,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "api_timeout_correction_long_001",
+      "baseline": {
+        "answer": "/api/v2/memory/compile, 900ms",
+        "accuracy": 1.0,
+        "expected_found": [
+          "/api/v2/memory/compile",
+          "900ms"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 43833,
+        "output_tokens": 10,
+        "total_tokens": 43843,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "/api/v2/memory/compile, 900ms",
+        "accuracy": 1.0,
+        "expected_found": [
+          "/api/v2/memory/compile",
+          "900ms"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 300,
+        "output_tokens": 10,
+        "total_tokens": 310,
+        "usage_source": "local",
+        "memory_payload_tokens": 226
+      },
+      "token_savings": 0.9931558414892889,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "checkpoint_state_long_001",
+      "baseline": {
+        "answer": "sqlite-backed-spine. path, state/checkpoints.jsonl, 12 turns",
+        "accuracy": 1.0,
+        "expected_found": [
+          "12 turns",
+          "sqlite-backed-spine",
+          "state/checkpoints.jsonl"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 38032,
+        "output_tokens": 16,
+        "total_tokens": 38048,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "sqlite-backed-spine, state/checkpoints.jsonl, 12 turns",
+        "accuracy": 1.0,
+        "expected_found": [
+          "12 turns",
+          "sqlite-backed-spine",
+          "state/checkpoints.jsonl"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 355,
+        "output_tokens": 14,
+        "total_tokens": 369,
+        "usage_source": "local",
+        "memory_payload_tokens": 274
+      },
+      "token_savings": 0.9906657551535549,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "embedding_migration_long_001",
+      "baseline": {
+        "answer": "text-embedding-3-large. package, memory-ledger-v2. schema_version, migrations/2026_04_embedding.sql, 2026-04",
+        "accuracy": 1.0,
+        "expected_found": [
+          "text-embedding-3-large",
+          "memory-ledger-v2",
+          "2026-04",
+          "migrations/2026_04_embedding.sql"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 37905,
+        "output_tokens": 32,
+        "total_tokens": 37937,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "text-embedding-3-large, memory-ledger-v2, migrations/2026_04_embedding.sql, 2026-04",
+        "accuracy": 1.0,
+        "expected_found": [
+          "text-embedding-3-large",
+          "memory-ledger-v2",
+          "2026-04",
+          "migrations/2026_04_embedding.sql"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 397,
+        "output_tokens": 27,
+        "total_tokens": 424,
+        "usage_source": "local",
+        "memory_payload_tokens": 313
+      },
+      "token_savings": 0.9895264476981929,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "regional_failover_long_001",
+      "baseline": {
+        "answer": "runbooks/failover-promote.md, /internal/failover/promote, us-east-2, 30s",
+        "accuracy": 1.0,
+        "expected_found": [
+          "us-east-2",
+          "/internal/failover/promote",
+          "30s",
+          "runbooks/failover-promote.md"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 39195,
+        "output_tokens": 25,
+        "total_tokens": 39220,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "runbooks/failover-promote.md, /internal/failover/promote, us-east-2, 30s",
+        "accuracy": 1.0,
+        "expected_found": [
+          "us-east-2",
+          "/internal/failover/promote",
+          "30s",
+          "runbooks/failover-promote.md"
+        ],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 394,
+        "output_tokens": 25,
+        "total_tokens": 419,
+        "usage_source": "local",
+        "memory_payload_tokens": 308
+      },
+      "token_savings": 0.989947697410384,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    },
+    {
+      "case_id": "unknown_observability_owner_long_001",
+      "baseline": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 52754,
+        "output_tokens": 1,
+        "total_tokens": 52755,
+        "usage_source": "local"
+      },
+      "capsule": {
+        "answer": "UNKNOWN",
+        "accuracy": 1.0,
+        "expected_found": [],
+        "expected_missing": [],
+        "forbidden_found": [],
+        "hallucination_count": 0,
+        "unknown_passed": true,
+        "input_tokens": 208,
+        "output_tokens": 1,
+        "total_tokens": 209,
+        "usage_source": "local",
+        "memory_payload_tokens": 139
+      },
+      "token_savings": 0.996057171020207,
+      "accuracy_delta": 0.0,
+      "hallucination_delta": 0,
+      "unknown_pass_delta": 0
+    }
+  ]
+}

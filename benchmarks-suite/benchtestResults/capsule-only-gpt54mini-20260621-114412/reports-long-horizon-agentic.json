@@ -1,0 +1,307 @@
+{
+  "summary": {
+    "adapters": [
+      "capsule"
+    ],
+    "adapter_scores": {
+      "capsule": {
+        "tasks": 4,
+        "success_rate": 0.75,
+        "memory_success_rate": 0.75,
+        "context_success_rate": 1.0,
+        "avg_recall": 1.0,
+        "avg_stale_penalty": 0.0,
+        "avg_cross_session_score": 1.0,
+        "avg_token_efficiency": 0.9506,
+        "avg_ingest_duration_seconds": 0.16,
+        "avg_total_tokens": 11776,
+        "avg_raw_context_tokens": 5413,
+        "avg_prepared_context_tokens": 266,
+        "avg_token_savings": 0.95,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "recall": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "stale_penalty": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "context_success_rate": {
+            "low": 1.0,
+            "high": 1.0
+          }
+        }
+      }
+    },
+    "best_adapter": "capsule",
+    "best_cross_session_score": 1.0,
+    "capsule_cross_session_score": 1.0,
+    "capsule_beats_mem0_real": null,
+    "mem0_baseline": null,
+    "capsule_token_savings": 0.95,
+    "mem0_token_savings": null,
+    "score_formula": "multiplicative",
+    "paired_deltas": {}
+  },
+  "results": [
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 2475,
+      "output_tokens": 164,
+      "total_tokens": 2639,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.947,
+      "duration_seconds": 2.5735419589909725,
+      "ingest_duration_seconds": 0.18420449999393895,
+      "final_message": "batch: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=48\n---\nPATCHED src/ops/oncall.py old_bytes=30 new_bytes=28\n---\nTESTS ok=True command=python3 -m uni",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp4a1urnqq/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'search_repo', 'pattern': 'PAGINATION_MODE|TIMEOUT_SECONDS|ON_CALL_OWNER'}\nOBSERVATION: SEARCH_RESULTS:\nsrc/api/routes/export_jobs.py:1: PAGINATION_MODE = 'offset'\nsrc/api/routes/export_jobs.py:2: TIMEOUT_SECONDS = 5\nsrc/ops/oncall.py:1: ON_CALL_OWNER = '@alice-chen'\ntests/test_export_jobs.py:2: from src.api.routes.export_jobs import PAGINATION_MODE, TIMEOUT_SECONDS\ntests/test_export_jobs.py:6:         self.assertEqual(PAGINATION_MODE, 'cursor')\ntests/test_export_jobs.py:7:         self.assertGreaterEqual(TIMEOUT_SECONDS, 30)\ntests/test_oncall.py:2: from src.ops.oncall import ON_CALL_OWNER\ntests/test_oncall.py:6:         self.assertEqual(ON_CALL_OWNER, '@carol-wu')",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\\n\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\\n\", 'new': \"ON_CALL_OWNER = '@carol-wu'\\n\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=48\n---\nPATCHED src/ops/oncall.py old_bytes=30 new_bytes=28\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9473,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_001",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 13892,
+      "output_tokens": 802,
+      "total_tokens": 14694,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 5534,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.952,
+      "duration_seconds": 14.917838374967687,
+      "ingest_duration_seconds": 0.1554597499780357,
+      "final_message": "invalid: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp_aq51fw5/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 5\\n\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\\n\", 'new': \"ON_CALL_OWNER = '@carol-wu'\\n\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=30 new_bytes=28\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nF.\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp_aq51fw5/repo_capsule/tests/test_export_jobs.py\", line 7, in test_export_jobs_cursor_timeout_0\n    self.assertGreaterEqual(TIMEOUT_SECONDS, 30)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 5 not greater than or equal to 30\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 4: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}",
+        "ACTION 5: {'action': 'invalid', 'raw': '{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}\\n{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}\\n{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}'}",
+        "ACTION 6: {'action': 'invalid', 'raw': '{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}\\n{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}\\n{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 5\\\\n\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\\\\nTIMEOUT_SECONDS = 30\\\\n\"}'}",
+        "ACTION 7: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\\n\"}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=48",
+        "ACTION 8: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}'}",
+        "ACTION 9: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}'}",
+        "ACTION 10: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"}]}'}"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9519,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 5534
+      },
+      "sessions": 11,
+      "session_events": 140
+    },
+    {
+      "task_id": "cs_long_horizon_project_002",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 14609,
+      "output_tokens": 712,
+      "total_tokens": 15321,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 6022,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.956,
+      "duration_seconds": 12.717972957994789,
+      "ingest_duration_seconds": 0.15516483300598338,
+      "final_message": "invalid: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp3oj0pwje/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}'}",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 3: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'offset\\'\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\"},{\"action\":\"apply_patch\",\"path\":\"src/ops/oncall.py\",\"old\":\"ON_CALL_OWNER = \\'@alice-chen\\'\",\"new\":\"ON_CALL_OWNER = \\'@carol-wu\\'\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'offset\\'\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\"},{\"action\":\"apply_patch\",\"path\":\"src/ops/oncall.py\",\"old\":\"ON_CALL_OWNER = \\'@alice-chen\\'\",\"new\":\"ON_CALL_OWNER = \\'@carol-wu\\'\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'offset\\'\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\"},{\"action\":\"apply_patch\",\"path\":\"src/ops/oncall.py\",\"old\":\"ON_CALL_OWNER = \\'@alice-chen\\'\",\"new\":\"ON_CALL_OWNER = \\'@carol-wu\\'\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"PAGINATION_MODE = \\'offset\\'\",\"new\":\"PAGINATION_MODE = \\'cursor\\'\"},{\"action\":\"apply_patch\",\"path\":\"src/ops/oncall.py\",\"old\":\"ON_CALL_OWNER = \\'@alice-chen\\'\",\"new\":\"ON_CALL_OWNER = \\'@carol-wu\\'\"}]}'}",
+        "ACTION 4: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=26 new_bytes=26\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nF.\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp3oj0pwje/repo_capsule/tests/test_export_jobs.py\", line 7, in test_export_jobs_cursor_timeout_0\n    self.assertGreaterEqual(TIMEOUT_SECONDS, 30)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 5 not greater than or equal to 30\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n",
+        "ACTION 5: {'action': 'invalid', 'raw': '{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"TIMEOUT_SECONDS = 5\",\"new\":\"TIMEOUT_SECONDS = 30\"}\\n{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"TIMEOUT_SECONDS = 5\",\"new\":\"TIMEOUT_SECONDS = 30\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"TIMEOUT_SECONDS = 5\",\"new\":\"TIMEOUT_SECONDS = 30\"}\\n{\"action\":\"apply_patch\",\"path\":\"src/api/routes/export_jobs.py\",\"old\":\"TIMEOUT_SECONDS = 5\",\"new\":\"TIMEOUT_SECONDS = 30\"}'}",
+        "ACTION 6: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@carol-wu'\n",
+        "ACTION 7: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'TIMEOUT_SECONDS = 5', 'new': 'TIMEOUT_SECONDS = 30'}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=19 new_bytes=20",
+        "ACTION 8: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}",
+        "ACTION 9: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': 'TIMEOUT_SECONDS = 5', 'new': 'TIMEOUT_SECONDS = 30'}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+        "ACTION 10: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": true,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9558,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 6022
+      },
+      "sessions": 11,
+      "session_events": 150
+    },
+    {
+      "task_id": "cs_long_horizon_project_003",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [
+        "TIMEOUT_SECONDS = 5"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 13621,
+      "output_tokens": 828,
+      "total_tokens": 14449,
+      "memory_payload_tokens": 266,
+      "raw_context_tokens": 5046,
+      "prepared_context_tokens": 266,
+      "token_savings": 0.947,
+      "duration_seconds": 14.606167665973771,
+      "ingest_duration_seconds": 0.1339200419606641,
+      "final_message": "read_file: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp27v_zwwi/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\\n\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 5\\n\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\\n\", 'new': \"ON_CALL_OWNER = '@carol-wu'\\n\"}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=47 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=30 new_bytes=28",
+        "ACTION 3: {'action': 'read_file', 'path': 'tests/test_oncall.py'}\nOBSERVATION: FILE tests/test_oncall.py:\nimport unittest\nfrom src.ops.oncall import ON_CALL_OWNER\n\nclass OncallTest(unittest.TestCase):\n    def test_current_owner(self):\n        self.assertEqual(ON_CALL_OWNER, '@carol-wu')\n",
+        "ACTION 4: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"}]}'}",
+        "ACTION 5: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}'}",
+        "ACTION 6: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py\n---\nERROR apply_patch old text not found in src/ops/oncall.py\n---\nTESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nF.\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp27v_zwwi/repo_capsule/tests/test_export_jobs.py\", line 7, in test_export_jobs_cursor_timeout_0\n    self.assertGreaterEqual(TIMEOUT_SECONDS, 30)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 5 not greater than or equal to 30\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n",
+        "ACTION 7: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}\\n{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"}'}",
+        "ACTION 8: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}'}",
+        "ACTION 9: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}'}\nOBSERVATION: ERROR invalid action: {'action': 'invalid', 'raw': '{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}\\n{\"action\":\"batch\",\"actions\":[{\"action\":\"read_file\",\"path\":\"src/api/routes/export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"src/ops/oncall.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_export_jobs.py\"},{\"action\":\"read_file\",\"path\":\"tests/test_oncall.py\"}]}'}",
+        "ACTION 10: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": true,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 0.0,
+        "score": 1.0,
+        "subtractive_score": 1.0,
+        "multiplicative_score": 1.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9473,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 0,
+        "stale_total": 6,
+        "payload_tokens": 266,
+        "raw_tokens": 5046
+      },
+      "sessions": 11,
+      "session_events": 130
+    }
+  ]
+}

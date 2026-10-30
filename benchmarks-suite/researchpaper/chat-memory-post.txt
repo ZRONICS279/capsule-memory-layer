@@ -1,0 +1,4 @@
+Agentic memory benchmark:
+best adapter: bm25_rag score=0.500.
+capsule recall=0.771, stale=0.250, token savings=10.3%.
+Workload: cross-session software-engineering memory with stale facts and long project history.

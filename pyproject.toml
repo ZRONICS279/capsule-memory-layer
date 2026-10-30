@@ -1,0 +1,24 @@
+[project]
+name = "semantic-capsule-memory"
+version = "0.1.0"
+description = "Hybrid capsule memory prototype with dense sketches, exact symbolic spine, and versioned updates."
+requires-python = ">=3.11"
+authors = [{ name = "Codex" }]
+license = { text = "MIT" }
+dependencies = ["tiktoken>=0.7"]
+
+[project.optional-dependencies]
+# tiktoken is the default backend, but the package stays importable and
+# functional (heuristic token counts) even if it cannot be installed.
+tokenizer = ["tiktoken>=0.7"]
+
+[project.scripts]
+scm = "semantic_capsule_memory.cli:main"
+scm-eval = "training.run_eval:main"
+scm-mcp = "semantic_capsule_memory.mcp_server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["semantic_capsule_memory*", "training*", "evals*"]

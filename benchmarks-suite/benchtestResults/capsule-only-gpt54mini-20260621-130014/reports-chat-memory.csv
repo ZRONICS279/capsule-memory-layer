@@ -1,0 +1,2 @@
+adapter,ctxok,recall,stale,privacy,deletion,score,raw_tokens,prepared_tokens,token_savings,ingest_seconds
+capsule,0.5000,0.8438,0.2500,0.1250,0.1250,0.5000,164,135,0.2540,0.01

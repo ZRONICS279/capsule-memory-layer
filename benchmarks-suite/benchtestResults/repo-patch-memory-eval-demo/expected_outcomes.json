@@ -1,0 +1,34 @@
+{
+  "test_command": "python3 -m unittest discover -s tests && python3 tools/check_contract.py",
+  "expected_files": [
+    "requirements.txt",
+    "src/orbitops/auth.py",
+    "src/orbitops/routes/admin_reports.py",
+    "src/orbitops/export_jobs.py",
+    "src/orbitops/invoices.py",
+    "src/orbitops/flags.py",
+    "src/orbitops/oncall.py"
+  ],
+  "required_values": [
+    "RequireSessionToken",
+    "PAGINATION_MODE = 'cursor'",
+    "TIMEOUT_SECONDS = 30",
+    "normalize_active_invoice",
+    "CHECKOUT_V2 = 'enabled'",
+    "PAYMENT_PLATFORM_OWNER = '@carol-wu'",
+    "pydantic==2.8.2"
+  ],
+  "forbidden_patterns": [
+    "LegacyApiKeyAuth",
+    "PAGINATION_MODE = 'offset'",
+    "TIMEOUT_SECONDS = 5",
+    "normalize_legacy_invoice",
+    "CHECKOUT_V2 = 'disabled'",
+    "CHECKOUT_V2 = 'canary'",
+    "@alice-chen",
+    "@bob-martinez",
+    "@platform-team",
+    "pydantic==1.10.0",
+    "pydantic==2.6.4"
+  ]
+}

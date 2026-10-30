@@ -1,0 +1,3 @@
+EXPORT_SCHEMA_VERSION = 'v3'
+EXPORT_FORMAT = 'json'
+RECORD_KEY = 'items'

@@ -1,0 +1,117 @@
+{
+  "summary": {
+    "agent": "openai",
+    "tokenizer_backend": "heuristic",
+    "tasks": 1,
+    "runs": 2,
+    "adapters": [
+      "zep_real",
+      "capsule"
+    ],
+    "adapter_scores": {
+      "zep_real": {
+        "tasks": 1,
+        "success_rate": 0.0,
+        "tests_pass_rate": 0.0,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.5443037974683544,
+        "avg_raw_context_tokens": 79.0,
+        "avg_prepared_context_tokens": 36.0,
+        "avg_memory_payload_tokens": 0.0,
+        "avg_total_tokens": 1211.0,
+        "avg_steps": 2.0,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 1
+      },
+      "capsule": {
+        "tasks": 1,
+        "success_rate": 0.0,
+        "tests_pass_rate": 0.0,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.0,
+        "avg_raw_context_tokens": 79.0,
+        "avg_prepared_context_tokens": 270.0,
+        "avg_memory_payload_tokens": 252.0,
+        "avg_total_tokens": 2109.0,
+        "avg_steps": 2.0,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 0
+      }
+    },
+    "capsule_success_rate": 0.0,
+    "best_success_rate": 0.0,
+    "capsule_token_savings": 0.0,
+    "passed": true
+  },
+  "results": [
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "zep_real",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "forbidden_found": [
+        "LegacyApiKeyAuth"
+      ],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 1186,
+      "output_tokens": 25,
+      "total_tokens": 1211,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 79,
+      "prepared_context_tokens": 36,
+      "token_savings": 0.5443037974683544,
+      "duration_seconds": 3.0129655420023482,
+      "final_message": "search_repo: SEARCH_RESULTS:\nsrc/api/routes/admin_reports.py:3: AUTH_MIDDLEWARE = LegacyApiKeyAuth\ntests/test_admin_reports.py:2: from src.api.routes.admin_reports import AU",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_admin_reports\nF\n======================================================================\nFAIL: test_session_token (tests.test_admin_reports.AdminReportsTest.test_session_token)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpcz3b6ltg/repo/tests/test_admin_reports.py\", line 6, in test_session_token\n    self.assert",
+        "ACTION 1: {'action': 'search_repo', 'pattern': 'RequireSessionToken'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_admin_reports.py:6:         self.assertEqual(AUTH_MIDDLEWARE.__name__, 'RequireSessionToken')",
+        "ACTION 2: {'action': 'search_repo', 'pattern': 'AUTH_MIDDLEWARE'}\nOBSERVATION: SEARCH_RESULTS:\nsrc/api/routes/admin_reports.py:3: AUTH_MIDDLEWARE = LegacyApiKeyAuth\ntests/test_admin_reports.py:2: from src.api.routes.admin_reports import AUTH_MIDDLEWARE\ntests/test_admin_reports.py:6:         self.assertEqual(AUTH_MIDDLEWARE.__name__, 'RequireSessionToken')"
+      ]
+    },
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "missing_expected_files": [
+        "src/auth/middleware.py"
+      ],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 2012,
+      "output_tokens": 97,
+      "total_tokens": 2109,
+      "memory_payload_tokens": 252,
+      "raw_context_tokens": 79,
+      "prepared_context_tokens": 270,
+      "token_savings": 0.0,
+      "duration_seconds": 2.1500892089970876,
+      "final_message": "apply_patch: ERROR apply_patch old text not found in src/api/routes/admin_reports.py",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_admin_reports\nF\n======================================================================\nFAIL: test_session_token (tests.test_admin_reports.AdminReportsTest.test_session_token)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp60giwpyg/repo/tests/test_admin_reports.py\", line 6, in test_session_token\n    self.assert",
+        "ACTION 1: {'action': 'apply_patch', 'path': 'src/api/routes/admin_reports.py', 'old': 'AUTH_MIDDLEWARE = LegacyApiKeyAuth', 'new': 'AUTH_MIDDLEWARE = RequireSessionToken'}\nOBSERVATION: PATCHED src/api/routes/admin_reports.py old_bytes=34 new_bytes=37",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/api/routes/admin_reports.py', 'old': 'from src.auth.middleware import LegacyApiKeyAuth\\nAUTH_MIDDLEWARE = LegacyApiKeyAuth\\n', 'new': 'from src.auth.middleware import RequireSessionToken\\nAUTH_MIDDLEWARE = RequireSessionToken\\n'}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/admin_reports.py"
+      ]
+    }
+  ]
+}

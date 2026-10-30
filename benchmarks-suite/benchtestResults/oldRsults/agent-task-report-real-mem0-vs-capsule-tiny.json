@@ -1,0 +1,556 @@
+{
+  "summary": {
+    "agent": "openai",
+    "tokenizer_backend": "tiktoken:cl100k_base",
+    "tasks": 7,
+    "runs": 14,
+    "adapters": [
+      "mem0_real",
+      "capsule"
+    ],
+    "adapter_scores": {
+      "mem0_real": {
+        "tasks": 7,
+        "success_rate": 0.5714285714285714,
+        "tests_pass_rate": 0.5714285714285714,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.009740259740259747,
+        "avg_raw_context_tokens": 45.714285714285715,
+        "avg_prepared_context_tokens": 67.42857142857143,
+        "avg_memory_payload_tokens": 67.42857142857143,
+        "avg_total_tokens": 3693.714285714286,
+        "avg_steps": 4.428571428571429,
+        "avg_ingest_duration_seconds": 6.626512118714994,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 1
+      },
+      "capsule": {
+        "tasks": 7,
+        "success_rate": 0.5714285714285714,
+        "tests_pass_rate": 0.5714285714285714,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.0,
+        "avg_raw_context_tokens": 45.714285714285715,
+        "avg_prepared_context_tokens": 230.85714285714286,
+        "avg_memory_payload_tokens": 199.42857142857142,
+        "avg_total_tokens": 4492.142857142857,
+        "avg_steps": 4.428571428571429,
+        "avg_ingest_duration_seconds": 0.002051012004293235,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 2
+      }
+    },
+    "capsule_success_rate": 0.5714285714285714,
+    "best_success_rate": 0.5714285714285714,
+    "capsule_token_savings": 0.0,
+    "passed": true
+  },
+  "results": [
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "mem0_real",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "missing_expected_files": [
+        "src/auth/middleware.py"
+      ],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4198,
+      "output_tokens": 165,
+      "total_tokens": 4363,
+      "memory_payload_tokens": 98,
+      "raw_context_tokens": 63,
+      "prepared_context_tokens": 98,
+      "token_savings": 0.0,
+      "duration_seconds": 24.956695708009647,
+      "ingest_duration_seconds": 6.999623707990395,
+      "final_message": "read_file: FILE src/api/routes/admin_reports.py:\nfrom src.auth.middleware import RequireSessionToken\n\nAUTH_MIDDLEWARE = RequireSessionToken\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_admin_reports\nF\n======================================================================\nFAIL: test_session_token (tests.test_admin_reports.AdminReportsTest.test_session_token)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpkt_4lzm_/repo/tests/test_admin_reports.py\", line 6, in test_session_token\n    self.assert",
+        "ACTION 1: {'action': 'read_file', 'path': 'src/api/routes/admin_reports.py'}\nOBSERVATION: FILE src/api/routes/admin_reports.py:\nfrom src.auth.middleware import LegacyApiKeyAuth\n\nAUTH_MIDDLEWARE = LegacyApiKeyAuth\n",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/api/routes/admin_reports.py', 'old': 'from src.auth.middleware import LegacyApiKeyAuth\\n\\nAUTH_MIDDLEWARE = LegacyApiKeyAuth', 'new': 'from src.auth.middleware import RequireSessionToken\\n\\nAUTH_MIDDLEWARE = RequireSessionToken'}\nOBSERVATION: PATCHED src/api/routes/admin_reports.py old_bytes=84 new_bytes=90",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/api/routes/admin_reports.py', 'old': 'from src.auth.middleware import LegacyApiKeyAuth\\n\\nAUTH_MIDDLEWARE = LegacyApiKeyAuth\\n', 'new': 'from src.auth.middleware import RequireSessionToken\\n\\nAUTH_MIDDLEWARE = RequireSessionToken\\n'}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/admin_reports.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/api/routes/admin_reports.py'}\nOBSERVATION: FILE src/api/routes/admin_reports.py:\nfrom src.auth.middleware import RequireSessionToken\n\nAUTH_MIDDLEWARE = RequireSessionToken\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/api/routes/admin_reports.py'}\nOBSERVATION: FILE src/api/routes/admin_reports.py:\nfrom src.auth.middleware import RequireSessionToken\n\nAUTH_MIDDLEWARE = RequireSessionToken\n"
+      ]
+    },
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/auth/middleware.py"
+      ],
+      "expected_files_touched": [
+        "src/auth/middleware.py"
+      ],
+      "missing_expected_files": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "forbidden_found": [
+        "LegacyApiKeyAuth"
+      ],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4994,
+      "output_tokens": 120,
+      "total_tokens": 5114,
+      "memory_payload_tokens": 215,
+      "raw_context_tokens": 63,
+      "prepared_context_tokens": 242,
+      "token_savings": 0.0,
+      "duration_seconds": 7.051778875000309,
+      "ingest_duration_seconds": 0.0027085840119980276,
+      "final_message": "read_file: FILE src/auth/middleware.py:\nclass RequireSessionToken:\n    pass\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_admin_reports\nF\n======================================================================\nFAIL: test_session_token (tests.test_admin_reports.AdminReportsTest.test_session_token)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp_zpn8cbu/repo/tests/test_admin_reports.py\", line 6, in test_session_token\n    self.assert",
+        "ACTION 1: {'action': 'read_file', 'path': 'src/auth/middleware.py'}\nOBSERVATION: FILE src/auth/middleware.py:\nclass LegacyApiKeyAuth:\n    pass\n",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/auth/middleware.py', 'old': 'class LegacyApiKeyAuth:\\n    pass\\n', 'new': 'class RequireSessionToken:\\n    pass\\n'}\nOBSERVATION: PATCHED src/auth/middleware.py old_bytes=33 new_bytes=36",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/auth/middleware.py', 'old': 'class LegacyApiKeyAuth:\\n    pass\\n', 'new': 'class RequireSessionToken:\\n    pass\\n'}\nOBSERVATION: ERROR apply_patch old text not found in src/auth/middleware.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/auth/middleware.py'}\nOBSERVATION: FILE src/auth/middleware.py:\nclass RequireSessionToken:\n    pass\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/auth/middleware.py'}\nOBSERVATION: FILE src/auth/middleware.py:\nclass RequireSessionToken:\n    pass\n"
+      ]
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "mem0_real",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4177,
+      "output_tokens": 138,
+      "total_tokens": 4315,
+      "memory_payload_tokens": 74,
+      "raw_context_tokens": 51,
+      "prepared_context_tokens": 74,
+      "token_savings": 0.0,
+      "duration_seconds": 22.625474124972243,
+      "ingest_duration_seconds": 16.194244707992766,
+      "final_message": "read_file: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_retry_policy\nF\n======================================================================\nFAIL: test_payment_retry_limit (tests.test_retry_policy.RetryPolicyTest.test_payment_retry_limit)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp34jjjuhh/repo/tests/test_retry_policy.py\", line 6, in test_payment_retry_limit\n ",
+        "ACTION 1: {'action': 'read_file', 'path': 'src/billing/retry_policy.py'}\nOBSERVATION: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'BILLING_RETRY_COUNT'\n",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/billing/retry_policy.py', 'old': \"CONFIG_KEY = 'BILLING_RETRY_COUNT'\", 'new': \"CONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\"}\nOBSERVATION: PATCHED src/billing/retry_policy.py old_bytes=34 new_bytes=36",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/billing/retry_policy.py', 'old': \"CONFIG_KEY = 'BILLING_RETRY_COUNT'\", 'new': \"CONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/billing/retry_policy.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/billing/retry_policy.py'}\nOBSERVATION: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/billing/retry_policy.py'}\nOBSERVATION: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n"
+      ]
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 5140,
+      "output_tokens": 138,
+      "total_tokens": 5278,
+      "memory_payload_tokens": 203,
+      "raw_context_tokens": 51,
+      "prepared_context_tokens": 231,
+      "token_savings": 0.0,
+      "duration_seconds": 6.097869958990486,
+      "ingest_duration_seconds": 0.001994999998714775,
+      "final_message": "read_file: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_retry_policy\nF\n======================================================================\nFAIL: test_payment_retry_limit (tests.test_retry_policy.RetryPolicyTest.test_payment_retry_limit)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp1l4z0u2_/repo/tests/test_retry_policy.py\", line 6, in test_payment_retry_limit\n ",
+        "ACTION 1: {'action': 'apply_patch', 'path': 'src/billing/retry_policy.py', 'old': \"CONFIG_KEY = 'BILLING_RETRY_COUNT'\", 'new': \"CONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\"}\nOBSERVATION: PATCHED src/billing/retry_policy.py old_bytes=34 new_bytes=36",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/billing/retry_policy.py', 'old': \"CONFIG_KEY = 'BILLING_RETRY_COUNT'\", 'new': \"CONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/billing/retry_policy.py",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/billing/retry_policy.py'}\nOBSERVATION: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/billing/retry_policy.py'}\nOBSERVATION: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/billing/retry_policy.py'}\nOBSERVATION: FILE src/billing/retry_policy.py:\nCONFIG_KEY = 'PAYMENT_RETRY_LIMIT_0'\n"
+      ]
+    },
+    {
+      "task_id": "agent_api_route_rename_000",
+      "family": "api_route_rename",
+      "adapter": "mem0_real",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/report_export.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/report_export.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4158,
+      "output_tokens": 139,
+      "total_tokens": 4297,
+      "memory_payload_tokens": 84,
+      "raw_context_tokens": 51,
+      "prepared_context_tokens": 84,
+      "token_savings": 0.0,
+      "duration_seconds": 19.825752042001113,
+      "ingest_duration_seconds": 5.434957499994198,
+      "final_message": "read_file: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v3/reports/0/export'\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_report_export\nF\n======================================================================\nFAIL: test_route_rename (tests.test_report_export.ReportExportTest.test_route_rename)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp2ghqkeq8/repo/tests/test_report_export.py\", line 6, in test_route_rename\n    self.assertEqu",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/report_export.py'}]}\nOBSERVATION: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v1/export'\n",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/api/routes/report_export.py', 'old': \"EXPORT_ENDPOINT = '/api/v1/export'\", 'new': \"EXPORT_ENDPOINT = '/api/v3/reports/0/export'\"}\nOBSERVATION: PATCHED src/api/routes/report_export.py old_bytes=34 new_bytes=44",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/api/routes/report_export.py', 'old': \"EXPORT_ENDPOINT = '/api/v1/export'\", 'new': \"EXPORT_ENDPOINT = '/api/v3/reports/0/export'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/report_export.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/api/routes/report_export.py'}\nOBSERVATION: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v3/reports/0/export'\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/api/routes/report_export.py'}\nOBSERVATION: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v3/reports/0/export'\n"
+      ]
+    },
+    {
+      "task_id": "agent_api_route_rename_000",
+      "family": "api_route_rename",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/report_export.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/report_export.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 5107,
+      "output_tokens": 131,
+      "total_tokens": 5238,
+      "memory_payload_tokens": 204,
+      "raw_context_tokens": 51,
+      "prepared_context_tokens": 232,
+      "token_savings": 0.0,
+      "duration_seconds": 5.350466542004142,
+      "ingest_duration_seconds": 0.002614375000121072,
+      "final_message": "read_file: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v3/reports/0/export'\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_report_export\nF\n======================================================================\nFAIL: test_route_rename (tests.test_report_export.ReportExportTest.test_route_rename)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpqjsn2_g8/repo/tests/test_report_export.py\", line 6, in test_route_rename\n    self.assertEqu",
+        "ACTION 1: {'action': 'read_file', 'path': 'src/api/routes/report_export.py'}\nOBSERVATION: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v1/export'\n",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/api/routes/report_export.py', 'old': \"EXPORT_ENDPOINT = '/api/v1/export'\", 'new': \"EXPORT_ENDPOINT = '/api/v3/reports/0/export'\"}\nOBSERVATION: PATCHED src/api/routes/report_export.py old_bytes=34 new_bytes=44",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/api/routes/report_export.py', 'old': \"EXPORT_ENDPOINT = '/api/v1/export'\", 'new': \"EXPORT_ENDPOINT = '/api/v3/reports/0/export'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/report_export.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/api/routes/report_export.py'}\nOBSERVATION: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v3/reports/0/export'\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/api/routes/report_export.py'}\nOBSERVATION: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v3/reports/0/export'\n"
+      ]
+    },
+    {
+      "task_id": "agent_test_failure_followup_000",
+      "family": "test_failure_followup",
+      "adapter": "mem0_real",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4119,
+      "output_tokens": 117,
+      "total_tokens": 4236,
+      "memory_payload_tokens": 41,
+      "raw_context_tokens": 44,
+      "prepared_context_tokens": 41,
+      "token_savings": 0.06818181818181823,
+      "duration_seconds": 26.54124716698425,
+      "ingest_duration_seconds": 3.321245708008064,
+      "final_message": "read_file: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs\nF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpg6wmyk_b/repo/tests/test_export_jobs.py\", line 6, in test_export_",
+        "ACTION 1: {'action': 'search_repo', 'pattern': 'PAGINATION_MODE'}\nOBSERVATION: SEARCH_RESULTS:\nsrc/api/routes/export_jobs.py:1: PAGINATION_MODE = 'offset'\ntests/test_export_jobs.py:2: from src.api.routes.export_jobs import PAGINATION_MODE, TIMEOUT_SECONDS\ntests/test_export_jobs.py:6:         self.assertEqual(PAGINATION_MODE, 'cursor')",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=26 new_bytes=26",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n"
+      ]
+    },
+    {
+      "task_id": "agent_test_failure_followup_000",
+      "family": "test_failure_followup",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 5119,
+      "output_tokens": 139,
+      "total_tokens": 5258,
+      "memory_payload_tokens": 209,
+      "raw_context_tokens": 44,
+      "prepared_context_tokens": 235,
+      "token_savings": 0.0,
+      "duration_seconds": 5.438837333000265,
+      "ingest_duration_seconds": 0.0019127919804304838,
+      "final_message": "apply_patch: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs\nF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmphu9uelw8/repo/tests/test_export_jobs.py\", line 6, in test_export_",
+        "ACTION 1: {'action': 'search_repo', 'pattern': 'PAGINATION_MODE'}\nOBSERVATION: SEARCH_RESULTS:\nsrc/api/routes/export_jobs.py:1: PAGINATION_MODE = 'offset'\ntests/test_export_jobs.py:2: from src.api.routes.export_jobs import PAGINATION_MODE, TIMEOUT_SECONDS\ntests/test_export_jobs.py:6:         self.assertEqual(PAGINATION_MODE, 'cursor')",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=26 new_bytes=26",
+        "ACTION 3: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'cursor'\nTIMEOUT_SECONDS = 5\n",
+        "ACTION 5: {'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\", 'new': \"PAGINATION_MODE = 'cursor'\"}\nOBSERVATION: ERROR apply_patch old text not found in src/api/routes/export_jobs.py"
+      ]
+    },
+    {
+      "task_id": "agent_stale_docs_current_code_000",
+      "family": "stale_docs_current_code",
+      "adapter": "mem0_real",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/invoices/normalizer.py"
+      ],
+      "forbidden_found": [
+        "normalize_legacy_invoice"
+      ],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4180,
+      "output_tokens": 64,
+      "total_tokens": 4244,
+      "memory_payload_tokens": 91,
+      "raw_context_tokens": 56,
+      "prepared_context_tokens": 91,
+      "token_savings": 0.0,
+      "duration_seconds": 18.981652249989565,
+      "ingest_duration_seconds": 5.617414416017709,
+      "final_message": "search_repo: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_normalizer\nE\n======================================================================\nERROR: test_active_invoice (tests.test_normalizer.NormalizerTest.test_active_invoice)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpo_4n1t2x/repo/tests/test_normalizer.py\", line 6, in test_active_invoice\n    result = normalize",
+        "ACTION 1: {'action': 'search_repo', 'pattern': 'normalize_active_invoice_0'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})",
+        "ACTION 2: {'action': 'search_repo', 'pattern': 'normalize_active_invoice'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})",
+        "ACTION 3: {'action': 'search_repo', 'pattern': 'normalize_active_invoice_0'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})",
+        "ACTION 4: {'action': 'search_repo', 'pattern': 'normalize_active_invoice'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})",
+        "ACTION 5: {'action': 'search_repo', 'pattern': 'normalize_active_invoice'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})"
+      ]
+    },
+    {
+      "task_id": "agent_stale_docs_current_code_000",
+      "family": "stale_docs_current_code",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/invoices/normalizer.py"
+      ],
+      "forbidden_found": [
+        "normalize_legacy_invoice"
+      ],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 5139,
+      "output_tokens": 74,
+      "total_tokens": 5213,
+      "memory_payload_tokens": 229,
+      "raw_context_tokens": 56,
+      "prepared_context_tokens": 273,
+      "token_savings": 0.0,
+      "duration_seconds": 6.442204958992079,
+      "ingest_duration_seconds": 0.0024232919968198985,
+      "final_message": "read_file: FILE src/invoices/normalizer.py:\ndef normalize_legacy_invoice(invoice):\n    return invoice\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_normalizer\nE\n======================================================================\nERROR: test_active_invoice (tests.test_normalizer.NormalizerTest.test_active_invoice)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmprntiplji/repo/tests/test_normalizer.py\", line 6, in test_active_invoice\n    result = normalize",
+        "ACTION 1: {'action': 'search_repo', 'pattern': 'normalize_active_invoice'}\nOBSERVATION: SEARCH_RESULTS:\ntests/test_normalizer.py:6:         result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})",
+        "ACTION 2: {'action': 'read_file', 'path': 'tests/test_normalizer.py'}\nOBSERVATION: FILE tests/test_normalizer.py:\nimport unittest\nfrom src.invoices import normalizer\n\nclass NormalizerTest(unittest.TestCase):\n    def test_active_invoice(self):\n        result = normalizer.normalize_active_invoice_0({'id': 'inv_1'})\n        self.assertEqual(result['status'], 'active')\n",
+        "ACTION 3: {'action': 'read_file', 'path': 'src/invoices/normalizer.py'}\nOBSERVATION: FILE src/invoices/normalizer.py:\ndef normalize_legacy_invoice(invoice):\n    return invoice\n",
+        "ACTION 4: {'action': 'read_file', 'path': 'src/invoices/normalizer.py'}\nOBSERVATION: FILE src/invoices/normalizer.py:\ndef normalize_legacy_invoice(invoice):\n    return invoice\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'src/invoices/normalizer.py'}\nOBSERVATION: FILE src/invoices/normalizer.py:\ndef normalize_legacy_invoice(invoice):\n    return invoice\n"
+      ]
+    },
+    {
+      "task_id": "agent_dependency_version_pin_000",
+      "family": "dependency_version_pin",
+      "adapter": "mem0_real",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "pyproject.toml"
+      ],
+      "expected_files_touched": [
+        "pyproject.toml"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4288,
+      "output_tokens": 113,
+      "total_tokens": 4401,
+      "memory_payload_tokens": 54,
+      "raw_context_tokens": 43,
+      "prepared_context_tokens": 54,
+      "token_savings": 0.0,
+      "duration_seconds": 18.718234165979084,
+      "ingest_duration_seconds": 3.064430541009642,
+      "final_message": "read_file: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_dependency_pins\nF\n======================================================================\nFAIL: test_pydantic_pin (tests.test_dependency_pins.DependencyPinsTest.test_pydantic_pin)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmppx_u3rgy/repo/tests/test_dependency_pins.py\", line 6, in test_pydantic_pin\n    self.a",
+        "ACTION 1: {'action': 'apply_patch', 'path': 'pyproject.toml', 'old': 'pydantic==1.10.0', 'new': 'pydantic==2.7.0'}\nOBSERVATION: PATCHED pyproject.toml old_bytes=16 new_bytes=15",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'pyproject.toml', 'old': 'pydantic==1.10.0', 'new': 'pydantic==2.7.0'}\nOBSERVATION: ERROR apply_patch old text not found in pyproject.toml",
+        "ACTION 3: {'action': 'read_file', 'path': 'pyproject.toml'}\nOBSERVATION: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n",
+        "ACTION 4: {'action': 'read_file', 'path': 'pyproject.toml'}\nOBSERVATION: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'pyproject.toml'}\nOBSERVATION: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n"
+      ]
+    },
+    {
+      "task_id": "agent_dependency_version_pin_000",
+      "family": "dependency_version_pin",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "pyproject.toml"
+      ],
+      "expected_files_touched": [
+        "pyproject.toml"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 5213,
+      "output_tokens": 131,
+      "total_tokens": 5344,
+      "memory_payload_tokens": 210,
+      "raw_context_tokens": 43,
+      "prepared_context_tokens": 237,
+      "token_savings": 0.0,
+      "duration_seconds": 16.385883000009926,
+      "ingest_duration_seconds": 0.001384916016831994,
+      "final_message": "read_file: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_dependency_pins\nF\n======================================================================\nFAIL: test_pydantic_pin (tests.test_dependency_pins.DependencyPinsTest.test_pydantic_pin)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpc8r3ai_c/repo/tests/test_dependency_pins.py\", line 6, in test_pydantic_pin\n    self.a",
+        "ACTION 1: {'action': 'apply_patch', 'path': 'pyproject.toml', 'old': \"[project]\\ndependencies = ['pydantic==1.10.0']\", 'new': \"[project]\\ndependencies = ['pydantic==2.7.0']\"}\nOBSERVATION: PATCHED pyproject.toml old_bytes=45 new_bytes=44",
+        "ACTION 2: {'action': 'apply_patch', 'path': 'pyproject.toml', 'old': 'pydantic==1.10.0', 'new': 'pydantic==2.7.0'}\nOBSERVATION: ERROR apply_patch old text not found in pyproject.toml",
+        "ACTION 3: {'action': 'read_file', 'path': 'pyproject.toml'}\nOBSERVATION: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n",
+        "ACTION 4: {'action': 'read_file', 'path': 'pyproject.toml'}\nOBSERVATION: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n",
+        "ACTION 5: {'action': 'read_file', 'path': 'pyproject.toml'}\nOBSERVATION: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==2.7.0']\n"
+      ]
+    },
+    {
+      "task_id": "agent_unknown_owner_000",
+      "family": "unknown_owner",
+      "adapter": "mem0_real",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 30,
+      "raw_context_tokens": 12,
+      "prepared_context_tokens": 30,
+      "token_savings": 0.0,
+      "duration_seconds": 1.359130249998998,
+      "ingest_duration_seconds": 5.753668249992188,
+      "final_message": "UNKNOWN",
+      "action_trace": [
+        "INITIAL_TESTS ok=True command=python3 -m unittest tests.test_observability\n.\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      ]
+    },
+    {
+      "task_id": "agent_unknown_owner_000",
+      "family": "unknown_owner",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "memory_payload_tokens": 126,
+      "raw_context_tokens": 12,
+      "prepared_context_tokens": 166,
+      "token_savings": 0.0,
+      "duration_seconds": 0.08390433402382769,
+      "ingest_duration_seconds": 0.0013181250251363963,
+      "final_message": "UNKNOWN",
+      "action_trace": [
+        "INITIAL_TESTS ok=True command=python3 -m unittest tests.test_observability\n.\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      ]
+    }
+  ]
+}

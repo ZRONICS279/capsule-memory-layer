@@ -1,0 +1,6 @@
+Run folder: benchtestResults/capsule-only-gpt41mini-20260621-234805
+Started: Sun Jun 21 23:48:05 PDT 2026
+Agent model: gpt-4.1-mini
+[1/6] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+[1/6] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.2s elapsed=0.2s
+[2/6] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule

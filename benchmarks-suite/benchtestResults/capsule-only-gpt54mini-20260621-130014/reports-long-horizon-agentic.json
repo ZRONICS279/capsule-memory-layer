@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "adapters": [
+      "capsule"
+    ],
+    "adapter_scores": {
+      "capsule": {
+        "tasks": 4,
+        "success_rate": 1.0,
+        "memory_success_rate": 0.0,
+        "context_success_rate": 0.0,
+        "avg_recall": 1.0,
+        "avg_stale_penalty": 1.0,
+        "avg_cross_session_score": 0.0,
+        "avg_token_efficiency": 0.9004,
+        "avg_ingest_duration_seconds": 0.15,
+        "avg_total_tokens": 2751,
+        "avg_raw_context_tokens": 5413,
+        "avg_prepared_context_tokens": 536,
+        "avg_token_savings": 0.901,
+        "bootstrap_ci": {
+          "cross_session_score": {
+            "low": 0.0,
+            "high": 0.0
+          },
+          "recall": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "stale_penalty": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "context_success_rate": {
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      }
+    },
+    "best_adapter": "capsule",
+    "best_cross_session_score": 0.0,
+    "capsule_cross_session_score": 0.0,
+    "capsule_beats_mem0_real": null,
+    "mem0_baseline": null,
+    "capsule_token_savings": 0.901,
+    "mem0_token_savings": null,
+    "score_formula": "multiplicative",
+    "paired_deltas": {}
+  },
+  "results": [
+    {
+      "task_id": "cs_long_horizon_project_000",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 2563,
+      "output_tokens": 176,
+      "total_tokens": 2739,
+      "memory_payload_tokens": 536,
+      "raw_context_tokens": 5049,
+      "prepared_context_tokens": 536,
+      "token_savings": 0.894,
+      "duration_seconds": 4.618044291972183,
+      "ingest_duration_seconds": 0.17956158297602087,
+      "final_message": "batch: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m uni",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp1xa63225/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": false,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 1.0,
+        "score": 0.0,
+        "subtractive_score": 0.0,
+        "multiplicative_score": 0.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.8938,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 6,
+        "stale_total": 6,
+        "payload_tokens": 536,
+        "raw_tokens": 5049
+      },
+      "sessions": 11,
+      "session_events": 130
+    },
+    {
+      "task_id": "cs_long_horizon_project_001",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 2579,
+      "output_tokens": 176,
+      "total_tokens": 2755,
+      "memory_payload_tokens": 536,
+      "raw_context_tokens": 5534,
+      "prepared_context_tokens": 536,
+      "token_savings": 0.903,
+      "duration_seconds": 2.289705916948151,
+      "ingest_duration_seconds": 0.14506829099263996,
+      "final_message": "batch: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m uni",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp0n0qcq84/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": false,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 1.0,
+        "score": 0.0,
+        "subtractive_score": 0.0,
+        "multiplicative_score": 0.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.9031,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 6,
+        "stale_total": 6,
+        "payload_tokens": 536,
+        "raw_tokens": 5534
+      },
+      "sessions": 11,
+      "session_events": 140
+    },
+    {
+      "task_id": "cs_long_horizon_project_002",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 2587,
+      "output_tokens": 176,
+      "total_tokens": 2763,
+      "memory_payload_tokens": 536,
+      "raw_context_tokens": 6022,
+      "prepared_context_tokens": 536,
+      "token_savings": 0.911,
+      "duration_seconds": 2.4452607089770027,
+      "ingest_duration_seconds": 0.16074066603323445,
+      "final_message": "batch: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m uni",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmpqpbj8m4j/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": false,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 1.0,
+        "score": 0.0,
+        "subtractive_score": 0.0,
+        "multiplicative_score": 0.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.911,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 6,
+        "stale_total": 6,
+        "payload_tokens": 536,
+        "raw_tokens": 6022
+      },
+      "sessions": 11,
+      "session_events": 150
+    },
+    {
+      "task_id": "cs_long_horizon_project_003",
+      "family": "long_horizon_project_memory",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py",
+        "src/ops/oncall.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 2,
+      "retries": 1,
+      "input_tokens": 2571,
+      "output_tokens": 176,
+      "total_tokens": 2747,
+      "memory_payload_tokens": 536,
+      "raw_context_tokens": 5046,
+      "prepared_context_tokens": 536,
+      "token_savings": 0.894,
+      "duration_seconds": 3.056909209000878,
+      "ingest_duration_seconds": 0.13115749997086823,
+      "final_message": "batch: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m uni",
+      "action_trace": [
+        "INITIAL_TESTS ok=False command=python3 -m unittest tests.test_export_jobs tests.test_oncall\nFF\n======================================================================\nFAIL: test_export_jobs_cursor_timeout_0 (tests.test_export_jobs.ExportJobsTest.test_export_jobs_cursor_timeout_0)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/hv/_jm1g1m52077k935_9bsl69w0000gn/T/tmp4thcnizk/repo_capsule/tests/test_export_jobs.p",
+        "ACTION 1: {'action': 'batch', 'actions': [{'action': 'read_file', 'path': 'src/api/routes/export_jobs.py'}, {'action': 'read_file', 'path': 'src/ops/oncall.py'}]}\nOBSERVATION: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n\n---\nFILE src/ops/oncall.py:\nON_CALL_OWNER = '@alice-chen'\n",
+        "ACTION 2: {'action': 'batch', 'actions': [{'action': 'apply_patch', 'path': 'src/api/routes/export_jobs.py', 'old': \"PAGINATION_MODE = 'offset'\\nTIMEOUT_SECONDS = 5\", 'new': \"PAGINATION_MODE = 'cursor'\\nTIMEOUT_SECONDS = 30\"}, {'action': 'apply_patch', 'path': 'src/ops/oncall.py', 'old': \"ON_CALL_OWNER = '@alice-chen'\", 'new': \"ON_CALL_OWNER = '@carol-wu'\"}, {'action': 'run_tests', 'command': 'python3 -m unittest tests.test_export_jobs tests.test_oncall'}]}\nOBSERVATION: PATCHED src/api/routes/export_jobs.py old_bytes=46 new_bytes=47\n---\nPATCHED src/ops/oncall.py old_bytes=29 new_bytes=27\n---\nTESTS ok=True command=python3 -m unittest tests.test_export_jobs tests.test_oncall\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      ],
+      "mode": "agentic",
+      "repeat": 0,
+      "context_success": false,
+      "memory_success": false,
+      "recall_score": {
+        "recall": 1.0,
+        "precision_penalty": 1.0,
+        "score": 0.0,
+        "subtractive_score": 0.0,
+        "multiplicative_score": 0.0,
+        "score_formula": "multiplicative",
+        "token_efficiency": 0.8938,
+        "required_found": 6,
+        "required_total": 6,
+        "stale_found": 6,
+        "stale_total": 6,
+        "payload_tokens": 536,
+        "raw_tokens": 5046
+      },
+      "sessions": 11,
+      "session_events": 130
+    }
+  ]
+}

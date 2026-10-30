@@ -1,0 +1,2 @@
+adapter,success_rate,memory_success_rate,context_success_rate,recall,stale_penalty,score,avg_total_tokens
+capsule,,,1.0000,1.0000,0.0000,1.0000,0

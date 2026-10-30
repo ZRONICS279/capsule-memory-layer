@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "agent": "heuristic",
+    "tokenizer_backend": "tiktoken:cl100k_base",
+    "tasks": 2,
+    "runs": 4,
+    "adapters": [
+      "bm25_rag",
+      "capsule"
+    ],
+    "adapter_scores": {
+      "bm25_rag": {
+        "tasks": 2,
+        "success_rate": 1.0,
+        "tests_pass_rate": 1.0,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.6881102328923454,
+        "avg_total_tokens": 143.5,
+        "avg_steps": 1.0,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 0
+      },
+      "capsule": {
+        "tasks": 2,
+        "success_rate": 1.0,
+        "tests_pass_rate": 1.0,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.15142531081497224,
+        "avg_total_tokens": 361.5,
+        "avg_steps": 1.0,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 0
+      }
+    },
+    "capsule_success_rate": 1.0,
+    "best_success_rate": 1.0,
+    "capsule_token_savings": 0.15142531081497224,
+    "passed": true
+  },
+  "results": [
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "bm25_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 146,
+      "output_tokens": 2,
+      "total_tokens": 148,
+      "memory_payload_tokens": 0,
+      "token_savings": 0.6779661016949152,
+      "duration_seconds": 0.13349770799686667,
+      "final_message": "PATCH_AUTH"
+    },
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 338,
+      "output_tokens": 2,
+      "total_tokens": 340,
+      "memory_payload_tokens": 298,
+      "token_savings": 0.21307506053268765,
+      "duration_seconds": 0.08440399999381043,
+      "final_message": "PATCH_AUTH"
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "bm25_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 135,
+      "output_tokens": 4,
+      "total_tokens": 139,
+      "memory_payload_tokens": 0,
+      "token_savings": 0.6982543640897756,
+      "duration_seconds": 0.07596566699794494,
+      "final_message": "PATCH_BILLING"
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 379,
+      "output_tokens": 4,
+      "total_tokens": 383,
+      "memory_payload_tokens": 337,
+      "token_savings": 0.08977556109725682,
+      "duration_seconds": 0.07872804198996164,
+      "final_message": "PATCH_BILLING"
+    }
+  ]
+}

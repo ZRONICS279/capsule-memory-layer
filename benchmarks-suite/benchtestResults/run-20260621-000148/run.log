@@ -1,0 +1,1544 @@
+Saving benchmark outputs to: benchtestResults/run-20260621-000148
+Adapters: capsule,mem0_real_async,vector_rag,langgraph_real
+[1/24] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+[1/24] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.2s elapsed=0.2s
+[2/24] repeat=1/1 task=cs_long_horizon_project_000 adapter=mem0_real_async
+Audited 1 package in 15ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+[2/24] done recall=0.00 stale_penalty=0.00 context_success=False ingest=19.9s elapsed=21.2s
+[3/24] repeat=1/1 task=cs_long_horizon_project_000 adapter=vector_rag
+[3/24] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=27.1s
+[4/24] repeat=1/1 task=cs_long_horizon_project_000 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+[4/24] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=27.2s
+[5/24] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+[5/24] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=27.3s
+[6/24] repeat=1/1 task=cs_long_horizon_project_001 adapter=mem0_real_async
+[6/24] done recall=0.00 stale_penalty=0.00 context_success=False ingest=19.4s elapsed=47.1s
+[7/24] repeat=1/1 task=cs_long_horizon_project_001 adapter=vector_rag
+[7/24] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=51.6s
+[8/24] repeat=1/1 task=cs_long_horizon_project_001 adapter=langgraph_real
+[8/24] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=51.6s
+[9/24] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+[9/24] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.2s elapsed=51.8s
+[10/24] repeat=1/1 task=cs_long_horizon_project_002 adapter=mem0_real_async
+[10/24] done recall=0.00 stale_penalty=0.00 context_success=False ingest=21.8s elapsed=73.9s
+[11/24] repeat=1/1 task=cs_long_horizon_project_002 adapter=vector_rag
+[11/24] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=78.2s
+[12/24] repeat=1/1 task=cs_long_horizon_project_002 adapter=langgraph_real
+[12/24] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=78.2s
+[13/24] repeat=1/1 task=cs_long_horizon_project_003 adapter=capsule
+[13/24] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=78.3s
+[14/24] repeat=1/1 task=cs_long_horizon_project_003 adapter=mem0_real_async
+[14/24] done recall=0.00 stale_penalty=0.00 context_success=False ingest=19.1s elapsed=97.7s
+[15/24] repeat=1/1 task=cs_long_horizon_project_003 adapter=vector_rag
+[15/24] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=101.4s
+[16/24] repeat=1/1 task=cs_long_horizon_project_003 adapter=langgraph_real
+[16/24] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=101.4s
+[17/24] repeat=1/1 task=cs_long_horizon_project_004 adapter=capsule
+[17/24] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=101.6s
+[18/24] repeat=1/1 task=cs_long_horizon_project_004 adapter=mem0_real_async
+Failed to insert memory 3f9351e0-9da9-406e-9592-084b7c648901 (async): bad parameter or other API misuse
+[18/24] done recall=0.00 stale_penalty=0.00 context_success=False ingest=24.5s elapsed=126.4s
+[19/24] repeat=1/1 task=cs_long_horizon_project_004 adapter=vector_rag
+[19/24] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=131.7s
+[20/24] repeat=1/1 task=cs_long_horizon_project_004 adapter=langgraph_real
+[20/24] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=131.7s
+[21/24] repeat=1/1 task=cs_long_horizon_project_005 adapter=capsule
+[21/24] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.2s elapsed=131.9s
+[22/24] repeat=1/1 task=cs_long_horizon_project_005 adapter=mem0_real_async
+[22/24] done recall=0.17 stale_penalty=0.00 context_success=False ingest=21.0s elapsed=153.2s
+[23/24] repeat=1/1 task=cs_long_horizon_project_005 adapter=vector_rag
+[23/24] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=158.9s
+[24/24] repeat=1/1 task=cs_long_horizon_project_005 adapter=langgraph_real
+[24/24] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=158.9s
+Report written to benchtestResults/run-20260621-000148/reports-long-horizon-retrieval.json
+LaTeX table written to benchtestResults/run-20260621-000148/reports-long-horizon-retrieval.tex
+CSV table written to benchtestResults/run-20260621-000148/reports-long-horizon-retrieval.csv
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                   n/a      n/a    1.000    1.000    0.000    1.000        0.1        0
+mem0_real_async           n/a      n/a    0.000    0.028    0.000    0.028       20.9        0
+vector_rag                n/a      n/a    0.000    0.000    0.333    0.000        0.0        0
+langgraph_real            n/a      n/a    0.000    0.167    0.333    0.111        0.0        0
+
+Best adapter: capsule (score=1.000)
+Capsule beats mem0_real: YES
+[1/12] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+[1/12] done recall=1.00 stale_penalty=0.00 success=True ingest=0.2s elapsed=10.0s
+[2/12] repeat=1/1 task=cs_long_horizon_project_000 adapter=mem0_real_async
+Audited 1 package in 13ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+[2/12] done recall=0.00 stale_penalty=0.00 success=False ingest=18.9s elapsed=76.8s
+[3/12] repeat=1/1 task=cs_long_horizon_project_000 adapter=vector_rag
+[3/12] done recall=0.00 stale_penalty=0.33 success=False ingest=0.0s elapsed=98.7s
+[4/12] repeat=1/1 task=cs_long_horizon_project_000 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+[4/12] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=108.7s
+[5/12] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+[5/12] done recall=1.00 stale_penalty=0.00 success=True ingest=0.1s elapsed=118.1s
+[6/12] repeat=1/1 task=cs_long_horizon_project_001 adapter=mem0_real_async
+[6/12] done recall=0.00 stale_penalty=0.17 success=False ingest=26.9s elapsed=180.6s
+[7/12] repeat=1/1 task=cs_long_horizon_project_001 adapter=vector_rag
+[7/12] done recall=0.00 stale_penalty=0.33 success=False ingest=0.0s elapsed=200.6s
+[8/12] repeat=1/1 task=cs_long_horizon_project_001 adapter=langgraph_real
+[8/12] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=210.1s
+[9/12] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+[9/12] done recall=1.00 stale_penalty=0.00 success=True ingest=0.2s elapsed=219.3s
+[10/12] repeat=1/1 task=cs_long_horizon_project_002 adapter=mem0_real_async
+[10/12] done recall=0.00 stale_penalty=0.00 success=False ingest=19.3s elapsed=275.6s
+[11/12] repeat=1/1 task=cs_long_horizon_project_002 adapter=vector_rag
+[11/12] done recall=0.00 stale_penalty=0.33 success=False ingest=0.0s elapsed=300.1s
+[12/12] repeat=1/1 task=cs_long_horizon_project_002 adapter=langgraph_real
+[12/12] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=309.0s
+Report written to benchtestResults/run-20260621-000148/reports-long-horizon-agentic.json
+LaTeX table written to benchtestResults/run-20260621-000148/reports-long-horizon-agentic.tex
+CSV table written to benchtestResults/run-20260621-000148/reports-long-horizon-agentic.csv
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                 1.000    1.000    1.000    1.000    0.000    1.000        0.2    12847
+mem0_real_async         0.000    0.000    0.000    0.000    0.056    0.000       21.7    15854
+vector_rag              0.000    0.000    0.000    0.000    0.333    0.000        0.0    12086
+langgraph_real          0.000    0.000    0.000    0.167    0.333    0.111        0.0    14756
+
+Best adapter: capsule (score=1.000)
+Capsule beats mem0_real: YES
+[1/120] repeat=1/1 task=cs_auth_evolution_000 adapter=capsule
+[1/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=0.1s
+[2/120] repeat=1/1 task=cs_auth_evolution_000 adapter=mem0_real_async
+Audited 1 package in 13ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+[2/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=8.7s elapsed=9.7s
+[3/120] repeat=1/1 task=cs_auth_evolution_000 adapter=vector_rag
+[3/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=10.5s
+[4/120] repeat=1/1 task=cs_auth_evolution_000 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+[4/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=10.6s
+[5/120] repeat=1/1 task=cs_auth_evolution_001 adapter=capsule
+[5/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=10.6s
+[6/120] repeat=1/1 task=cs_auth_evolution_001 adapter=mem0_real_async
+[6/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.5s elapsed=13.6s
+[7/120] repeat=1/1 task=cs_auth_evolution_001 adapter=vector_rag
+[7/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=14.7s
+[8/120] repeat=1/1 task=cs_auth_evolution_001 adapter=langgraph_real
+[8/120] done recall=0.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=14.7s
+[9/120] repeat=1/1 task=cs_auth_evolution_002 adapter=capsule
+[9/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=14.7s
+[10/120] repeat=1/1 task=cs_auth_evolution_002 adapter=mem0_real_async
+[10/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=3.1s elapsed=18.1s
+[11/120] repeat=1/1 task=cs_auth_evolution_002 adapter=vector_rag
+[11/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=19.1s
+[12/120] repeat=1/1 task=cs_auth_evolution_002 adapter=langgraph_real
+[12/120] done recall=0.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=19.1s
+[13/120] repeat=1/1 task=cs_config_iteration_000 adapter=capsule
+[13/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=19.2s
+[14/120] repeat=1/1 task=cs_config_iteration_000 adapter=mem0_real_async
+[14/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.6s elapsed=22.2s
+[15/120] repeat=1/1 task=cs_config_iteration_000 adapter=vector_rag
+[15/120] done recall=1.00 stale_penalty=0.50 context_success=False ingest=0.0s elapsed=23.3s
+[16/120] repeat=1/1 task=cs_config_iteration_000 adapter=langgraph_real
+[16/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=23.4s
+[17/120] repeat=1/1 task=cs_config_iteration_001 adapter=capsule
+[17/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=23.4s
+[18/120] repeat=1/1 task=cs_config_iteration_001 adapter=mem0_real_async
+[18/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=3.6s elapsed=27.3s
+[19/120] repeat=1/1 task=cs_config_iteration_001 adapter=vector_rag
+[19/120] done recall=1.00 stale_penalty=0.50 context_success=False ingest=0.0s elapsed=28.4s
+[20/120] repeat=1/1 task=cs_config_iteration_001 adapter=langgraph_real
+[20/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=28.4s
+[21/120] repeat=1/1 task=cs_config_iteration_002 adapter=capsule
+[21/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=28.4s
+[22/120] repeat=1/1 task=cs_config_iteration_002 adapter=mem0_real_async
+[22/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.2s elapsed=30.8s
+[23/120] repeat=1/1 task=cs_config_iteration_002 adapter=vector_rag
+[23/120] done recall=1.00 stale_penalty=0.50 context_success=False ingest=0.0s elapsed=31.8s
+[24/120] repeat=1/1 task=cs_config_iteration_002 adapter=langgraph_real
+[24/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=31.8s
+[25/120] repeat=1/1 task=cs_route_migration_000 adapter=capsule
+[25/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=31.8s
+[26/120] repeat=1/1 task=cs_route_migration_000 adapter=mem0_real_async
+[26/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=3.1s elapsed=35.2s
+[27/120] repeat=1/1 task=cs_route_migration_000 adapter=vector_rag
+[27/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=35.9s
+[28/120] repeat=1/1 task=cs_route_migration_000 adapter=langgraph_real
+[28/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=35.9s
+[29/120] repeat=1/1 task=cs_route_migration_001 adapter=capsule
+[29/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=35.9s
+[30/120] repeat=1/1 task=cs_route_migration_001 adapter=mem0_real_async
+[30/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=5.1s elapsed=41.4s
+[31/120] repeat=1/1 task=cs_route_migration_001 adapter=vector_rag
+[31/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=42.1s
+[32/120] repeat=1/1 task=cs_route_migration_001 adapter=langgraph_real
+[32/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=42.1s
+[33/120] repeat=1/1 task=cs_route_migration_002 adapter=capsule
+[33/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=42.1s
+[34/120] repeat=1/1 task=cs_route_migration_002 adapter=mem0_real_async
+[34/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=7.5s elapsed=49.8s
+[35/120] repeat=1/1 task=cs_route_migration_002 adapter=vector_rag
+[35/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=50.8s
+[36/120] repeat=1/1 task=cs_route_migration_002 adapter=langgraph_real
+[36/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=50.8s
+[37/120] repeat=1/1 task=cs_feature_flag_000 adapter=capsule
+[37/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=50.8s
+[38/120] repeat=1/1 task=cs_feature_flag_000 adapter=mem0_real_async
+[38/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=7.7s elapsed=58.8s
+[39/120] repeat=1/1 task=cs_feature_flag_000 adapter=vector_rag
+[39/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=60.2s
+[40/120] repeat=1/1 task=cs_feature_flag_000 adapter=langgraph_real
+[40/120] done recall=0.50 stale_penalty=0.50 context_success=False ingest=0.0s elapsed=60.2s
+[41/120] repeat=1/1 task=cs_feature_flag_001 adapter=capsule
+[41/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=60.3s
+[42/120] repeat=1/1 task=cs_feature_flag_001 adapter=mem0_real_async
+[42/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=6.5s elapsed=67.3s
+[43/120] repeat=1/1 task=cs_feature_flag_001 adapter=vector_rag
+[43/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=68.5s
+[44/120] repeat=1/1 task=cs_feature_flag_001 adapter=langgraph_real
+[44/120] done recall=0.50 stale_penalty=0.50 context_success=False ingest=0.0s elapsed=68.5s
+[45/120] repeat=1/1 task=cs_feature_flag_002 adapter=capsule
+[45/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=68.6s
+[46/120] repeat=1/1 task=cs_feature_flag_002 adapter=mem0_real_async
+[46/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=10.4s elapsed=79.4s
+[47/120] repeat=1/1 task=cs_feature_flag_002 adapter=vector_rag
+[47/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=81.0s
+[48/120] repeat=1/1 task=cs_feature_flag_002 adapter=langgraph_real
+[48/120] done recall=0.50 stale_penalty=0.50 context_success=False ingest=0.0s elapsed=81.0s
+[49/120] repeat=1/1 task=cs_service_ownership_000 adapter=capsule
+[49/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=81.1s
+[50/120] repeat=1/1 task=cs_service_ownership_000 adapter=mem0_real_async
+[50/120] done recall=1.00 stale_penalty=0.33 context_success=False ingest=3.5s elapsed=85.0s
+[51/120] repeat=1/1 task=cs_service_ownership_000 adapter=vector_rag
+[51/120] done recall=0.50 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=86.8s
+[52/120] repeat=1/1 task=cs_service_ownership_000 adapter=langgraph_real
+[52/120] done recall=0.50 stale_penalty=0.67 context_success=False ingest=0.0s elapsed=86.8s
+[53/120] repeat=1/1 task=cs_service_ownership_001 adapter=capsule
+[53/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=86.8s
+[54/120] repeat=1/1 task=cs_service_ownership_001 adapter=mem0_real_async
+[54/120] done recall=0.50 stale_penalty=0.67 context_success=False ingest=4.5s elapsed=91.6s
+[55/120] repeat=1/1 task=cs_service_ownership_001 adapter=vector_rag
+[55/120] done recall=0.50 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=93.2s
+[56/120] repeat=1/1 task=cs_service_ownership_001 adapter=langgraph_real
+[56/120] done recall=0.50 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=93.2s
+[57/120] repeat=1/1 task=cs_service_ownership_002 adapter=capsule
+[57/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=93.2s
+[58/120] repeat=1/1 task=cs_service_ownership_002 adapter=mem0_real_async
+[58/120] done recall=0.50 stale_penalty=0.33 context_success=False ingest=4.0s elapsed=97.5s
+[59/120] repeat=1/1 task=cs_service_ownership_002 adapter=vector_rag
+[59/120] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=99.1s
+[60/120] repeat=1/1 task=cs_service_ownership_002 adapter=langgraph_real
+[60/120] done recall=0.50 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=99.1s
+[61/120] repeat=1/1 task=cs_export_jobs_000 adapter=capsule
+[61/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=99.2s
+[62/120] repeat=1/1 task=cs_export_jobs_000 adapter=mem0_real_async
+[62/120] done recall=0.33 stale_penalty=1.00 context_success=False ingest=3.4s elapsed=102.9s
+[63/120] repeat=1/1 task=cs_export_jobs_000 adapter=vector_rag
+[63/120] done recall=0.33 stale_penalty=0.00 context_success=False ingest=0.0s elapsed=104.6s
+[64/120] repeat=1/1 task=cs_export_jobs_000 adapter=langgraph_real
+[64/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=104.6s
+[65/120] repeat=1/1 task=cs_export_jobs_001 adapter=capsule
+[65/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=104.7s
+[66/120] repeat=1/1 task=cs_export_jobs_001 adapter=mem0_real_async
+[66/120] done recall=0.33 stale_penalty=1.00 context_success=False ingest=3.7s elapsed=108.6s
+[67/120] repeat=1/1 task=cs_export_jobs_001 adapter=vector_rag
+[67/120] done recall=0.33 stale_penalty=0.00 context_success=False ingest=0.0s elapsed=109.8s
+[68/120] repeat=1/1 task=cs_export_jobs_001 adapter=langgraph_real
+[68/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=109.8s
+[69/120] repeat=1/1 task=cs_export_jobs_002 adapter=capsule
+[69/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=109.8s
+[70/120] repeat=1/1 task=cs_export_jobs_002 adapter=mem0_real_async
+[70/120] done recall=0.33 stale_penalty=0.00 context_success=False ingest=5.7s elapsed=115.9s
+[71/120] repeat=1/1 task=cs_export_jobs_002 adapter=vector_rag
+[71/120] done recall=0.33 stale_penalty=0.00 context_success=False ingest=0.0s elapsed=117.2s
+[72/120] repeat=1/1 task=cs_export_jobs_002 adapter=langgraph_real
+[72/120] done recall=0.67 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=117.3s
+[73/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=capsule
+[73/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=117.3s
+[74/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=mem0_real_async
+[74/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.7s elapsed=120.4s
+[75/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=vector_rag
+[75/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=121.3s
+[76/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=langgraph_real
+[76/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=121.3s
+[77/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=capsule
+[77/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=121.4s
+[78/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=mem0_real_async
+[78/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=5.8s elapsed=127.5s
+[79/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=vector_rag
+[79/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=128.4s
+[80/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=langgraph_real
+[80/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=128.4s
+[81/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=capsule
+[81/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=128.4s
+[82/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=mem0_real_async
+[82/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.7s elapsed=131.4s
+[83/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=vector_rag
+[83/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=132.4s
+[84/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=langgraph_real
+[84/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=132.4s
+[85/120] repeat=1/1 task=cs_dependency_pin_000 adapter=capsule
+[85/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=132.5s
+[86/120] repeat=1/1 task=cs_dependency_pin_000 adapter=mem0_real_async
+[86/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=3.5s elapsed=136.3s
+[87/120] repeat=1/1 task=cs_dependency_pin_000 adapter=vector_rag
+[87/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=137.4s
+[88/120] repeat=1/1 task=cs_dependency_pin_000 adapter=langgraph_real
+[88/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=137.4s
+[89/120] repeat=1/1 task=cs_dependency_pin_001 adapter=capsule
+[89/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=137.5s
+[90/120] repeat=1/1 task=cs_dependency_pin_001 adapter=mem0_real_async
+[90/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.1s elapsed=139.8s
+[91/120] repeat=1/1 task=cs_dependency_pin_001 adapter=vector_rag
+[91/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=140.5s
+[92/120] repeat=1/1 task=cs_dependency_pin_001 adapter=langgraph_real
+[92/120] done recall=0.67 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=140.5s
+[93/120] repeat=1/1 task=cs_dependency_pin_002 adapter=capsule
+[93/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=140.5s
+[94/120] repeat=1/1 task=cs_dependency_pin_002 adapter=mem0_real_async
+[94/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.1s elapsed=142.8s
+[95/120] repeat=1/1 task=cs_dependency_pin_002 adapter=vector_rag
+[95/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=144.0s
+[96/120] repeat=1/1 task=cs_dependency_pin_002 adapter=langgraph_real
+[96/120] done recall=0.67 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=144.0s
+[97/120] repeat=1/1 task=cs_unknown_owner_000 adapter=capsule
+[97/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=144.0s
+[98/120] repeat=1/1 task=cs_unknown_owner_000 adapter=mem0_real_async
+[98/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=1.9s elapsed=146.3s
+[99/120] repeat=1/1 task=cs_unknown_owner_000 adapter=vector_rag
+[99/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=147.4s
+[100/120] repeat=1/1 task=cs_unknown_owner_000 adapter=langgraph_real
+[100/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=147.4s
+[101/120] repeat=1/1 task=cs_unknown_owner_001 adapter=capsule
+[101/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=147.5s
+[102/120] repeat=1/1 task=cs_unknown_owner_001 adapter=mem0_real_async
+[102/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=2.7s elapsed=150.5s
+[103/120] repeat=1/1 task=cs_unknown_owner_001 adapter=vector_rag
+[103/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=151.3s
+[104/120] repeat=1/1 task=cs_unknown_owner_001 adapter=langgraph_real
+[104/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=151.4s
+[105/120] repeat=1/1 task=cs_unknown_owner_002 adapter=capsule
+[105/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.0s elapsed=151.4s
+[106/120] repeat=1/1 task=cs_unknown_owner_002 adapter=mem0_real_async
+[106/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=1.9s elapsed=153.6s
+[107/120] repeat=1/1 task=cs_unknown_owner_002 adapter=vector_rag
+[107/120] done recall=1.00 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=154.4s
+[108/120] repeat=1/1 task=cs_unknown_owner_002 adapter=langgraph_real
+[108/120] done recall=0.50 stale_penalty=1.00 context_success=False ingest=0.0s elapsed=154.4s
+[109/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+[109/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=154.6s
+[110/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=mem0_real_async
+[110/120] done recall=0.00 stale_penalty=0.00 context_success=False ingest=16.9s elapsed=171.8s
+[111/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=vector_rag
+[111/120] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=175.7s
+[112/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=langgraph_real
+[112/120] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=175.7s
+[113/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+[113/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.1s elapsed=175.9s
+[114/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=mem0_real_async
+[114/120] done recall=0.00 stale_penalty=0.00 context_success=False ingest=28.5s elapsed=204.8s
+[115/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=vector_rag
+[115/120] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=208.5s
+[116/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=langgraph_real
+[116/120] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=208.5s
+[117/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+[117/120] done recall=1.00 stale_penalty=0.00 context_success=True ingest=0.2s elapsed=208.7s
+[118/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=mem0_real_async
+[118/120] done recall=0.00 stale_penalty=0.00 context_success=False ingest=22.7s elapsed=231.7s
+[119/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=vector_rag
+[119/120] done recall=0.00 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=235.3s
+[120/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=langgraph_real
+[120/120] done recall=0.17 stale_penalty=0.33 context_success=False ingest=0.0s elapsed=235.3s
+Report written to benchtestResults/run-20260621-000148/reports-all-retrieval.json
+LaTeX table written to benchtestResults/run-20260621-000148/reports-all-retrieval.tex
+CSV table written to benchtestResults/run-20260621-000148/reports-all-retrieval.csv
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                   n/a      n/a    1.000    1.000    0.000    1.000        0.0        0
+mem0_real_async           n/a      n/a    0.000    0.750    0.811    0.050        6.0        0
+vector_rag                n/a      n/a    0.000    0.767    0.717    0.106        0.0        0
+langgraph_real            n/a      n/a    0.000    0.633    0.828    0.064        0.0        0
+
+Best adapter: capsule (score=1.000)
+Capsule beats mem0_real: YES
+[1/160] repeat=1/2 task=cs_stale_docs_code_001 adapter=capsule
+[1/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.1s elapsed=7.6s
+[2/160] repeat=1/2 task=cs_stale_docs_code_001 adapter=vector_rag
+[2/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=26.8s
+[3/160] repeat=1/2 task=cs_stale_docs_code_001 adapter=mem0_real_async
+Audited 1 package in 15ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+[3/160] done recall=1.00 stale_penalty=1.00 success=False ingest=2.6s elapsed=68.8s
+[4/160] repeat=1/2 task=cs_stale_docs_code_001 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+[4/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=83.6s
+[5/160] repeat=1/2 task=cs_auth_evolution_001 adapter=vector_rag
+[5/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=101.2s
+[6/160] repeat=1/2 task=cs_auth_evolution_001 adapter=langgraph_real
+[6/160] done recall=0.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=112.2s
+[7/160] repeat=1/2 task=cs_auth_evolution_001 adapter=mem0_real_async
+Failed to insert memory b5812d5e-c0a1-46fd-86dd-5e00fab17a83 (async): bad parameter or other API misuse
+[7/160] done recall=1.00 stale_penalty=1.00 success=False ingest=3.1s elapsed=124.5s
+[8/160] repeat=1/2 task=cs_auth_evolution_001 adapter=capsule
+[8/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=131.1s
+[9/160] repeat=1/2 task=cs_config_iteration_000 adapter=mem0_real_async
+[9/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.6s elapsed=154.7s
+[10/160] repeat=1/2 task=cs_config_iteration_000 adapter=vector_rag
+[10/160] done recall=1.00 stale_penalty=0.50 success=True ingest=0.0s elapsed=165.4s
+[11/160] repeat=1/2 task=cs_config_iteration_000 adapter=capsule
+[11/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=170.7s
+[12/160] repeat=1/2 task=cs_config_iteration_000 adapter=langgraph_real
+[12/160] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=178.2s
+[13/160] repeat=1/2 task=cs_service_ownership_001 adapter=capsule
+[13/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=183.4s
+[14/160] repeat=1/2 task=cs_service_ownership_001 adapter=mem0_real_async
+[14/160] done recall=1.00 stale_penalty=0.33 success=True ingest=3.3s elapsed=198.8s
+[15/160] repeat=1/2 task=cs_service_ownership_001 adapter=langgraph_real
+[15/160] done recall=0.50 stale_penalty=0.33 success=True ingest=0.0s elapsed=205.2s
+[16/160] repeat=1/2 task=cs_service_ownership_001 adapter=vector_rag
+[16/160] done recall=0.50 stale_penalty=0.33 success=True ingest=0.0s elapsed=212.1s
+[17/160] repeat=1/2 task=cs_feature_flag_001 adapter=mem0_real_async
+[17/160] done recall=1.00 stale_penalty=1.00 success=True ingest=6.6s elapsed=237.1s
+[18/160] repeat=1/2 task=cs_feature_flag_001 adapter=langgraph_real
+[18/160] done recall=0.50 stale_penalty=0.50 success=True ingest=0.0s elapsed=241.0s
+[19/160] repeat=1/2 task=cs_feature_flag_001 adapter=capsule
+[19/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=243.5s
+[20/160] repeat=1/2 task=cs_feature_flag_001 adapter=vector_rag
+[20/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=264.0s
+[21/160] repeat=1/2 task=cs_service_ownership_000 adapter=vector_rag
+[21/160] done recall=0.50 stale_penalty=0.33 success=True ingest=0.0s elapsed=270.7s
+[22/160] repeat=1/2 task=cs_service_ownership_000 adapter=mem0_real_async
+[22/160] done recall=1.00 stale_penalty=0.33 success=True ingest=3.0s elapsed=285.6s
+[23/160] repeat=1/2 task=cs_service_ownership_000 adapter=langgraph_real
+[23/160] done recall=0.50 stale_penalty=0.67 success=True ingest=0.0s elapsed=291.0s
+[24/160] repeat=1/2 task=cs_service_ownership_000 adapter=capsule
+[24/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=294.2s
+[25/160] repeat=1/2 task=cs_auth_evolution_000 adapter=mem0_real_async
+[25/160] done recall=1.00 stale_penalty=1.00 success=False ingest=3.0s elapsed=306.9s
+[26/160] repeat=1/2 task=cs_auth_evolution_000 adapter=langgraph_real
+[26/160] done recall=0.50 stale_penalty=1.00 success=False ingest=0.0s elapsed=320.0s
+[27/160] repeat=1/2 task=cs_auth_evolution_000 adapter=vector_rag
+[27/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=341.2s
+[28/160] repeat=1/2 task=cs_auth_evolution_000 adapter=capsule
+[28/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=351.0s
+[29/160] repeat=1/2 task=cs_long_horizon_project_000 adapter=langgraph_real
+[29/160] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=367.5s
+[30/160] repeat=1/2 task=cs_long_horizon_project_000 adapter=vector_rag
+[30/160] done recall=0.00 stale_penalty=0.33 success=False ingest=0.0s elapsed=408.9s
+[31/160] repeat=1/2 task=cs_long_horizon_project_000 adapter=capsule
+[31/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.1s elapsed=418.3s
+[32/160] repeat=1/2 task=cs_long_horizon_project_000 adapter=mem0_real_async
+[32/160] done recall=0.00 stale_penalty=0.00 success=False ingest=22.2s elapsed=521.9s
+[33/160] repeat=1/2 task=cs_config_iteration_001 adapter=langgraph_real
+[33/160] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=527.4s
+[34/160] repeat=1/2 task=cs_config_iteration_001 adapter=mem0_real_async
+[34/160] done recall=1.00 stale_penalty=1.00 success=True ingest=1.7s elapsed=540.0s
+[35/160] repeat=1/2 task=cs_config_iteration_001 adapter=capsule
+[35/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=544.1s
+[36/160] repeat=1/2 task=cs_config_iteration_001 adapter=vector_rag
+[36/160] done recall=1.00 stale_penalty=0.50 success=True ingest=0.0s elapsed=552.2s
+[37/160] repeat=1/2 task=cs_dependency_pin_000 adapter=langgraph_real
+[37/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=557.3s
+[38/160] repeat=1/2 task=cs_dependency_pin_000 adapter=mem0_real_async
+[38/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.4s elapsed=581.1s
+[39/160] repeat=1/2 task=cs_dependency_pin_000 adapter=capsule
+[39/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=584.2s
+[40/160] repeat=1/2 task=cs_dependency_pin_000 adapter=vector_rag
+[40/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=598.2s
+[41/160] repeat=1/2 task=cs_route_migration_000 adapter=mem0_real_async
+[41/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.5s elapsed=608.2s
+[42/160] repeat=1/2 task=cs_route_migration_000 adapter=capsule
+[42/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=610.9s
+[43/160] repeat=1/2 task=cs_route_migration_000 adapter=vector_rag
+[43/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=616.7s
+[44/160] repeat=1/2 task=cs_route_migration_000 adapter=langgraph_real
+[44/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=623.8s
+[45/160] repeat=1/2 task=cs_unknown_owner_000 adapter=langgraph_real
+[45/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=623.9s
+[46/160] repeat=1/2 task=cs_unknown_owner_000 adapter=mem0_real_async
+[46/160] done recall=1.00 stale_penalty=1.00 success=True ingest=4.3s elapsed=629.5s
+[47/160] repeat=1/2 task=cs_unknown_owner_000 adapter=vector_rag
+[47/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=630.9s
+[48/160] repeat=1/2 task=cs_unknown_owner_000 adapter=capsule
+[48/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=631.0s
+[49/160] repeat=1/2 task=cs_stale_docs_code_000 adapter=langgraph_real
+[49/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=642.4s
+[50/160] repeat=1/2 task=cs_stale_docs_code_000 adapter=capsule
+[50/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=650.1s
+[51/160] repeat=1/2 task=cs_stale_docs_code_000 adapter=vector_rag
+[51/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=670.0s
+[52/160] repeat=1/2 task=cs_stale_docs_code_000 adapter=mem0_real_async
+[52/160] done recall=1.00 stale_penalty=1.00 success=False ingest=3.1s elapsed=696.7s
+[53/160] repeat=1/2 task=cs_dependency_pin_001 adapter=langgraph_real
+[53/160] done recall=0.67 stale_penalty=1.00 success=True ingest=0.0s elapsed=702.6s
+[54/160] repeat=1/2 task=cs_dependency_pin_001 adapter=capsule
+[54/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=706.4s
+[55/160] repeat=1/2 task=cs_dependency_pin_001 adapter=vector_rag
+[55/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=710.2s
+[56/160] repeat=1/2 task=cs_dependency_pin_001 adapter=mem0_real_async
+[56/160] done recall=1.00 stale_penalty=1.00 success=True ingest=1.6s elapsed=728.7s
+[57/160] repeat=1/2 task=cs_feature_flag_000 adapter=capsule
+[57/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=731.2s
+[58/160] repeat=1/2 task=cs_feature_flag_000 adapter=mem0_real_async
+[58/160] done recall=0.50 stale_penalty=1.00 success=True ingest=5.0s elapsed=753.2s
+[59/160] repeat=1/2 task=cs_feature_flag_000 adapter=vector_rag
+[59/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=765.2s
+[60/160] repeat=1/2 task=cs_feature_flag_000 adapter=langgraph_real
+[60/160] done recall=0.50 stale_penalty=0.50 success=True ingest=0.0s elapsed=770.2s
+[61/160] repeat=1/2 task=cs_export_jobs_000 adapter=langgraph_real
+[61/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=775.7s
+[62/160] repeat=1/2 task=cs_export_jobs_000 adapter=mem0_real_async
+[62/160] done recall=0.67 stale_penalty=0.00 success=True ingest=2.9s elapsed=804.0s
+[63/160] repeat=1/2 task=cs_export_jobs_000 adapter=vector_rag
+[63/160] done recall=0.33 stale_penalty=0.00 success=True ingest=0.0s elapsed=823.1s
+[64/160] repeat=1/2 task=cs_export_jobs_000 adapter=capsule
+[64/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=831.8s
+[65/160] repeat=1/2 task=cs_route_migration_001 adapter=capsule
+[65/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=838.2s
+[66/160] repeat=1/2 task=cs_route_migration_001 adapter=mem0_real_async
+[66/160] done recall=1.00 stale_penalty=1.00 success=True ingest=1.9s elapsed=854.4s
+[67/160] repeat=1/2 task=cs_route_migration_001 adapter=langgraph_real
+[67/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=857.9s
+[68/160] repeat=1/2 task=cs_route_migration_001 adapter=vector_rag
+[68/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=864.9s
+[69/160] repeat=1/2 task=cs_export_jobs_001 adapter=mem0_real_async
+[69/160] done recall=0.67 stale_penalty=0.00 success=True ingest=3.2s elapsed=889.5s
+[70/160] repeat=1/2 task=cs_export_jobs_001 adapter=langgraph_real
+[70/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=895.2s
+[71/160] repeat=1/2 task=cs_export_jobs_001 adapter=capsule
+[71/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=905.2s
+[72/160] repeat=1/2 task=cs_export_jobs_001 adapter=vector_rag
+[72/160] done recall=0.33 stale_penalty=0.00 success=True ingest=0.0s elapsed=925.9s
+[73/160] repeat=1/2 task=cs_unknown_owner_001 adapter=vector_rag
+[73/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=927.6s
+[74/160] repeat=1/2 task=cs_unknown_owner_001 adapter=mem0_real_async
+[74/160] done recall=1.00 stale_penalty=1.00 success=True ingest=4.7s elapsed=933.6s
+[75/160] repeat=1/2 task=cs_unknown_owner_001 adapter=langgraph_real
+[75/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=933.7s
+[76/160] repeat=1/2 task=cs_unknown_owner_001 adapter=capsule
+[76/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=933.8s
+[77/160] repeat=1/2 task=cs_long_horizon_project_001 adapter=vector_rag
+[77/160] done recall=0.00 stale_penalty=0.33 success=False ingest=0.0s elapsed=954.8s
+[78/160] repeat=1/2 task=cs_long_horizon_project_001 adapter=mem0_real_async
+[78/160] done recall=0.00 stale_penalty=0.00 success=False ingest=22.4s elapsed=1011.3s
+[79/160] repeat=1/2 task=cs_long_horizon_project_001 adapter=langgraph_real
+[79/160] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=1021.9s
+[80/160] repeat=1/2 task=cs_long_horizon_project_001 adapter=capsule
+[80/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.1s elapsed=1034.5s
+[81/160] repeat=2/2 task=cs_long_horizon_project_001 adapter=capsule
+[81/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.1s elapsed=1045.3s
+[82/160] repeat=2/2 task=cs_long_horizon_project_001 adapter=mem0_real_async
+[82/160] done recall=0.00 stale_penalty=0.00 success=False ingest=22.7s elapsed=1101.6s
+[83/160] repeat=2/2 task=cs_long_horizon_project_001 adapter=langgraph_real
+[83/160] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=1111.8s
+[84/160] repeat=2/2 task=cs_long_horizon_project_001 adapter=vector_rag
+[84/160] done recall=0.00 stale_penalty=0.33 success=True ingest=0.0s elapsed=1135.4s
+[85/160] repeat=2/2 task=cs_dependency_pin_001 adapter=langgraph_real
+[85/160] done recall=0.67 stale_penalty=1.00 success=True ingest=0.0s elapsed=1140.4s
+[86/160] repeat=2/2 task=cs_dependency_pin_001 adapter=vector_rag
+[86/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1150.5s
+[87/160] repeat=2/2 task=cs_dependency_pin_001 adapter=capsule
+[87/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1153.4s
+[88/160] repeat=2/2 task=cs_dependency_pin_001 adapter=mem0_real_async
+[88/160] done recall=1.00 stale_penalty=1.00 success=True ingest=5.1s elapsed=1171.1s
+[89/160] repeat=2/2 task=cs_feature_flag_001 adapter=capsule
+[89/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1173.6s
+[90/160] repeat=2/2 task=cs_feature_flag_001 adapter=vector_rag
+[90/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1185.2s
+[91/160] repeat=2/2 task=cs_feature_flag_001 adapter=mem0_real_async
+[91/160] done recall=0.50 stale_penalty=1.00 success=True ingest=4.3s elapsed=1205.2s
+[92/160] repeat=2/2 task=cs_feature_flag_001 adapter=langgraph_real
+[92/160] done recall=0.50 stale_penalty=0.50 success=True ingest=0.0s elapsed=1211.4s
+[93/160] repeat=2/2 task=cs_export_jobs_000 adapter=mem0_real_async
+[93/160] done recall=0.67 stale_penalty=0.00 success=True ingest=3.6s elapsed=1234.4s
+[94/160] repeat=2/2 task=cs_export_jobs_000 adapter=langgraph_real
+[94/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1239.5s
+[95/160] repeat=2/2 task=cs_export_jobs_000 adapter=capsule
+[95/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1249.1s
+[96/160] repeat=2/2 task=cs_export_jobs_000 adapter=vector_rag
+[96/160] done recall=0.33 stale_penalty=0.00 success=True ingest=0.0s elapsed=1272.6s
+[97/160] repeat=2/2 task=cs_long_horizon_project_000 adapter=langgraph_real
+[97/160] done recall=0.17 stale_penalty=0.33 success=False ingest=0.0s elapsed=1283.1s
+[98/160] repeat=2/2 task=cs_long_horizon_project_000 adapter=capsule
+[98/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.1s elapsed=1293.2s
+[99/160] repeat=2/2 task=cs_long_horizon_project_000 adapter=mem0_real_async
+[99/160] done recall=0.00 stale_penalty=0.00 success=False ingest=14.8s elapsed=1342.6s
+[100/160] repeat=2/2 task=cs_long_horizon_project_000 adapter=vector_rag
+[100/160] done recall=0.00 stale_penalty=0.33 success=False ingest=0.0s elapsed=1368.0s
+[101/160] repeat=2/2 task=cs_config_iteration_001 adapter=vector_rag
+[101/160] done recall=1.00 stale_penalty=0.50 success=True ingest=0.0s elapsed=1379.4s
+[102/160] repeat=2/2 task=cs_config_iteration_001 adapter=mem0_real_async
+[102/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.8s elapsed=1396.8s
+[103/160] repeat=2/2 task=cs_config_iteration_001 adapter=capsule
+[103/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1402.0s
+[104/160] repeat=2/2 task=cs_config_iteration_001 adapter=langgraph_real
+[104/160] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=1409.0s
+[105/160] repeat=2/2 task=cs_dependency_pin_000 adapter=mem0_real_async
+[105/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.8s elapsed=1421.9s
+[106/160] repeat=2/2 task=cs_dependency_pin_000 adapter=langgraph_real
+[106/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1427.0s
+[107/160] repeat=2/2 task=cs_dependency_pin_000 adapter=capsule
+[107/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1434.2s
+[108/160] repeat=2/2 task=cs_dependency_pin_000 adapter=vector_rag
+[108/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1444.2s
+[109/160] repeat=2/2 task=cs_stale_docs_code_000 adapter=capsule
+[109/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1451.5s
+[110/160] repeat=2/2 task=cs_stale_docs_code_000 adapter=langgraph_real
+[110/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1463.0s
+[111/160] repeat=2/2 task=cs_stale_docs_code_000 adapter=vector_rag
+[111/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1482.3s
+[112/160] repeat=2/2 task=cs_stale_docs_code_000 adapter=mem0_real_async
+[112/160] done recall=1.00 stale_penalty=1.00 success=False ingest=1.6s elapsed=1514.0s
+[113/160] repeat=2/2 task=cs_config_iteration_000 adapter=capsule
+[113/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1518.5s
+[114/160] repeat=2/2 task=cs_config_iteration_000 adapter=mem0_real_async
+[114/160] done recall=1.00 stale_penalty=1.00 success=True ingest=5.2s elapsed=1534.4s
+[115/160] repeat=2/2 task=cs_config_iteration_000 adapter=langgraph_real
+[115/160] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=1539.6s
+[116/160] repeat=2/2 task=cs_config_iteration_000 adapter=vector_rag
+[116/160] done recall=1.00 stale_penalty=0.50 success=True ingest=0.0s elapsed=1548.6s
+[117/160] repeat=2/2 task=cs_unknown_owner_000 adapter=vector_rag
+[117/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1549.6s
+[118/160] repeat=2/2 task=cs_unknown_owner_000 adapter=capsule
+[118/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1549.7s
+[119/160] repeat=2/2 task=cs_unknown_owner_000 adapter=mem0_real_async
+[119/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.2s elapsed=1554.3s
+[120/160] repeat=2/2 task=cs_unknown_owner_000 adapter=langgraph_real
+[120/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1554.3s
+[121/160] repeat=2/2 task=cs_feature_flag_000 adapter=capsule
+[121/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1557.7s
+[122/160] repeat=2/2 task=cs_feature_flag_000 adapter=langgraph_real
+[122/160] done recall=0.50 stale_penalty=0.50 success=True ingest=0.0s elapsed=1564.7s
+[123/160] repeat=2/2 task=cs_feature_flag_000 adapter=mem0_real_async
+[123/160] done recall=0.50 stale_penalty=1.00 success=True ingest=5.2s elapsed=1586.1s
+[124/160] repeat=2/2 task=cs_feature_flag_000 adapter=vector_rag
+[124/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1595.9s
+[125/160] repeat=2/2 task=cs_auth_evolution_000 adapter=vector_rag
+[125/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1614.3s
+[126/160] repeat=2/2 task=cs_auth_evolution_000 adapter=mem0_real_async
+[126/160] done recall=1.00 stale_penalty=1.00 success=False ingest=2.8s elapsed=1657.3s
+[127/160] repeat=2/2 task=cs_auth_evolution_000 adapter=capsule
+[127/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1663.8s
+[128/160] repeat=2/2 task=cs_auth_evolution_000 adapter=langgraph_real
+[128/160] done recall=0.50 stale_penalty=1.00 success=False ingest=0.0s elapsed=1673.5s
+[129/160] repeat=2/2 task=cs_export_jobs_001 adapter=vector_rag
+[129/160] done recall=0.33 stale_penalty=0.00 success=True ingest=0.0s elapsed=1686.3s
+[130/160] repeat=2/2 task=cs_export_jobs_001 adapter=capsule
+[130/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1695.3s
+[131/160] repeat=2/2 task=cs_export_jobs_001 adapter=langgraph_real
+[131/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1699.8s
+[132/160] repeat=2/2 task=cs_export_jobs_001 adapter=mem0_real_async
+[132/160] done recall=0.67 stale_penalty=0.00 success=True ingest=4.4s elapsed=1721.0s
+[133/160] repeat=2/2 task=cs_service_ownership_001 adapter=mem0_real_async
+[133/160] done recall=1.00 stale_penalty=0.00 success=True ingest=3.9s elapsed=1736.6s
+[134/160] repeat=2/2 task=cs_service_ownership_001 adapter=capsule
+[134/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1740.2s
+[135/160] repeat=2/2 task=cs_service_ownership_001 adapter=vector_rag
+[135/160] done recall=0.50 stale_penalty=0.33 success=True ingest=0.0s elapsed=1747.3s
+[136/160] repeat=2/2 task=cs_service_ownership_001 adapter=langgraph_real
+[136/160] done recall=0.50 stale_penalty=0.33 success=True ingest=0.0s elapsed=1752.3s
+[137/160] repeat=2/2 task=cs_route_migration_001 adapter=langgraph_real
+[137/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1756.5s
+[138/160] repeat=2/2 task=cs_route_migration_001 adapter=mem0_real_async
+[138/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.8s elapsed=1767.3s
+[139/160] repeat=2/2 task=cs_route_migration_001 adapter=capsule
+[139/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1770.0s
+[140/160] repeat=2/2 task=cs_route_migration_001 adapter=vector_rag
+[140/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1779.2s
+[141/160] repeat=2/2 task=cs_stale_docs_code_001 adapter=capsule
+[141/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1784.6s
+[142/160] repeat=2/2 task=cs_stale_docs_code_001 adapter=mem0_real_async
+[142/160] done recall=1.00 stale_penalty=1.00 success=True ingest=5.5s elapsed=1811.6s
+[143/160] repeat=2/2 task=cs_stale_docs_code_001 adapter=vector_rag
+[143/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1831.7s
+[144/160] repeat=2/2 task=cs_stale_docs_code_001 adapter=langgraph_real
+[144/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1845.8s
+[145/160] repeat=2/2 task=cs_route_migration_000 adapter=vector_rag
+[145/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1851.5s
+[146/160] repeat=2/2 task=cs_route_migration_000 adapter=langgraph_real
+[146/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1856.4s
+[147/160] repeat=2/2 task=cs_route_migration_000 adapter=capsule
+[147/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1859.0s
+[148/160] repeat=2/2 task=cs_route_migration_000 adapter=mem0_real_async
+[148/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.8s elapsed=1872.5s
+[149/160] repeat=2/2 task=cs_auth_evolution_001 adapter=capsule
+[149/160] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1882.1s
+[150/160] repeat=2/2 task=cs_auth_evolution_001 adapter=langgraph_real
+[150/160] done recall=0.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1891.4s
+[151/160] repeat=2/2 task=cs_auth_evolution_001 adapter=vector_rag
+[151/160] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1912.0s
+[152/160] repeat=2/2 task=cs_auth_evolution_001 adapter=mem0_real_async
+[152/160] done recall=1.00 stale_penalty=1.00 success=False ingest=3.1s elapsed=1939.1s
+[153/160] repeat=2/2 task=cs_service_ownership_000 adapter=mem0_real_async
+[153/160] done recall=1.00 stale_penalty=0.00 success=True ingest=3.8s elapsed=1958.9s
+[154/160] repeat=2/2 task=cs_service_ownership_000 adapter=langgraph_real
+[154/160] done recall=0.50 stale_penalty=0.67 success=True ingest=0.0s elapsed=1964.0s
+[155/160] repeat=2/2 task=cs_service_ownership_000 adapter=vector_rag
+[155/160] done recall=0.50 stale_penalty=0.33 success=True ingest=0.0s elapsed=1969.6s
+[156/160] repeat=2/2 task=cs_service_ownership_000 adapter=capsule
+[156/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1974.3s
+[157/160] repeat=2/2 task=cs_unknown_owner_001 adapter=langgraph_real
+[157/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1974.4s
+[158/160] repeat=2/2 task=cs_unknown_owner_001 adapter=mem0_real_async
+[158/160] done recall=1.00 stale_penalty=1.00 success=True ingest=2.0s elapsed=1977.6s
+[159/160] repeat=2/2 task=cs_unknown_owner_001 adapter=capsule
+[159/160] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1977.7s
+[160/160] repeat=2/2 task=cs_unknown_owner_001 adapter=vector_rag
+[160/160] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1978.6s
+Report written to benchtestResults/run-20260621-000148/reports-all-agentic.json
+LaTeX table written to benchtestResults/run-20260621-000148/reports-all-agentic.tex
+CSV table written to benchtestResults/run-20260621-000148/reports-all-agentic.csv
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                 0.725    0.725    1.000    1.000    0.000    1.000        0.0     5300
+mem0_real_async         0.725    0.050    0.050    0.829    0.717    0.150        5.1     5927
+vector_rag              0.725    0.000    0.000    0.783    0.717    0.117        0.0     6924
+langgraph_real          0.725    0.000    0.000    0.675    0.833    0.061        0.0     6742
+
+Best adapter: capsule (score=1.000)
+Capsule beats mem0_real: YES
+[1/120] repeat=1/1 task=cs_auth_evolution_000 adapter=capsule
+  loaded 24 events into store
+[2/120] repeat=1/1 task=cs_auth_evolution_000 adapter=mem0_real_async
+Audited 1 package in 15ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+  loaded 24 events into store
+[3/120] repeat=1/1 task=cs_auth_evolution_000 adapter=vector_rag
+  loaded 24 events into store
+[4/120] repeat=1/1 task=cs_auth_evolution_000 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+  loaded 24 events into store
+[5/120] repeat=1/1 task=cs_auth_evolution_001 adapter=capsule
+  loaded 26 events into store
+[6/120] repeat=1/1 task=cs_auth_evolution_001 adapter=mem0_real_async
+  loaded 26 events into store
+[7/120] repeat=1/1 task=cs_auth_evolution_001 adapter=vector_rag
+  loaded 26 events into store
+[8/120] repeat=1/1 task=cs_auth_evolution_001 adapter=langgraph_real
+  loaded 26 events into store
+[9/120] repeat=1/1 task=cs_auth_evolution_002 adapter=capsule
+  loaded 28 events into store
+[10/120] repeat=1/1 task=cs_auth_evolution_002 adapter=mem0_real_async
+  loaded 28 events into store
+[11/120] repeat=1/1 task=cs_auth_evolution_002 adapter=vector_rag
+  loaded 28 events into store
+[12/120] repeat=1/1 task=cs_auth_evolution_002 adapter=langgraph_real
+  loaded 28 events into store
+[13/120] repeat=1/1 task=cs_config_iteration_000 adapter=capsule
+  loaded 13 events into store
+[14/120] repeat=1/1 task=cs_config_iteration_000 adapter=mem0_real_async
+  loaded 13 events into store
+[15/120] repeat=1/1 task=cs_config_iteration_000 adapter=vector_rag
+  loaded 13 events into store
+[16/120] repeat=1/1 task=cs_config_iteration_000 adapter=langgraph_real
+  loaded 13 events into store
+[17/120] repeat=1/1 task=cs_config_iteration_001 adapter=capsule
+  loaded 14 events into store
+[18/120] repeat=1/1 task=cs_config_iteration_001 adapter=mem0_real_async
+  loaded 14 events into store
+[19/120] repeat=1/1 task=cs_config_iteration_001 adapter=vector_rag
+  loaded 14 events into store
+[20/120] repeat=1/1 task=cs_config_iteration_001 adapter=langgraph_real
+  loaded 14 events into store
+[21/120] repeat=1/1 task=cs_config_iteration_002 adapter=capsule
+  loaded 15 events into store
+[22/120] repeat=1/1 task=cs_config_iteration_002 adapter=mem0_real_async
+  loaded 15 events into store
+[23/120] repeat=1/1 task=cs_config_iteration_002 adapter=vector_rag
+  loaded 15 events into store
+[24/120] repeat=1/1 task=cs_config_iteration_002 adapter=langgraph_real
+  loaded 15 events into store
+[25/120] repeat=1/1 task=cs_route_migration_000 adapter=capsule
+  loaded 13 events into store
+[26/120] repeat=1/1 task=cs_route_migration_000 adapter=mem0_real_async
+  loaded 13 events into store
+[27/120] repeat=1/1 task=cs_route_migration_000 adapter=vector_rag
+  loaded 13 events into store
+[28/120] repeat=1/1 task=cs_route_migration_000 adapter=langgraph_real
+  loaded 13 events into store
+[29/120] repeat=1/1 task=cs_route_migration_001 adapter=capsule
+  loaded 14 events into store
+[30/120] repeat=1/1 task=cs_route_migration_001 adapter=mem0_real_async
+  loaded 14 events into store
+[31/120] repeat=1/1 task=cs_route_migration_001 adapter=vector_rag
+  loaded 14 events into store
+[32/120] repeat=1/1 task=cs_route_migration_001 adapter=langgraph_real
+  loaded 14 events into store
+[33/120] repeat=1/1 task=cs_route_migration_002 adapter=capsule
+  loaded 15 events into store
+[34/120] repeat=1/1 task=cs_route_migration_002 adapter=mem0_real_async
+  loaded 15 events into store
+[35/120] repeat=1/1 task=cs_route_migration_002 adapter=vector_rag
+  loaded 15 events into store
+[36/120] repeat=1/1 task=cs_route_migration_002 adapter=langgraph_real
+  loaded 15 events into store
+[37/120] repeat=1/1 task=cs_feature_flag_000 adapter=capsule
+  loaded 39 events into store
+[38/120] repeat=1/1 task=cs_feature_flag_000 adapter=mem0_real_async
+  loaded 39 events into store
+[39/120] repeat=1/1 task=cs_feature_flag_000 adapter=vector_rag
+  loaded 39 events into store
+[40/120] repeat=1/1 task=cs_feature_flag_000 adapter=langgraph_real
+  loaded 39 events into store
+[41/120] repeat=1/1 task=cs_feature_flag_001 adapter=capsule
+  loaded 42 events into store
+[42/120] repeat=1/1 task=cs_feature_flag_001 adapter=mem0_real_async
+  loaded 42 events into store
+[43/120] repeat=1/1 task=cs_feature_flag_001 adapter=vector_rag
+  loaded 42 events into store
+[44/120] repeat=1/1 task=cs_feature_flag_001 adapter=langgraph_real
+  loaded 42 events into store
+[45/120] repeat=1/1 task=cs_feature_flag_002 adapter=capsule
+  loaded 45 events into store
+[46/120] repeat=1/1 task=cs_feature_flag_002 adapter=mem0_real_async
+  loaded 45 events into store
+[47/120] repeat=1/1 task=cs_feature_flag_002 adapter=vector_rag
+  loaded 45 events into store
+[48/120] repeat=1/1 task=cs_feature_flag_002 adapter=langgraph_real
+  loaded 45 events into store
+[49/120] repeat=1/1 task=cs_service_ownership_000 adapter=capsule
+  loaded 30 events into store
+[50/120] repeat=1/1 task=cs_service_ownership_000 adapter=mem0_real_async
+  loaded 30 events into store
+[51/120] repeat=1/1 task=cs_service_ownership_000 adapter=vector_rag
+  loaded 30 events into store
+[52/120] repeat=1/1 task=cs_service_ownership_000 adapter=langgraph_real
+  loaded 30 events into store
+[53/120] repeat=1/1 task=cs_service_ownership_001 adapter=capsule
+  loaded 33 events into store
+[54/120] repeat=1/1 task=cs_service_ownership_001 adapter=mem0_real_async
+  loaded 33 events into store
+[55/120] repeat=1/1 task=cs_service_ownership_001 adapter=vector_rag
+  loaded 33 events into store
+[56/120] repeat=1/1 task=cs_service_ownership_001 adapter=langgraph_real
+  loaded 33 events into store
+[57/120] repeat=1/1 task=cs_service_ownership_002 adapter=capsule
+  loaded 36 events into store
+[58/120] repeat=1/1 task=cs_service_ownership_002 adapter=mem0_real_async
+  loaded 36 events into store
+[59/120] repeat=1/1 task=cs_service_ownership_002 adapter=vector_rag
+  loaded 36 events into store
+[60/120] repeat=1/1 task=cs_service_ownership_002 adapter=langgraph_real
+  loaded 36 events into store
+[61/120] repeat=1/1 task=cs_export_jobs_000 adapter=capsule
+  loaded 29 events into store
+[62/120] repeat=1/1 task=cs_export_jobs_000 adapter=mem0_real_async
+  loaded 29 events into store
+[63/120] repeat=1/1 task=cs_export_jobs_000 adapter=vector_rag
+  loaded 29 events into store
+[64/120] repeat=1/1 task=cs_export_jobs_000 adapter=langgraph_real
+  loaded 29 events into store
+[65/120] repeat=1/1 task=cs_export_jobs_001 adapter=capsule
+  loaded 32 events into store
+[66/120] repeat=1/1 task=cs_export_jobs_001 adapter=mem0_real_async
+  loaded 32 events into store
+[67/120] repeat=1/1 task=cs_export_jobs_001 adapter=vector_rag
+  loaded 32 events into store
+[68/120] repeat=1/1 task=cs_export_jobs_001 adapter=langgraph_real
+  loaded 32 events into store
+[69/120] repeat=1/1 task=cs_export_jobs_002 adapter=capsule
+  loaded 35 events into store
+[70/120] repeat=1/1 task=cs_export_jobs_002 adapter=mem0_real_async
+Failed to insert memory 181ed4d4-e3c2-465f-80ee-5fd14c500d75 (async): bad parameter or other API misuse
+Failed to insert memory 965bb74e-0a0d-40e1-96f0-aa5ef10b50b4 (async): bad parameter or other API misuse
+  loaded 35 events into store
+[71/120] repeat=1/1 task=cs_export_jobs_002 adapter=vector_rag
+  loaded 35 events into store
+[72/120] repeat=1/1 task=cs_export_jobs_002 adapter=langgraph_real
+  loaded 35 events into store
+[73/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=capsule
+  loaded 12 events into store
+[74/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=mem0_real_async
+  loaded 12 events into store
+[75/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=vector_rag
+  loaded 12 events into store
+[76/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=langgraph_real
+  loaded 12 events into store
+[77/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=capsule
+  loaded 13 events into store
+[78/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=mem0_real_async
+  loaded 13 events into store
+[79/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=vector_rag
+  loaded 13 events into store
+[80/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=langgraph_real
+  loaded 13 events into store
+[81/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=capsule
+  loaded 14 events into store
+[82/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=mem0_real_async
+  loaded 14 events into store
+[83/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=vector_rag
+  loaded 14 events into store
+[84/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=langgraph_real
+  loaded 14 events into store
+[85/120] repeat=1/1 task=cs_dependency_pin_000 adapter=capsule
+  loaded 12 events into store
+[86/120] repeat=1/1 task=cs_dependency_pin_000 adapter=mem0_real_async
+  loaded 12 events into store
+[87/120] repeat=1/1 task=cs_dependency_pin_000 adapter=vector_rag
+  loaded 12 events into store
+[88/120] repeat=1/1 task=cs_dependency_pin_000 adapter=langgraph_real
+  loaded 12 events into store
+[89/120] repeat=1/1 task=cs_dependency_pin_001 adapter=capsule
+  loaded 13 events into store
+[90/120] repeat=1/1 task=cs_dependency_pin_001 adapter=mem0_real_async
+  loaded 13 events into store
+[91/120] repeat=1/1 task=cs_dependency_pin_001 adapter=vector_rag
+  loaded 13 events into store
+[92/120] repeat=1/1 task=cs_dependency_pin_001 adapter=langgraph_real
+  loaded 13 events into store
+[93/120] repeat=1/1 task=cs_dependency_pin_002 adapter=capsule
+  loaded 14 events into store
+[94/120] repeat=1/1 task=cs_dependency_pin_002 adapter=mem0_real_async
+  loaded 14 events into store
+[95/120] repeat=1/1 task=cs_dependency_pin_002 adapter=vector_rag
+  loaded 14 events into store
+[96/120] repeat=1/1 task=cs_dependency_pin_002 adapter=langgraph_real
+  loaded 14 events into store
+[97/120] repeat=1/1 task=cs_unknown_owner_000 adapter=capsule
+  loaded 9 events into store
+[98/120] repeat=1/1 task=cs_unknown_owner_000 adapter=mem0_real_async
+  loaded 9 events into store
+[99/120] repeat=1/1 task=cs_unknown_owner_000 adapter=vector_rag
+  loaded 9 events into store
+[100/120] repeat=1/1 task=cs_unknown_owner_000 adapter=langgraph_real
+  loaded 9 events into store
+[101/120] repeat=1/1 task=cs_unknown_owner_001 adapter=capsule
+  loaded 10 events into store
+[102/120] repeat=1/1 task=cs_unknown_owner_001 adapter=mem0_real_async
+  loaded 10 events into store
+[103/120] repeat=1/1 task=cs_unknown_owner_001 adapter=vector_rag
+  loaded 10 events into store
+[104/120] repeat=1/1 task=cs_unknown_owner_001 adapter=langgraph_real
+  loaded 10 events into store
+[105/120] repeat=1/1 task=cs_unknown_owner_002 adapter=capsule
+  loaded 11 events into store
+[106/120] repeat=1/1 task=cs_unknown_owner_002 adapter=mem0_real_async
+  loaded 11 events into store
+[107/120] repeat=1/1 task=cs_unknown_owner_002 adapter=vector_rag
+  loaded 11 events into store
+[108/120] repeat=1/1 task=cs_unknown_owner_002 adapter=langgraph_real
+  loaded 11 events into store
+[109/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+  loaded 130 events into store
+[110/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=mem0_real_async
+  loaded 130 events into store
+[111/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=vector_rag
+  loaded 130 events into store
+[112/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=langgraph_real
+  loaded 130 events into store
+[113/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+  loaded 140 events into store
+[114/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=mem0_real_async
+  loaded 140 events into store
+[115/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=vector_rag
+  loaded 140 events into store
+[116/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=langgraph_real
+  loaded 140 events into store
+[117/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+  loaded 150 events into store
+[118/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=mem0_real_async
+  loaded 150 events into store
+[119/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=vector_rag
+  loaded 150 events into store
+[120/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=langgraph_real
+  loaded 150 events into store
+Load-only complete. 1011 events ingested into benchtestResults/run-20260621-000148/cs-store-paper
+Re-run without --load-only and with --skip-ingest to test retrieval.
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[1/120] repeat=1/1 task=cs_auth_evolution_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_000
+[1/120] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=9.9s
+[2/120] repeat=1/1 task=cs_auth_evolution_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_000
+Audited 1 package in 1ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+[2/120] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=47.2s
+[3/120] repeat=1/1 task=cs_auth_evolution_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_000
+[3/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=64.8s
+[4/120] repeat=1/1 task=cs_auth_evolution_000 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_000
+[4/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=74.1s
+[5/120] repeat=1/1 task=cs_auth_evolution_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_001
+[5/120] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=84.3s
+[6/120] repeat=1/1 task=cs_auth_evolution_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_001
+[6/120] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=94.5s
+[7/120] repeat=1/1 task=cs_auth_evolution_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_001
+[7/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=113.5s
+[8/120] repeat=1/1 task=cs_auth_evolution_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_001
+[8/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=123.3s
+[9/120] repeat=1/1 task=cs_auth_evolution_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_002
+[9/120] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=132.5s
+[10/120] repeat=1/1 task=cs_auth_evolution_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_002
+[10/120] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=162.6s
+[11/120] repeat=1/1 task=cs_auth_evolution_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_002
+[11/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=182.7s
+[12/120] repeat=1/1 task=cs_auth_evolution_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_auth_evolution_002
+[12/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=193.6s
+[13/120] repeat=1/1 task=cs_config_iteration_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_000
+[13/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=199.9s
+[14/120] repeat=1/1 task=cs_config_iteration_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_000
+[14/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=220.3s
+[15/120] repeat=1/1 task=cs_config_iteration_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_000
+[15/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=230.2s
+[16/120] repeat=1/1 task=cs_config_iteration_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_000
+[16/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=236.0s
+[17/120] repeat=1/1 task=cs_config_iteration_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_001
+[17/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=240.5s
+[18/120] repeat=1/1 task=cs_config_iteration_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_001
+[18/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=256.9s
+[19/120] repeat=1/1 task=cs_config_iteration_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_001
+[19/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=275.6s
+[20/120] repeat=1/1 task=cs_config_iteration_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_001
+[20/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=279.5s
+[21/120] repeat=1/1 task=cs_config_iteration_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_002
+[21/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=285.0s
+[22/120] repeat=1/1 task=cs_config_iteration_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_002
+[22/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=305.6s
+[23/120] repeat=1/1 task=cs_config_iteration_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_002
+[23/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=318.4s
+[24/120] repeat=1/1 task=cs_config_iteration_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_config_iteration_002
+[24/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=323.6s
+[25/120] repeat=1/1 task=cs_route_migration_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_000
+[25/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=326.3s
+[26/120] repeat=1/1 task=cs_route_migration_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_000
+[26/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=337.3s
+[27/120] repeat=1/1 task=cs_route_migration_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_000
+[27/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=349.1s
+[28/120] repeat=1/1 task=cs_route_migration_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_000
+[28/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=355.7s
+[29/120] repeat=1/1 task=cs_route_migration_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_001
+[29/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=359.1s
+[30/120] repeat=1/1 task=cs_route_migration_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_001
+[30/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=369.3s
+[31/120] repeat=1/1 task=cs_route_migration_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_001
+[31/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=381.5s
+[32/120] repeat=1/1 task=cs_route_migration_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_001
+[32/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=389.3s
+[33/120] repeat=1/1 task=cs_route_migration_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_002
+[33/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=392.9s
+[34/120] repeat=1/1 task=cs_route_migration_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_002
+[34/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=404.3s
+[35/120] repeat=1/1 task=cs_route_migration_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_002
+[35/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=416.6s
+[36/120] repeat=1/1 task=cs_route_migration_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_route_migration_002
+[36/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=421.7s
+[37/120] repeat=1/1 task=cs_feature_flag_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_000
+[37/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=428.9s
+[38/120] repeat=1/1 task=cs_feature_flag_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_000
+[38/120] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=447.2s
+[39/120] repeat=1/1 task=cs_feature_flag_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_000
+[39/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=454.2s
+[40/120] repeat=1/1 task=cs_feature_flag_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_000
+[40/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=457.3s
+[41/120] repeat=1/1 task=cs_feature_flag_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_001
+[41/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=461.8s
+[42/120] repeat=1/1 task=cs_feature_flag_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_001
+[42/120] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=485.1s
+[43/120] repeat=1/1 task=cs_feature_flag_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_001
+[43/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=492.3s
+[44/120] repeat=1/1 task=cs_feature_flag_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_001
+[44/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=494.8s
+[45/120] repeat=1/1 task=cs_feature_flag_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_002
+[45/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=500.2s
+[46/120] repeat=1/1 task=cs_feature_flag_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_002
+[46/120] done recall=0.50 stale_penalty=1.00 success=True ingest=0.0s elapsed=518.5s
+[47/120] repeat=1/1 task=cs_feature_flag_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_002
+[47/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=525.9s
+[48/120] repeat=1/1 task=cs_feature_flag_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_feature_flag_002
+[48/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=529.9s
+[49/120] repeat=1/1 task=cs_service_ownership_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_000
+[49/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=536.1s
+[50/120] repeat=1/1 task=cs_service_ownership_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_000
+[50/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=556.4s
+[51/120] repeat=1/1 task=cs_service_ownership_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_000
+[51/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=562.3s
+[52/120] repeat=1/1 task=cs_service_ownership_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_000
+[52/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=565.6s
+[53/120] repeat=1/1 task=cs_service_ownership_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_001
+[53/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=570.8s
+[54/120] repeat=1/1 task=cs_service_ownership_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_001
+[54/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=589.4s
+[55/120] repeat=1/1 task=cs_service_ownership_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_001
+[55/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=595.7s
+[56/120] repeat=1/1 task=cs_service_ownership_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_001
+[56/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=600.8s
+[57/120] repeat=1/1 task=cs_service_ownership_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_002
+[57/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=606.3s
+[58/120] repeat=1/1 task=cs_service_ownership_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_002
+[58/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=620.9s
+[59/120] repeat=1/1 task=cs_service_ownership_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_002
+[59/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=628.1s
+[60/120] repeat=1/1 task=cs_service_ownership_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_service_ownership_002
+[60/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=632.0s
+[61/120] repeat=1/1 task=cs_export_jobs_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_000
+[61/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=641.1s
+[62/120] repeat=1/1 task=cs_export_jobs_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_000
+[62/120] done recall=0.33 stale_penalty=1.00 success=True ingest=0.0s elapsed=675.1s
+[63/120] repeat=1/1 task=cs_export_jobs_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_000
+[63/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=696.2s
+[64/120] repeat=1/1 task=cs_export_jobs_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_000
+[64/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=705.4s
+[65/120] repeat=1/1 task=cs_export_jobs_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_001
+[65/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=714.3s
+[66/120] repeat=1/1 task=cs_export_jobs_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_001
+[66/120] done recall=0.67 stale_penalty=0.00 success=True ingest=0.0s elapsed=741.6s
+[67/120] repeat=1/1 task=cs_export_jobs_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_001
+[67/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=759.1s
+[68/120] repeat=1/1 task=cs_export_jobs_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_001
+[68/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=768.1s
+[69/120] repeat=1/1 task=cs_export_jobs_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_002
+[69/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=780.7s
+[70/120] repeat=1/1 task=cs_export_jobs_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_002
+[70/120] done recall=0.33 stale_penalty=0.00 success=True ingest=0.0s elapsed=814.0s
+[71/120] repeat=1/1 task=cs_export_jobs_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_002
+[71/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=835.0s
+[72/120] repeat=1/1 task=cs_export_jobs_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_export_jobs_002
+[72/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=846.1s
+[73/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_000
+[73/120] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=854.5s
+[74/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_000
+[74/120] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=891.1s
+[75/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_000
+[75/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=905.9s
+[76/120] repeat=1/1 task=cs_stale_docs_code_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_000
+[76/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=916.9s
+[77/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_001
+[77/120] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=923.1s
+[78/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_001
+[78/120] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=955.0s
+[79/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_001
+[79/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=969.5s
+[80/120] repeat=1/1 task=cs_stale_docs_code_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_001
+[80/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=981.6s
+[81/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_002
+[81/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=986.8s
+[82/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_002
+[82/120] done recall=1.00 stale_penalty=1.00 success=False ingest=0.0s elapsed=1023.8s
+[83/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_002
+[83/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1042.4s
+[84/120] repeat=1/1 task=cs_stale_docs_code_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_stale_docs_code_002
+[84/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1054.4s
+[85/120] repeat=1/1 task=cs_dependency_pin_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_000
+[85/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1059.6s
+[86/120] repeat=1/1 task=cs_dependency_pin_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_000
+[86/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1067.4s
+[87/120] repeat=1/1 task=cs_dependency_pin_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_000
+[87/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1073.4s
+[88/120] repeat=1/1 task=cs_dependency_pin_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_000
+[88/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1075.8s
+[89/120] repeat=1/1 task=cs_dependency_pin_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_001
+[89/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1077.9s
+[90/120] repeat=1/1 task=cs_dependency_pin_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_001
+[90/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1093.2s
+[91/120] repeat=1/1 task=cs_dependency_pin_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_001
+[91/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1100.2s
+[92/120] repeat=1/1 task=cs_dependency_pin_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_001
+[92/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1105.8s
+[93/120] repeat=1/1 task=cs_dependency_pin_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_002
+[93/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1112.0s
+[94/120] repeat=1/1 task=cs_dependency_pin_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_002
+[94/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1121.6s
+[95/120] repeat=1/1 task=cs_dependency_pin_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_002
+[95/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1128.2s
+[96/120] repeat=1/1 task=cs_dependency_pin_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_dependency_pin_002
+[96/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1137.5s
+[97/120] repeat=1/1 task=cs_unknown_owner_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_000
+[97/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1137.6s
+[98/120] repeat=1/1 task=cs_unknown_owner_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_000
+[98/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1140.0s
+[99/120] repeat=1/1 task=cs_unknown_owner_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_000
+[99/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1140.1s
+[100/120] repeat=1/1 task=cs_unknown_owner_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_000
+[100/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1140.2s
+[101/120] repeat=1/1 task=cs_unknown_owner_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_001
+[101/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1140.3s
+[102/120] repeat=1/1 task=cs_unknown_owner_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_001
+[102/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1141.8s
+[103/120] repeat=1/1 task=cs_unknown_owner_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_001
+[103/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1141.9s
+[104/120] repeat=1/1 task=cs_unknown_owner_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_001
+[104/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1142.0s
+[105/120] repeat=1/1 task=cs_unknown_owner_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_002
+[105/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1142.1s
+[106/120] repeat=1/1 task=cs_unknown_owner_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_002
+[106/120] done recall=1.00 stale_penalty=1.00 success=True ingest=0.0s elapsed=1144.1s
+[107/120] repeat=1/1 task=cs_unknown_owner_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_002
+[107/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1144.2s
+[108/120] repeat=1/1 task=cs_unknown_owner_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_unknown_owner_002
+[108/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1144.3s
+[109/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_000
+[109/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1153.9s
+[110/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_000
+[110/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1196.0s
+[111/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_000
+[111/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1214.4s
+[112/120] repeat=1/1 task=cs_long_horizon_project_000 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_000
+[112/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1225.6s
+[113/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_001
+[113/120] done recall=1.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1235.7s
+[114/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_001
+[114/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1274.2s
+[115/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_001
+[115/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1291.1s
+[116/120] repeat=1/1 task=cs_long_horizon_project_001 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_001
+[116/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1300.0s
+[117/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=capsule
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_002
+[117/120] done recall=1.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1310.9s
+[118/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=mem0_real_async
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_002
+[118/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1350.6s
+[119/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=vector_rag
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_002
+[119/120] done recall=0.00 stale_penalty=0.00 success=True ingest=0.0s elapsed=1369.3s
+[120/120] repeat=1/1 task=cs_long_horizon_project_002 adapter=langgraph_real
+  skip-ingest: using existing store at benchtestResults/run-20260621-000148/cs-store-paper/cs_long_horizon_project_002
+[120/120] done recall=0.00 stale_penalty=0.00 success=False ingest=0.0s elapsed=1380.8s
+Report written to benchtestResults/run-20260621-000148/reports-persistent-retrieval.json
+LaTeX table written to benchtestResults/run-20260621-000148/reports-persistent-retrieval.tex
+CSV table written to benchtestResults/run-20260621-000148/reports-persistent-retrieval.csv
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+
+=== Cross-Session Benchmark Results ===
+Adapter               Success    MemOK    CtxOK   Recall   Stale%    Score  Ingest(s)   Tokens
+-------------------------------------------------------------------------------------------
+capsule                 0.800    0.800    1.000    1.000    0.000    1.000        0.0     5274
+mem0_real_async         0.700    0.100    0.100    0.794    0.733    0.133        0.0     6982
+vector_rag              0.767    0.000    0.000    0.000    0.000    0.000        0.0     7138
+langgraph_real          0.700    0.000    0.000    0.000    0.000    0.000        0.0     7749
+
+Best adapter: capsule (score=1.000)
+Capsule beats mem0_real: YES
+[1/64] repeat=1/1 task=chat_personal_preference_000 adapter=capsule
+[1/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.1s elapsed=0.1s
+[2/64] repeat=1/1 task=chat_personal_preference_000 adapter=mem0_real_async
+Audited 1 package in 15ms
+Failed to load spaCy lemma model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Audited 1 package in 1ms
+Failed to load spaCy full model: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+[2/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=2.5s elapsed=3.6s
+[3/64] repeat=1/1 task=chat_personal_preference_000 adapter=vector_rag
+[3/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=4.3s
+[4/64] repeat=1/1 task=chat_personal_preference_000 adapter=langgraph_real
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/langchain_core/utils/pydantic.py:41: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1 import BaseModel as BaseModelV1
+[4/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=4.4s
+[5/64] repeat=1/1 task=chat_personal_preference_001 adapter=capsule
+[5/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=4.4s
+[6/64] repeat=1/1 task=chat_personal_preference_001 adapter=mem0_real_async
+[6/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=2.2s elapsed=6.9s
+[7/64] repeat=1/1 task=chat_personal_preference_001 adapter=vector_rag
+[7/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=8.0s
+[8/64] repeat=1/1 task=chat_personal_preference_001 adapter=langgraph_real
+[8/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=8.0s
+[9/64] repeat=1/1 task=chat_preference_update_000 adapter=capsule
+[9/64] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=8.0s
+[10/64] repeat=1/1 task=chat_preference_update_000 adapter=mem0_real_async
+[10/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=3.4s elapsed=11.8s
+[11/64] repeat=1/1 task=chat_preference_update_000 adapter=vector_rag
+[11/64] done recall=0.50 stale=0.50 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=13.3s
+[12/64] repeat=1/1 task=chat_preference_update_000 adapter=langgraph_real
+[12/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=13.3s
+[13/64] repeat=1/1 task=chat_preference_update_001 adapter=capsule
+[13/64] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=13.3s
+[14/64] repeat=1/1 task=chat_preference_update_001 adapter=mem0_real_async
+[14/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=2.8s elapsed=16.4s
+[15/64] repeat=1/1 task=chat_preference_update_001 adapter=vector_rag
+[15/64] done recall=0.50 stale=0.50 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=17.5s
+[16/64] repeat=1/1 task=chat_preference_update_001 adapter=langgraph_real
+[16/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=17.5s
+[17/64] repeat=1/1 task=chat_episodic_recall_000 adapter=capsule
+[17/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=17.5s
+[18/64] repeat=1/1 task=chat_episodic_recall_000 adapter=mem0_real_async
+[18/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=2.3s elapsed=20.4s
+[19/64] repeat=1/1 task=chat_episodic_recall_000 adapter=vector_rag
+[19/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=22.0s
+[20/64] repeat=1/1 task=chat_episodic_recall_000 adapter=langgraph_real
+[20/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=22.0s
+[21/64] repeat=1/1 task=chat_episodic_recall_001 adapter=capsule
+[21/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=22.0s
+[22/64] repeat=1/1 task=chat_episodic_recall_001 adapter=mem0_real_async
+[22/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=2.4s elapsed=24.7s
+[23/64] repeat=1/1 task=chat_episodic_recall_001 adapter=vector_rag
+[23/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=26.1s
+[24/64] repeat=1/1 task=chat_episodic_recall_001 adapter=langgraph_real
+[24/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=26.1s
+[25/64] repeat=1/1 task=chat_conversation_continuity_000 adapter=capsule
+[25/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=26.1s
+[26/64] repeat=1/1 task=chat_conversation_continuity_000 adapter=mem0_real_async
+[26/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=1.9s elapsed=28.2s
+[27/64] repeat=1/1 task=chat_conversation_continuity_000 adapter=vector_rag
+[27/64] done recall=0.33 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=29.8s
+[28/64] repeat=1/1 task=chat_conversation_continuity_000 adapter=langgraph_real
+[28/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=29.8s
+[29/64] repeat=1/1 task=chat_conversation_continuity_001 adapter=capsule
+[29/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=29.8s
+[30/64] repeat=1/1 task=chat_conversation_continuity_001 adapter=mem0_real_async
+Failed to insert memory c4cfacc0-8620-4c15-b06a-ce3642ea511a (async): index 7 is out of bounds for axis 0 with size 7
+[30/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=3.3s elapsed=33.3s
+[31/64] repeat=1/1 task=chat_conversation_continuity_001 adapter=vector_rag
+[31/64] done recall=0.33 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=34.6s
+[32/64] repeat=1/1 task=chat_conversation_continuity_001 adapter=langgraph_real
+[32/64] done recall=0.67 stale=0.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=34.6s
+[33/64] repeat=1/1 task=chat_privacy_boundary_000 adapter=capsule
+[33/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=34.7s
+[34/64] repeat=1/1 task=chat_privacy_boundary_000 adapter=mem0_real_async
+[34/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=2.0s elapsed=36.9s
+[35/64] repeat=1/1 task=chat_privacy_boundary_000 adapter=vector_rag
+[35/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=38.2s
+[36/64] repeat=1/1 task=chat_privacy_boundary_000 adapter=langgraph_real
+[36/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=38.2s
+[37/64] repeat=1/1 task=chat_privacy_boundary_001 adapter=capsule
+[37/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=38.2s
+[38/64] repeat=1/1 task=chat_privacy_boundary_001 adapter=mem0_real_async
+[38/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=3.3s elapsed=42.0s
+[39/64] repeat=1/1 task=chat_privacy_boundary_001 adapter=vector_rag
+[39/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=42.9s
+[40/64] repeat=1/1 task=chat_privacy_boundary_001 adapter=langgraph_real
+[40/64] done recall=1.00 stale=0.00 privacy=1.00 delete=0.00 ctxok=False ingest=0.0s elapsed=42.9s
+[41/64] repeat=1/1 task=chat_deletion_forgetting_000 adapter=capsule
+[41/64] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=42.9s
+[42/64] repeat=1/1 task=chat_deletion_forgetting_000 adapter=mem0_real_async
+[42/64] done recall=0.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=1.4s elapsed=44.5s
+[43/64] repeat=1/1 task=chat_deletion_forgetting_000 adapter=vector_rag
+[43/64] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=45.2s
+[44/64] repeat=1/1 task=chat_deletion_forgetting_000 adapter=langgraph_real
+[44/64] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=45.2s
+[45/64] repeat=1/1 task=chat_deletion_forgetting_001 adapter=capsule
+[45/64] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=45.2s
+[46/64] repeat=1/1 task=chat_deletion_forgetting_001 adapter=mem0_real_async
+[46/64] done recall=0.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=1.7s elapsed=47.3s
+[47/64] repeat=1/1 task=chat_deletion_forgetting_001 adapter=vector_rag
+[47/64] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=48.2s
+[48/64] repeat=1/1 task=chat_deletion_forgetting_001 adapter=langgraph_real
+[48/64] done recall=1.00 stale=0.00 privacy=0.00 delete=1.00 ctxok=False ingest=0.0s elapsed=48.2s
+[49/64] repeat=1/1 task=chat_temporal_preference_000 adapter=capsule
+[49/64] done recall=0.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=48.2s
+[50/64] repeat=1/1 task=chat_temporal_preference_000 adapter=mem0_real_async
+[50/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=1.8s elapsed=50.3s
+[51/64] repeat=1/1 task=chat_temporal_preference_000 adapter=vector_rag
+[51/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=51.3s
+[52/64] repeat=1/1 task=chat_temporal_preference_000 adapter=langgraph_real
+[52/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=51.3s
+[53/64] repeat=1/1 task=chat_temporal_preference_001 adapter=capsule
+[53/64] done recall=0.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=51.3s
+[54/64] repeat=1/1 task=chat_temporal_preference_001 adapter=mem0_real_async
+[54/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=2.8s elapsed=54.4s
+[55/64] repeat=1/1 task=chat_temporal_preference_001 adapter=vector_rag
+[55/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=55.5s
+[56/64] repeat=1/1 task=chat_temporal_preference_001 adapter=langgraph_real
+[56/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=55.5s
+[57/64] repeat=1/1 task=chat_general_mixed_000 adapter=capsule
+[57/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=55.5s
+[58/64] repeat=1/1 task=chat_general_mixed_000 adapter=mem0_real_async
+[58/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=5.1s elapsed=60.9s
+[59/64] repeat=1/1 task=chat_general_mixed_000 adapter=vector_rag
+[59/64] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=61.8s
+[60/64] repeat=1/1 task=chat_general_mixed_000 adapter=langgraph_real
+[60/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=61.8s
+[61/64] repeat=1/1 task=chat_general_mixed_001 adapter=capsule
+[61/64] done recall=1.00 stale=0.00 privacy=0.00 delete=0.00 ctxok=True ingest=0.0s elapsed=61.9s
+[62/64] repeat=1/1 task=chat_general_mixed_001 adapter=mem0_real_async
+[62/64] done recall=1.00 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=3.9s elapsed=66.0s
+[63/64] repeat=1/1 task=chat_general_mixed_001 adapter=vector_rag
+[63/64] done recall=0.50 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=67.0s
+[64/64] repeat=1/1 task=chat_general_mixed_001 adapter=langgraph_real
+[64/64] done recall=0.75 stale=1.00 privacy=0.00 delete=0.00 ctxok=False ingest=0.0s elapsed=67.0s
+Report written to benchtestResults/run-20260621-000148/reports-chat-memory.json
+CSV table written to benchtestResults/run-20260621-000148/reports-chat-memory.csv
+LaTeX table written to benchtestResults/run-20260621-000148/reports-chat-memory.tex
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+
+=== Chat Memory Benchmark Results ===
+Adapter                 CtxOK   Recall    Stale  Privacy   Delete    Score  Savings
+--------------------------------------------------------------------------------------
+capsule                 0.375    0.771    0.250    0.125    0.125    0.458    0.207
+mem0_real_async         0.188    0.812    0.375    0.125    0.125    0.312    0.213
+vector_rag              0.125    0.750    0.312    0.125    0.125    0.281    0.476
+langgraph_real          0.312    0.964    0.375    0.125    0.125    0.354    0.011
+
+Best adapter: capsule (score=0.458)
+missing reports-long-horizon-retrieval.json; run the benchmark first
+missing reports-long-horizon-agentic.json; run the benchmark first
+missing reports-all-retrieval.json; run the benchmark first
+missing reports-all-agentic.json; run the benchmark first
+missing reports-persistent-retrieval.json; run the benchmark first
+missing reports-chat-memory.json; run the benchmark first
+research artifacts written to benchmarks-suite/benchtestResults/run-20260621-000148/researchpaper
+Wrote benchmarks-suite/benchtestResults/run-20260621-000148/researchpaper/benchmark-scorecard.png
+Wrote benchmarks-suite/benchtestResults/run-20260621-000148/researchpaper/benchmark-scorecard.md
+Traceback (most recent call last):
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 236, in <module>
+    main()
+    ~~~~^^
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 231, in main
+    render(report_dir, out, blended_price_per_million=args.blended_price_per_million)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 76, in render
+    score = _score(full, adapter)
+  File "benchmarks-suite/benchmarks/render_cost_savings_graphic.py", line 50, in _score
+    return report["summary"]["adapter_scores"][adapter]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'bm25_rag'

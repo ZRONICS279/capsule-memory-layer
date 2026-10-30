@@ -1,0 +1,3 @@
+EXPORT_SCHEMA_VERSION = 'v2'
+EXPORT_FORMAT = 'csv'
+RECORD_KEY = 'rows'

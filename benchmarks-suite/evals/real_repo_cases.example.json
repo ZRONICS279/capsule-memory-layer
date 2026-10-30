@@ -1,0 +1,30 @@
+{
+  "cases": [
+    {
+      "case_id": "example-small-python-bug",
+      "repo_url": "https://github.com/example/project.git",
+      "base_ref": "commit-before-fix",
+      "issue_url": "https://github.com/example/project/issues/1234",
+      "gold_pr_url": "https://github.com/example/project/pull/1250",
+      "memory_sessions": [
+        [
+          "Issue triage: users report the export job timeout on large result sets.",
+          "Rejected approach: keep offset pagination and only raise TIMEOUT_SECONDS to 10."
+        ],
+        [
+          "Maintainer review: accepted approach is cursor pagination with TIMEOUT_SECONDS=30.",
+          "Final target file is src/api/routes/export_jobs.py. Run pytest tests/test_export_jobs.py."
+        ]
+      ],
+      "prompt": "Fix the export jobs timeout using the accepted maintainer decision.",
+      "test_command": "python -m pytest tests/test_export_jobs.py",
+      "expected_files": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "forbidden_patterns": [
+        "PAGINATION_MODE = 'offset'",
+        "TIMEOUT_SECONDS = 10"
+      ]
+    }
+  ]
+}

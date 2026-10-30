@@ -1,0 +1,10 @@
+# Real memory-system benchmark integrations
+# Install with: python3 -m pip install -r requirements-real-memory.txt
+
+mem0ai>=2.0.7
+langgraph>=1.2.5
+zep-python>=2.0.2
+zep-cloud>=3.23.0
+# Letta/MemGPT support is server/client-version sensitive.
+# The package named `letta` may resolve to an old unusable package on Python 3.14.
+# Prefer a Python 3.12 virtualenv and the current Letta client/server install docs.

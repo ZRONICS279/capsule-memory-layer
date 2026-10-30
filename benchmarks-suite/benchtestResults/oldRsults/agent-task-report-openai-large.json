@@ -1,0 +1,637 @@
+{
+  "summary": {
+    "agent": "openai",
+    "tokenizer_backend": "tiktoken:cl100k_base",
+    "tasks": 7,
+    "runs": 21,
+    "adapters": [
+      "bm25_rag",
+      "openai_embedding_rag",
+      "capsule"
+    ],
+    "adapter_scores": {
+      "bm25_rag": {
+        "tasks": 7,
+        "success_rate": 0.2857142857142857,
+        "tests_pass_rate": 0.2857142857142857,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.9869478301491317,
+        "avg_raw_context_tokens": 245920.7142857143,
+        "avg_prepared_context_tokens": 3222.5714285714284,
+        "avg_memory_payload_tokens": 0.0,
+        "avg_total_tokens": 19712.14285714286,
+        "avg_steps": 8.714285714285714,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 3
+      },
+      "openai_embedding_rag": {
+        "tasks": 7,
+        "success_rate": 0.42857142857142855,
+        "tests_pass_rate": 0.42857142857142855,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.9918118141535264,
+        "avg_raw_context_tokens": 245920.7142857143,
+        "avg_prepared_context_tokens": 2014.857142857143,
+        "avg_memory_payload_tokens": 0.0,
+        "avg_total_tokens": 12383.42857142857,
+        "avg_steps": 7.428571428571429,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 3
+      },
+      "capsule": {
+        "tasks": 7,
+        "success_rate": 0.5714285714285714,
+        "tests_pass_rate": 0.5714285714285714,
+        "unknown_pass_rate": 1.0,
+        "avg_token_savings": 0.9983296801550682,
+        "avg_raw_context_tokens": 245920.7142857143,
+        "avg_prepared_context_tokens": 410.7142857142857,
+        "avg_memory_payload_tokens": 366.7142857142857,
+        "avg_total_tokens": 6417.428571428572,
+        "avg_steps": 8.0,
+        "hallucinated_file_count": 0,
+        "forbidden_found_count": 2
+      }
+    },
+    "capsule_success_rate": 0.5714285714285714,
+    "best_success_rate": 0.5714285714285714,
+    "capsule_token_savings": 0.9983296801550682,
+    "passed": true
+  },
+  "results": [
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "bm25_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "forbidden_found": [
+        "LegacyApiKeyAuth"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 27275,
+      "output_tokens": 150,
+      "total_tokens": 27425,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 243313,
+      "prepared_context_tokens": 2298,
+      "token_savings": 0.9905553751751859,
+      "duration_seconds": 12.08823433300131,
+      "final_message": "read_file: FILE src/api/routes/admin_reports.py:\nfrom src.auth.middleware import LegacyApiKeyAuth\n\nAUTH_MIDDLEWARE = LegacyApiKeyAuth\n"
+    },
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "openai_embedding_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/admin_reports.py",
+        "src/auth/middleware.py"
+      ],
+      "forbidden_found": [
+        "LegacyApiKeyAuth"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 9095,
+      "output_tokens": 143,
+      "total_tokens": 9238,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 243313,
+      "prepared_context_tokens": 2298,
+      "token_savings": 0.9905553751751859,
+      "duration_seconds": 23.74220191600034,
+      "final_message": "read_file: FILE src/auth/middleware.py:\nclass LegacyApiKeyAuth:\n    pass\n"
+    },
+    {
+      "task_id": "agent_auth_migration_000",
+      "family": "auth_migration",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/admin_reports.py"
+      ],
+      "missing_expected_files": [
+        "src/auth/middleware.py"
+      ],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 8024,
+      "output_tokens": 167,
+      "total_tokens": 8191,
+      "memory_payload_tokens": 380,
+      "raw_context_tokens": 243313,
+      "prepared_context_tokens": 423,
+      "token_savings": 0.9982614985635786,
+      "duration_seconds": 17.904235583002446,
+      "final_message": "read_file: FILE src/api/routes/admin_reports.py:\nfrom src.auth.middleware import RequireSessionToken\n\nAUTH_MIDDLEWARE = RequireSessionToken\n"
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "bm25_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 14241,
+      "output_tokens": 288,
+      "total_tokens": 14529,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 243676,
+      "prepared_context_tokens": 2366,
+      "token_savings": 0.9902903855939854,
+      "duration_seconds": 11.42993754100462,
+      "final_message": "write_file: WROTE src/billing/retry_policy.py bytes=37"
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "openai_embedding_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 5,
+      "retries": 4,
+      "input_tokens": 4198,
+      "output_tokens": 114,
+      "total_tokens": 4312,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 243676,
+      "prepared_context_tokens": 1601,
+      "token_savings": 0.9934298002265303,
+      "duration_seconds": 18.855659166991245,
+      "final_message": "run_tests: TESTS ok=True command=python3 -m unittest tests.test_retry_policy\n.\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n"
+    },
+    {
+      "task_id": "agent_billing_retry_000",
+      "family": "billing_retry",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/billing/retry_policy.py"
+      ],
+      "expected_files_touched": [
+        "src/billing/retry_policy.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 9,
+      "retries": 8,
+      "input_tokens": 8141,
+      "output_tokens": 228,
+      "total_tokens": 8369,
+      "memory_payload_tokens": 418,
+      "raw_context_tokens": 243676,
+      "prepared_context_tokens": 462,
+      "token_savings": 0.9981040397905415,
+      "duration_seconds": 18.427277374998084,
+      "final_message": "run_tests: TESTS ok=True command=python3 -m unittest tests.test_retry_policy\n.\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n"
+    },
+    {
+      "task_id": "agent_api_route_rename_000",
+      "family": "api_route_rename",
+      "adapter": "bm25_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/report_export.py"
+      ],
+      "forbidden_found": [
+        "/api/v1/export"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 26776,
+      "output_tokens": 150,
+      "total_tokens": 26926,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 247676,
+      "prepared_context_tokens": 2366,
+      "token_savings": 0.9904471971446567,
+      "duration_seconds": 9.652028041993617,
+      "final_message": "read_file: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v1/export'\n"
+    },
+    {
+      "task_id": "agent_api_route_rename_000",
+      "family": "api_route_rename",
+      "adapter": "openai_embedding_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/report_export.py"
+      ],
+      "forbidden_found": [
+        "/api/v1/export"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 8584,
+      "output_tokens": 150,
+      "total_tokens": 8734,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 247676,
+      "prepared_context_tokens": 2366,
+      "token_savings": 0.9904471971446567,
+      "duration_seconds": 26.319690708012786,
+      "final_message": "read_file: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v1/export'\n"
+    },
+    {
+      "task_id": "agent_api_route_rename_000",
+      "family": "api_route_rename",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/report_export.py"
+      ],
+      "forbidden_found": [
+        "/api/v1/export"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 7516,
+      "output_tokens": 150,
+      "total_tokens": 7666,
+      "memory_payload_tokens": 389,
+      "raw_context_tokens": 247676,
+      "prepared_context_tokens": 435,
+      "token_savings": 0.9982436731859364,
+      "duration_seconds": 12.44367991699255,
+      "final_message": "read_file: FILE src/api/routes/report_export.py:\nEXPORT_ENDPOINT = '/api/v1/export'\n"
+    },
+    {
+      "task_id": "agent_test_failure_followup_000",
+      "family": "test_failure_followup",
+      "adapter": "bm25_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 18357,
+      "output_tokens": 149,
+      "total_tokens": 18506,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 249794,
+      "prepared_context_tokens": 1994,
+      "token_savings": 0.9920174223560214,
+      "duration_seconds": 10.522138957996503,
+      "final_message": "read_file: FILE src/api/routes/export_jobs.py:\nPAGINATION_MODE = 'offset'\nTIMEOUT_SECONDS = 5\n"
+    },
+    {
+      "task_id": "agent_test_failure_followup_000",
+      "family": "test_failure_followup",
+      "adapter": "openai_embedding_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 6,
+      "retries": 5,
+      "input_tokens": 14004,
+      "output_tokens": 111,
+      "total_tokens": 14115,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 249794,
+      "prepared_context_tokens": 1994,
+      "token_savings": 0.9920174223560214,
+      "duration_seconds": 18.212388625004678,
+      "final_message": "run_tests: TESTS ok=True command=python3 -m unittest tests.test_export_jobs\n.\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\n"
+    },
+    {
+      "task_id": "agent_test_failure_followup_000",
+      "family": "test_failure_followup",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "expected_files_touched": [
+        "src/api/routes/export_jobs.py"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 7,
+      "retries": 6,
+      "input_tokens": 5725,
+      "output_tokens": 126,
+      "total_tokens": 5851,
+      "memory_payload_tokens": 375,
+      "raw_context_tokens": 249794,
+      "prepared_context_tokens": 416,
+      "token_savings": 0.9983346277332522,
+      "duration_seconds": 8.826644833010505,
+      "final_message": "run_tests: TESTS ok=True command=python3 -m unittest tests.test_export_jobs\n.\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\n"
+    },
+    {
+      "task_id": "agent_stale_docs_current_code_000",
+      "family": "stale_docs_current_code",
+      "adapter": "bm25_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/invoices/normalizer.py"
+      ],
+      "forbidden_found": [
+        "normalize_legacy_invoice"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 22333,
+      "output_tokens": 154,
+      "total_tokens": 22487,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 249431,
+      "prepared_context_tokens": 9041,
+      "token_savings": 0.963753502972766,
+      "duration_seconds": 9.950591125001665,
+      "final_message": "read_file: FILE src/invoices/normalizer.py:\ndef normalize_legacy_invoice(invoice):\n    return invoice\n"
+    },
+    {
+      "task_id": "agent_stale_docs_current_code_000",
+      "family": "stale_docs_current_code",
+      "adapter": "openai_embedding_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/invoices/normalizer.py"
+      ],
+      "forbidden_found": [
+        "normalize_legacy_invoice"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 22567,
+      "output_tokens": 144,
+      "total_tokens": 22711,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 249431,
+      "prepared_context_tokens": 1890,
+      "token_savings": 0.9924227541885331,
+      "duration_seconds": 25.27532250000513,
+      "final_message": "search_repo: SEARCH_RESULTS:\nsrc/invoices/normalizer.py:1: def normalize_legacy_invoice(invoice):\ntests/test_normalizer.py:2: from src.invoices import normalizer\ntests/test_"
+    },
+    {
+      "task_id": "agent_stale_docs_current_code_000",
+      "family": "stale_docs_current_code",
+      "adapter": "capsule",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "src/invoices/normalizer.py"
+      ],
+      "forbidden_found": [
+        "normalize_legacy_invoice"
+      ],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 7343,
+      "output_tokens": 158,
+      "total_tokens": 7501,
+      "memory_payload_tokens": 358,
+      "raw_context_tokens": 249431,
+      "prepared_context_tokens": 402,
+      "token_savings": 0.9983883318432752,
+      "duration_seconds": 28.509735917003127,
+      "final_message": "read_file: FILE src/invoices/normalizer.py:\ndef normalize_legacy_invoice(invoice):\n    return invoice\n"
+    },
+    {
+      "task_id": "agent_dependency_version_pin_000",
+      "family": "dependency_version_pin",
+      "adapter": "bm25_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "pyproject.toml"
+      ],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 25521,
+      "output_tokens": 130,
+      "total_tokens": 25651,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 247293,
+      "prepared_context_tokens": 2293,
+      "token_savings": 0.9907275984358636,
+      "duration_seconds": 9.61191800000961,
+      "final_message": "read_file: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==1.10.0']\n"
+    },
+    {
+      "task_id": "agent_dependency_version_pin_000",
+      "family": "dependency_version_pin",
+      "adapter": "openai_embedding_rag",
+      "success": false,
+      "tests_passed": false,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [
+        "pyproject.toml"
+      ],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 10,
+      "retries": 9,
+      "input_tokens": 25521,
+      "output_tokens": 130,
+      "total_tokens": 25651,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 247293,
+      "prepared_context_tokens": 2293,
+      "token_savings": 0.9907275984358636,
+      "duration_seconds": 26.811109457994462,
+      "final_message": "read_file: FILE pyproject.toml:\n[project]\ndependencies = ['pydantic==1.10.0']\n"
+    },
+    {
+      "task_id": "agent_dependency_version_pin_000",
+      "family": "dependency_version_pin",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [
+        "pyproject.toml"
+      ],
+      "expected_files_touched": [
+        "pyproject.toml"
+      ],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 9,
+      "retries": 8,
+      "input_tokens": 6491,
+      "output_tokens": 216,
+      "total_tokens": 6707,
+      "memory_payload_tokens": 319,
+      "raw_context_tokens": 247293,
+      "prepared_context_tokens": 364,
+      "token_savings": 0.9985280618537524,
+      "duration_seconds": 12.09663862499292,
+      "final_message": "run_tests: TESTS ok=True command=python3 -m unittest tests.test_dependency_pins\n.\n----------------------------------------------------------------------\nRan 1 test in 0.00"
+    },
+    {
+      "task_id": "agent_unknown_owner_000",
+      "family": "unknown_owner",
+      "adapter": "bm25_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 2452,
+      "output_tokens": 9,
+      "total_tokens": 2461,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 240262,
+      "prepared_context_tokens": 2200,
+      "token_savings": 0.9908433293654427,
+      "duration_seconds": 0.9081502920016646,
+      "final_message": "UNKNOWN"
+    },
+    {
+      "task_id": "agent_unknown_owner_000",
+      "family": "unknown_owner",
+      "adapter": "openai_embedding_rag",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 1914,
+      "output_tokens": 9,
+      "total_tokens": 1923,
+      "memory_payload_tokens": 0,
+      "raw_context_tokens": 240262,
+      "prepared_context_tokens": 1662,
+      "token_savings": 0.9930825515478936,
+      "duration_seconds": 5.026016667005024,
+      "final_message": "UNKNOWN"
+    },
+    {
+      "task_id": "agent_unknown_owner_000",
+      "family": "unknown_owner",
+      "adapter": "capsule",
+      "success": true,
+      "tests_passed": true,
+      "unknown_passed": true,
+      "changed_files": [],
+      "expected_files_touched": [],
+      "missing_expected_files": [],
+      "forbidden_found": [],
+      "hallucinated_files": [],
+      "steps": 1,
+      "retries": 0,
+      "input_tokens": 628,
+      "output_tokens": 9,
+      "total_tokens": 637,
+      "memory_payload_tokens": 328,
+      "raw_context_tokens": 240262,
+      "prepared_context_tokens": 373,
+      "token_savings": 0.9984475281151409,
+      "duration_seconds": 1.3706645000056596,
+      "final_message": "UNKNOWN"
+    }
+  ]
+}
